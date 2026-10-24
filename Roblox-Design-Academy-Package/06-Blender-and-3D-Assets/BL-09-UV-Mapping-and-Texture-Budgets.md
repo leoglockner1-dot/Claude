@@ -34,3 +34,10 @@ Keep a consistent density across assets of one game (e.g. 256 px per 2 studs) so
 
 ## Acceptance criteria
 QC: UV sets ≤ 1 and 0 loops outside 0–1; the texture size follows the budget table; texel density is consistent with the asset set.
+
+## Sources
+Accessed 2026-10-24. Roblox pages from the creator-docs repository (commit 4e795e6); Blender pages from the 5.2 LTS manual (the URLs use `latest`, which served 5.2 on that date).
+- [Texture specifications](https://create.roblox.com/docs/art/modeling/texture-specifications)
+- [Use Blender with Roblox](https://create.roblox.com/docs/art/blender)
+- Blender manual: [UV Operators](https://docs.blender.org/manual/en/latest/modeling/meshes/editing/uv.html)
+- Blender manual: [UV Unwrapping: Introduction](https://docs.blender.org/manual/en/latest/modeling/meshes/uv/unwrapping/introduction.html)

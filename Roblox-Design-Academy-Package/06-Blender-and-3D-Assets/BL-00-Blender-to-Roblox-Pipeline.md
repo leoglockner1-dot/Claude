@@ -63,3 +63,11 @@ The facts every Roblox asset depends on, each with its source. **[RBX]** = Roblo
 ## Not verified here (do this in Studio)
 - How Studio imports **material base colours without textures** from FBX/GLB. This session's exercise assets use flat Principled colours. Verify in the Importer preview, and expect to set `MeshPart.Color` or use a palette texture ([BL-08](BL-08-Materials-and-Color.md)).
 - Final scale in Studio for the exported files. Round trips were checked only in Blender ([BL-15](BL-15-Export-Settings.md)).
+
+## Sources
+Accessed 2026-10-24. Roblox pages from the creator-docs repository (commit 4e795e6); Blender pages from the 5.2 LTS manual (the URLs use `latest`, which served 5.2 on that date).
+- [Use Blender with Roblox](https://create.roblox.com/docs/art/blender)
+- [Export requirements](https://create.roblox.com/docs/art/modeling/export-requirements)
+- [Mesh specifications](https://create.roblox.com/docs/art/modeling/specifications)
+- [Meshes (MeshPart, fidelity, name suffixes)](https://create.roblox.com/docs/parts/meshes)
+- [bpy 5.2.3 on PyPI](https://pypi.org/project/bpy/) — operator and property names confirmed by introspection in this environment

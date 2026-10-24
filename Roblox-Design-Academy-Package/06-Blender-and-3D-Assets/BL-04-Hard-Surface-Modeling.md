@@ -43,3 +43,8 @@ FBX export with `mesh_smooth_type='FACE'` writes smoothing; custom normals are e
 
 ## Acceptance criteria
 Big faces shade flat; bevels catch the highlight; no shading gradients across flat faces in the 3/4 render; QC passes.
+
+## Sources
+Accessed 2026-10-24. Roblox pages from the creator-docs repository (commit 4e795e6); Blender pages from the 5.2 LTS manual (the URLs use `latest`, which served 5.2 on that date).
+- Blender manual: [Bevel Modifier](https://docs.blender.org/manual/en/latest/modeling/modifiers/generate/bevel.html)
+- Blender manual: [Weighted Normal Modifier](https://docs.blender.org/manual/en/latest/modeling/modifiers/normals/weighted_normal.html)

@@ -30,3 +30,10 @@ Typical stack: Mirror → Boolean → Bevel → Weighted Normal → (Smooth by A
 
 ## Acceptance criteria
 Each modifier has a reason; the stack order is documented in the asset note; QC runs on the evaluated result.
+
+## Sources
+Accessed 2026-10-24. Roblox pages from the creator-docs repository (commit 4e795e6); Blender pages from the 5.2 LTS manual (the URLs use `latest`, which served 5.2 on that date).
+- Blender manual: [Bevel Modifier](https://docs.blender.org/manual/en/latest/modeling/modifiers/generate/bevel.html)
+- Blender manual: [Weighted Normal Modifier](https://docs.blender.org/manual/en/latest/modeling/modifiers/normals/weighted_normal.html)
+- Blender manual: [Decimate Modifier](https://docs.blender.org/manual/en/latest/modeling/modifiers/generate/decimate.html)
+- [bpy 5.2.3 on PyPI](https://pypi.org/project/bpy/) — operator and property names confirmed by introspection in this environment

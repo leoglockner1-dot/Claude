@@ -51,3 +51,7 @@ evidence: "academy framework; applied with real renders in BL-EX-01..06"
 
 ## Scoring (for benchmarks)
 Each category: **Pass / Pass with notes / Fail**, with one sentence of evidence each. The overall result is the *lowest* category. Do not average; a gorgeous asset with a broken pivot is still a Fail for integration.
+
+## Sources
+Accessed 2026-10-24. Roblox pages from the creator-docs repository (commit 4e795e6); Blender pages from the 5.2 LTS manual (the URLs use `latest`, which served 5.2 on that date).
+- [Mesh specifications](https://create.roblox.com/docs/art/modeling/specifications)

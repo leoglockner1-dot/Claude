@@ -30,3 +30,6 @@ The brief exists; the 2–3 identifying features are named; style references are
 
 ## Example
 [BL-EX-04 Treasure chests](Exercises/BL-EX-04-Treasure-Chests.md) used "arched or domed lid + bands/trim + lock" as identifying features. The v1 premium chest dropped the arched lid and immediately read as a crate. That evidence shows why step 3 matters.
+
+## Sources
+No external source: this note is the academy's own method, applied and tested in the linked exercises.

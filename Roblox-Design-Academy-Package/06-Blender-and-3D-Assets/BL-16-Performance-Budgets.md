@@ -36,3 +36,10 @@ These ceilings are design guidance for a mobile-friendly stylized game, not plat
 
 ## Acceptance criteria
 Each asset's triangle count is within its class budget; repeated props reuse one asset id; scene draw calls are measured on a phone profile.
+
+## Sources
+Accessed 2026-10-24. Roblox pages from the creator-docs repository (commit 4e795e6); Blender pages from the 5.2 LTS manual (the URLs use `latest`, which served 5.2 on that date).
+- [Mesh specifications](https://create.roblox.com/docs/art/modeling/specifications)
+- [Meshes (MeshPart, fidelity, name suffixes)](https://create.roblox.com/docs/parts/meshes)
+- [Improve performance](https://create.roblox.com/docs/performance-optimization/improve)
+- Blender manual: [Decimate Modifier](https://docs.blender.org/manual/en/latest/modeling/modifiers/generate/decimate.html)

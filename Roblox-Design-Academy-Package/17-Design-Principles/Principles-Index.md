@@ -6,7 +6,7 @@ note_type: "index"
 
 # Principles Index
 
-**94 principles.** Each entry: rule, reasoning, evidence links, good example, failure mode, conditions, Roblox implementation, confidence, tags.
+**128 principles** (94 from v1 + 34 added in Academy 2.0). Each entry: rule, reasoning, evidence links, good example, failure mode, conditions, Roblox implementation, confidence, tags.
 
 | ID | Principle | File | Confidence |
 |---|---|---|---|

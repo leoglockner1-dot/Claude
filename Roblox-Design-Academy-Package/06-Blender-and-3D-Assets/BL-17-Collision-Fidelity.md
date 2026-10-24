@@ -31,3 +31,7 @@ Visualize with Studio's *Visualization Options > Collision fidelity*.
 
 ## Acceptance criteria
 Every imported mesh has a deliberate fidelity (documented per asset class); visualization checked on walkable areas.
+
+## Sources
+Accessed 2026-10-24. Roblox pages from the creator-docs repository (commit 4e795e6); Blender pages from the 5.2 LTS manual (the URLs use `latest`, which served 5.2 on that date).
+- [Meshes (MeshPart, fidelity, name suffixes)](https://create.roblox.com/docs/parts/meshes)

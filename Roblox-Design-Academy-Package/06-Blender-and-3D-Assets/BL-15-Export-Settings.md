@@ -38,3 +38,10 @@ OBJ carries no rig or animation. It is fine for static meshes.
 
 ## Not verified
 Studio import of these files. **Next step for a human or agent with Studio:** import `chest_premium.fbx` and `chest_premium.glb` with Scale Unit = Stud and check they come in about 2.7 studs wide.
+
+## Sources
+Accessed 2026-10-24. Roblox pages from the creator-docs repository (commit 4e795e6); Blender pages from the 5.2 LTS manual (the URLs use `latest`, which served 5.2 on that date).
+- [Export requirements](https://create.roblox.com/docs/art/modeling/export-requirements)
+- [glTF export](https://create.roblox.com/docs/art/modeling/gltf-export)
+- [Use Blender with Roblox](https://create.roblox.com/docs/art/blender)
+- [bpy 5.2.3 on PyPI](https://pypi.org/project/bpy/) — operator and property names confirmed by introspection in this environment

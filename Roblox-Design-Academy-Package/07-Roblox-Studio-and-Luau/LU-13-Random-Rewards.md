@@ -43,3 +43,7 @@ Implications for this module: `odds()` provides the base percentages. If pity or
 - Rolling on the client.
 - `math.random(1,100) <= 5` scattered through code instead of one table that drives both odds and display.
 - Reusing the same `Random` seed across servers.
+
+## Sources
+Accessed 2026-10-24. Roblox pages from the creator-docs repository (commit 4e795e6); Blender pages from the 5.2 LTS manual (the URLs use `latest`, which served 5.2 on that date).
+- [Paid random items policy](https://create.roblox.com/docs/production/monetization/paid-random-items)

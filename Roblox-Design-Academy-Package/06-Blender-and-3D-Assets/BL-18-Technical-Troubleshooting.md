@@ -25,3 +25,10 @@ evidence: "mix: real failures from this session (marked ✅) and documented issu
 | Textures missing after import | Not embedded | Path Mode Copy + Embed Textures | 📄 export-requirements |
 | Two materials on one mesh | Roblox allows one per mesh | Split by material or use a palette texture | 📄 texture-specifications; ✅ BL-EX-07 |
 | Old tutorial says "Auto Smooth checkbox" | Removed in Blender 4.1 | Shade Auto Smooth (Smooth by Angle modifier) | ✅ bpy 5.2.3 introspection |
+
+## Sources
+Accessed 2026-10-24. Roblox pages from the creator-docs repository (commit 4e795e6); Blender pages from the 5.2 LTS manual (the URLs use `latest`, which served 5.2 on that date).
+- [Export requirements](https://create.roblox.com/docs/art/modeling/export-requirements)
+- [Mesh specifications](https://create.roblox.com/docs/art/modeling/specifications)
+- Blender manual: [Editing Normals](https://docs.blender.org/manual/en/latest/modeling/meshes/editing/mesh/normals.html)
+- [bpy 5.2.3 on PyPI](https://pypi.org/project/bpy/) — operator and property names confirmed by introspection in this environment

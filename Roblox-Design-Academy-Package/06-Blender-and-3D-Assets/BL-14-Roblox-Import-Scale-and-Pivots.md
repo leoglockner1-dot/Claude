@@ -31,3 +31,10 @@ Import > choose the file > *Insert Using Scene Position* as needed > World Forwa
 
 ## Acceptance criteria
 QC pivot check passes (or the assembly pivot is reported); round trip matches; the Studio preview shows the right size next to an avatar.
+
+## Sources
+Accessed 2026-10-24. Roblox pages from the creator-docs repository (commit 4e795e6); Blender pages from the 5.2 LTS manual (the URLs use `latest`, which served 5.2 on that date).
+- [Units](https://create.roblox.com/docs/physics/units)
+- [Use Blender with Roblox](https://create.roblox.com/docs/art/blender)
+- [Meshes (MeshPart, fidelity, name suffixes)](https://create.roblox.com/docs/parts/meshes)
+- [bpy 5.2.3 on PyPI](https://pypi.org/project/bpy/) — operator and property names confirmed by introspection in this environment

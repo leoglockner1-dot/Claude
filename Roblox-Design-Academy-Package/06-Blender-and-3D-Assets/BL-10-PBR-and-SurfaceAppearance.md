@@ -26,3 +26,9 @@ Many successful Roblox styles use flat colours or simple gradients with no PBR a
 
 ## Not verified here
 None of the academy's exercise assets use PBR maps. This note is documentation-based; a PBR exercise in Studio is listed in [Remaining gaps](../00-Start-Here/Research-Tracker.md).
+
+## Sources
+Accessed 2026-10-24. Roblox pages from the creator-docs repository (commit 4e795e6); Blender pages from the 5.2 LTS manual (the URLs use `latest`, which served 5.2 on that date).
+- [SurfaceAppearance](https://create.roblox.com/docs/art/modeling/surface-appearance)
+- [Assign textures](https://create.roblox.com/docs/art/modeling/assign-textures)
+- [Texture specifications](https://create.roblox.com/docs/art/modeling/texture-specifications)

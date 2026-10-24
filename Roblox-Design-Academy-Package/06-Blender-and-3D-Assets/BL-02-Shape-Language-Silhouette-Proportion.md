@@ -36,3 +36,6 @@ See [BL-EX-04](Exercises/BL-EX-04-Treasure-Chests.md) and [BL-EX-01](Exercises/B
 
 ## Acceptance criteria
 The silhouette at the gameplay angle identifies the object to someone who was not told what it is; the 64 px version is still distinct from the neighbouring assets in the same set.
+
+## Sources
+No external source: this note is the academy's own method, applied and tested in the linked exercises.

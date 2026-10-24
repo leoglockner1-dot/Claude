@@ -35,3 +35,9 @@ Details: [FC-BL-03](../15-Anti-Patterns-and-Failure-Cases/Failures/FC-BL-03-Ngon
 
 ## Acceptance criteria
 QC: 0 n-gons, 0 non-manifold edges, 0 inward faces, 0 loose vertices; deforming meshes show loops at every joint.
+
+## Sources
+Accessed 2026-10-24. Roblox pages from the creator-docs repository (commit 4e795e6); Blender pages from the 5.2 LTS manual (the URLs use `latest`, which served 5.2 on that date).
+- [Mesh specifications](https://create.roblox.com/docs/art/modeling/specifications)
+- Blender manual: [Mesh Structure](https://docs.blender.org/manual/en/latest/modeling/meshes/structure.html)
+- Blender manual: [Editing Normals](https://docs.blender.org/manual/en/latest/modeling/meshes/editing/mesh/normals.html)

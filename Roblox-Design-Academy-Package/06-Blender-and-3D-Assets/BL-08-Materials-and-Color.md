@@ -27,3 +27,8 @@ evidence: "Roblox docs + executed palette exercise (BL-EX-07)"
 
 ## Acceptance criteria
 ≤ 1 material per mesh (QC); colour roles distinguishable in greyscale; any palette PNG is generated from the same source values as the materials.
+
+## Sources
+Accessed 2026-10-24. Roblox pages from the creator-docs repository (commit 4e795e6); Blender pages from the 5.2 LTS manual (the URLs use `latest`, which served 5.2 on that date).
+- [Assign textures](https://create.roblox.com/docs/art/modeling/assign-textures)
+- [SurfaceAppearance](https://create.roblox.com/docs/art/modeling/surface-appearance)

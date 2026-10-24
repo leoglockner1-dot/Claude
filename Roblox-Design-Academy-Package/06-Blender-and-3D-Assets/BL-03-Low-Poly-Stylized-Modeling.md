@@ -30,3 +30,9 @@ In [BL-EX-01](Exercises/BL-EX-01-Stylized-Rocks.md), the same noise displacement
 
 ## Acceptance criteria
 Passes [BL-20](BL-20-Modeling-Quality-Framework.md) visual and geometry categories; triangle count noted.
+
+## Sources
+Accessed 2026-10-24. Roblox pages from the creator-docs repository (commit 4e795e6); Blender pages from the 5.2 LTS manual (the URLs use `latest`, which served 5.2 on that date).
+- [Mesh specifications](https://create.roblox.com/docs/art/modeling/specifications)
+- Blender manual: [Mesh Structure](https://docs.blender.org/manual/en/latest/modeling/meshes/structure.html)
+- Blender manual: [Shading (object)](https://docs.blender.org/manual/en/latest/scene_layout/object/editing/shading.html)

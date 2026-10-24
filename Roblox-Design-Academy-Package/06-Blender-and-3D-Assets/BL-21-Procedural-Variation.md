@@ -30,3 +30,8 @@ Every unique mesh is a separate asset and loses instancing with its siblings ([B
 
 ## Acceptance criteria
 At most ~5 meshes per prop family; each archetype passes [BL-20](BL-20-Modeling-Quality-Framework.md); the scene shows no obvious repetition from normal camera positions.
+
+## Sources
+Accessed 2026-10-24. Roblox pages from the creator-docs repository (commit 4e795e6); Blender pages from the 5.2 LTS manual (the URLs use `latest`, which served 5.2 on that date).
+- [Meshes (MeshPart, fidelity, name suffixes)](https://create.roblox.com/docs/parts/meshes)
+- [Improve performance](https://create.roblox.com/docs/performance-optimization/improve)

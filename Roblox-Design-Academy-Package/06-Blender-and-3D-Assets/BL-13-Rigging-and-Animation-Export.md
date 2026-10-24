@@ -27,3 +27,10 @@ Often you need **no armature**: export separate parts with pivots at their hinge
 
 ## Tested here
 [BL-EX-11 Animated pickup](Exercises/BL-EX-11-Animated-Pickup.md) exports a keyframed spin+bob as FBX and checks that the animation survives a re-import in Blender. Studio import of that animation was **not** tested.
+
+## Sources
+Accessed 2026-10-24. Roblox pages from the creator-docs repository (commit 4e795e6); Blender pages from the 5.2 LTS manual (the URLs use `latest`, which served 5.2 on that date).
+- [Character body specifications](https://create.roblox.com/docs/avatar/character-bodies/specifications)
+- [Use animations](https://create.roblox.com/docs/animation/using)
+- [Export requirements](https://create.roblox.com/docs/art/modeling/export-requirements)
+- [bpy 5.2.3 on PyPI](https://pypi.org/project/bpy/) — operator and property names confirmed by introspection in this environment

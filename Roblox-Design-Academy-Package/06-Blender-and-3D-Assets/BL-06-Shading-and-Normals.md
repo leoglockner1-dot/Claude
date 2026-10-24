@@ -28,3 +28,10 @@ evidence: "Blender 5.2 manual + bpy introspection"
 
 ## Roblox note
 Studio renders the normals stored in the imported mesh. Whether custom normals survive import exactly was **not verified** here. Inspect in Studio under the game's lighting.
+
+## Sources
+Accessed 2026-10-24. Roblox pages from the creator-docs repository (commit 4e795e6); Blender pages from the 5.2 LTS manual (the URLs use `latest`, which served 5.2 on that date).
+- Blender manual: [Shading (object)](https://docs.blender.org/manual/en/latest/scene_layout/object/editing/shading.html)
+- Blender manual: [Editing Normals](https://docs.blender.org/manual/en/latest/modeling/meshes/editing/mesh/normals.html)
+- Blender manual: [Weighted Normal Modifier](https://docs.blender.org/manual/en/latest/modeling/modifiers/normals/weighted_normal.html)
+- [bpy 5.2.3 on PyPI](https://pypi.org/project/bpy/) — operator and property names confirmed by introspection in this environment

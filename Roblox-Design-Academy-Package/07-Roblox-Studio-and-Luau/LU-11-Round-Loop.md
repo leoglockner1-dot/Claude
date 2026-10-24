@@ -41,3 +41,7 @@ Full cycle with ordered transition events; mid-round drop → Results → Waitin
 
 ## Acceptance criteria
 Tests pass; a 2-client Studio test cycles twice without errors; a client leaving mid-round ends it.
+
+## Sources
+Accessed 2026-10-24. Roblox pages from the creator-docs repository (commit 4e795e6); Blender pages from the 5.2 LTS manual (the URLs use `latest`, which served 5.2 on that date).
+- [Add rounds (tutorial)](https://create.roblox.com/docs/tutorials/curriculums/gameplay-scripting/add-rounds)

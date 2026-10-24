@@ -45,3 +45,8 @@ Runtime here (software EEVEE, 4 cores): ~6–8 min for the chest exercise, ~12 m
 
 ## Procedural generation, used well
 See [BL-21](BL-21-Procedural-Variation.md). Automate the **repetitive** work (camera rigs, exports, QC, batch renders, variations of one designed asset). Leave the design decisions to a person or a critiqued loop.
+
+## Sources
+Accessed 2026-10-24. Roblox pages from the creator-docs repository (commit 4e795e6); Blender pages from the 5.2 LTS manual (the URLs use `latest`, which served 5.2 on that date).
+- [bpy 5.2.3 on PyPI](https://pypi.org/project/bpy/) — operator and property names confirmed by introspection in this environment
+- Tested code: `_tools/blender/` in this package.
