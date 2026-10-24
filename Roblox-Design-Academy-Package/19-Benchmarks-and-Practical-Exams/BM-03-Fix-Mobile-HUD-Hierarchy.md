@@ -49,7 +49,17 @@ status: "executed"
 Run the [Self-Critique Loop](../18-Skill-Training/Self-Critique-Loop.md): state the criteria **before** looking at the result, inspect the output (not your intention), and log every failed version.
 
 ## Academy run and evidence
-Before: 11 issues on the phone, 8 on the tablet (currency under the Roblox top-left buttons, shop, quest and rebirth in the thumbstick zone, sprint on the jump button, 9 px text, 26 px tap targets, info panels covering 21.6%). After v1: 0 issues; **but visual review** found that quest progress showed only as small "12 / 25" text and that the checker never tested elements against each other. v2 added a progress bar and an element-overlap check: 0 issues, info area 6.3% (phone) and 2.6% (tablet). Screenshots and JSON: [../Assets/Original/UI/BM-03/](../Assets/Original/UI/BM-03/bm03_results.json). **Limits:** the zones are eyeballed from one phone illustration and scaled by percentage to the tablet, where the real controls are probably fixed-size. HTML is not Roblox UI, so this trains layout judgement, not Studio implementation.
+Before: 11 issues on the phone, 8 on the tablet (currency under the Roblox top-left buttons, shop, quest and rebirth in the thumbstick zone, sprint on the jump button, 9 px text, 26 px tap targets, info panels covering 21.6%). After v1: 0 issues; **but visual review** found that quest progress showed only as small "12 / 25" text and that the checker never tested elements against each other. v2 added a progress bar and an element-overlap check: 0 issues, info area 6.3% (phone) and 2.6% (tablet). Measurements: [bm03_results.json](../Assets/Original/UI/BM-03/bm03_results.json). Cyan dashed areas = reserved zones as measured.
+
+![Before, phone](../Assets/Original/UI/BM-03/bm03_before_phone-landscape-844x390.png)
+*Before, 844×390: 11 issues.*
+
+![After v2, phone](../Assets/Original/UI/BM-03/bm03_after_phone-landscape-844x390.png)
+*After v2, 844×390: 0 issues.*
+
+Tablet: [before](../Assets/Original/UI/BM-03/bm03_before_tablet-landscape-1024x768.png) · [after v2](../Assets/Original/UI/BM-03/bm03_after_tablet-landscape-1024x768.png).
+
+ **Limits:** the zones are eyeballed from one phone illustration and scaled by percentage to the tablet, where the real controls are probably fixed-size. HTML is not Roblox UI, so this trains layout judgement, not Studio implementation.
 
 ## Related
 - [TUT-11 UI hierarchy](../16-Tutorials-and-Workflows/TUT-11-UI-Visual-Hierarchy-and-Wireframes.md)
