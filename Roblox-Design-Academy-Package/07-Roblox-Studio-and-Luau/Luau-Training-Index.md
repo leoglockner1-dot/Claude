@@ -10,7 +10,7 @@ Practical procedures for building Roblox systems that are **correct, secure, tes
 
 ## How this section is different from a snippet collection
 - The core logic lives in **tested, strict-typed modules** in [`_tools/luau/src/`](../_tools/luau/src/). They have no engine dependencies, so they run in the standalone Luau CLI. [`run_tests.sh`](../_tools/luau/run_tests.sh) type-checks every file with `luau-analyze` and runs the suite.
-- **Last verified run (2026-10-24):** Luau CLI built from `luau-lang/luau` commit `32c2808`. `luau-analyze`: 0 type errors. Tests: **53 passed, 0 failed**.
+- **Last verified run (2026-10-24):** Luau CLI built from `luau-lang/luau` commit `32c2808`. `luau-analyze`: 0 type errors. Tests: **54 passed, 0 failed** (module specs) + **6 passed, 0 failed** (`tests/tutorial_repros.luau`, reproductions of two official-tutorial defects, see [TUT-01](../16-Tutorials-and-Workflows/TUT-01-Upgrade-Button-Server-Purchase.md) and [TUT-13](../16-Tutorials-and-Workflows/TUT-13-Save-Player-Data-Safely.md)).
 - Engine wiring stays thin and is shown in each note. It was **not executed**, because Roblox Studio is not available in this environment. Treat it as reviewed code that you still have to playtest in Studio.
 - Facts about Roblox come from the Roblox Creator Docs source (`Roblox/creator-docs`, commit `4e795e6`, read 2026-10-24). Links point to create.roblox.com.
 

@@ -27,6 +27,7 @@ Every A entry records the problem, context, symptoms, cause, correction, how it 
 | [FC-QA-01](Failures/FC-QA-01-Validator-Blind-Spots.md) | QA tooling | Three of my own checks gave false results | Validate the validator |
 | [FC-ART-01](Failures/FC-ART-01-Pre-Written-Critique.md) | Process | Critique written before seeing the render | Critique follows evidence |
 | [FC-WF-01](Failures/FC-WF-01-Pkill-Matched-Own-Shell.md) | Workflow | `pkill -f` killed its own launcher | Kill by PID |
+| [FC-RES-01](Failures/FC-RES-01-Assumed-Engine-Guarantee.md) | Research / security | Draft claimed a prompt trigger proves proximity; the security docs say otherwise | Check security pages before stating engine guarantees |
 | [FC-DATA-01](Failures/FC-DATA-01-Lost-Gitignored-Assets.md) | Workflow / assets | 367 gitignored media files lost | Anything uncommittable needs a committed rebuild path |
 
 Also recorded inside the exercise notes (each with before/after evidence):
@@ -52,6 +53,8 @@ Also recorded inside the exercise notes (each with before/after evidence):
 | Luau security | NaN bypassing range checks in a trade system (Roblox docs example) | [LU-05](../07-Roblox-Studio-and-Luau/LU-05-Server-Validation.md) |
 | Performance | Duplicate mesh ids preventing instancing; leaked connections on Player objects (Roblox docs) | [LU-23](../07-Roblox-Studio-and-Luau/LU-23-Performance-Profiling.md), [LU-20](../07-Roblox-Studio-and-Luau/LU-20-Signals-and-Cleanup.md) |
 | Data | Saving defaults over real data after a failed load (widely reported pattern; Roblox's sample guards against it with session locking) | [LU-08](../07-Roblox-Studio-and-Luau/LU-08-Player-Data-Persistence.md) |
+| Official tutorial code | *Script an upgrade button*: coin check before a yield, deduction after it (two purchases pass) | [TUT-01](../16-Tutorials-and-Workflows/TUT-01-Upgrade-Button-Server-Purchase.md) — **reproduced by us in a Luau simulation** |
+| Official tutorial code | *Save player data*: a failed load followed by collecting gold lets autosave overwrite the real save (500 → 10) | [TUT-13](../16-Tutorials-and-Workflows/TUT-13-Save-Player-Data-Safely.md) — **reproduced by us in a Luau simulation** |
 More documented cases from the game-design research: [Core Loop Failure Cases](../03-Core-Gameplay-Loops/Core-Loop-Failure-Cases.md).
 
 ## C. Generalized anti-patterns

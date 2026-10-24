@@ -11,4 +11,5 @@ for f in src/*.luau mocks/*.luau tests/*.luau; do
 done
 [ $status -eq 0 ] && echo "luau-analyze: 0 type errors"
 "$LUAU" tests/run_all.luau || status=1
+"$LUAU" tests/tutorial_repros.luau || status=1
 exit $status
