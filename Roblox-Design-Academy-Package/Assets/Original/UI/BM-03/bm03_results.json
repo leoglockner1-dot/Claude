@@ -1,0 +1,363 @@
+{
+ "zones": {
+  "coreTopLeft": {
+   "x0": 0.058,
+   "y0": 0.013,
+   "x1": 0.294,
+   "y1": 0.13
+  },
+  "thumbstick": {
+   "x0": 0,
+   "y0": 0.43,
+   "x1": 0.406,
+   "y1": 1
+  },
+  "jump": {
+   "cx": 0.868,
+   "cy": 0.832,
+   "rH": 0.1
+  }
+ },
+ "rules": {
+  "minFontPx": 12,
+  "minTapPx": 44,
+  "maxInfoAreaPct": 15,
+  "thumbReachH": 0.35
+ },
+ "results": [
+  {
+   "file": "bm03_before.html",
+   "viewport": "phone-landscape-844x390",
+   "elements": [
+    {
+     "id": "currency",
+     "rect": [
+      8,
+      8,
+      210,
+      40
+     ],
+     "minFont": 18
+    },
+    {
+     "id": "quest",
+     "rect": [
+      160,
+      86,
+      523,
+      120
+     ],
+     "minFont": 11
+    },
+    {
+     "id": "shop",
+     "rect": [
+      24,
+      302,
+      64,
+      64
+     ],
+     "minFont": 13
+    },
+    {
+     "id": "sprint",
+     "rect": [
+      704,
+      280,
+      70,
+      70
+     ],
+     "minFont": 13
+    },
+    {
+     "id": "settings",
+     "rect": [
+      802,
+      16,
+      26,
+      26
+     ],
+     "minFont": 9
+    },
+    {
+     "id": "rebirth",
+     "rect": [
+      342,
+      350,
+      160,
+      30
+     ],
+     "minFont": 9
+    }
+   ],
+   "infoAreaPct": 21.6,
+   "issues": [
+    [
+     "currency",
+     "overlaps Roblox top-left core UI"
+    ],
+    [
+     "quest",
+     "inside thumbstick zone"
+    ],
+    [
+     "quest",
+     "font 11px < 12px"
+    ],
+    [
+     "shop",
+     "inside thumbstick zone"
+    ],
+    [
+     "sprint",
+     "overlaps jump button"
+    ],
+    [
+     "settings",
+     "font 9px < 12px"
+    ],
+    [
+     "settings",
+     "tap target 26px < 44px"
+    ],
+    [
+     "rebirth",
+     "inside thumbstick zone"
+    ],
+    [
+     "rebirth",
+     "font 9px < 12px"
+    ],
+    [
+     "rebirth",
+     "tap target 30px < 44px"
+    ],
+    [
+     "(info panels)",
+     "cover 21.6% of screen > 15%"
+    ]
+   ],
+   "screenshot": "bm03_before_phone-landscape-844x390.png"
+  },
+  {
+   "file": "bm03_before.html",
+   "viewport": "tablet-landscape-1024x768",
+   "elements": [
+    {
+     "id": "currency",
+     "rect": [
+      8,
+      8,
+      210,
+      40
+     ],
+     "minFont": 18
+    },
+    {
+     "id": "quest",
+     "rect": [
+      195,
+      169,
+      635,
+      120
+     ],
+     "minFont": 11
+    },
+    {
+     "id": "shop",
+     "rect": [
+      24,
+      680,
+      64,
+      64
+     ],
+     "minFont": 13
+    },
+    {
+     "id": "sprint",
+     "rect": [
+      884,
+      658,
+      70,
+      70
+     ],
+     "minFont": 13
+    },
+    {
+     "id": "settings",
+     "rect": [
+      982,
+      16,
+      26,
+      26
+     ],
+     "minFont": 9
+    },
+    {
+     "id": "rebirth",
+     "rect": [
+      432,
+      728,
+      160,
+      30
+     ],
+     "minFont": 9
+    }
+   ],
+   "infoAreaPct": 10.8,
+   "issues": [
+    [
+     "currency",
+     "overlaps Roblox top-left core UI"
+    ],
+    [
+     "quest",
+     "font 11px < 12px"
+    ],
+    [
+     "shop",
+     "inside thumbstick zone"
+    ],
+    [
+     "sprint",
+     "overlaps jump button"
+    ],
+    [
+     "settings",
+     "font 9px < 12px"
+    ],
+    [
+     "settings",
+     "tap target 26px < 44px"
+    ],
+    [
+     "rebirth",
+     "font 9px < 12px"
+    ],
+    [
+     "rebirth",
+     "tap target 30px < 44px"
+    ]
+   ],
+   "screenshot": "bm03_before_tablet-landscape-1024x768.png"
+  },
+  {
+   "file": "bm03_after.html",
+   "viewport": "phone-landscape-844x390",
+   "elements": [
+    {
+     "id": "currency",
+     "rect": [
+      341,
+      10,
+      163,
+      40
+     ],
+     "minFont": 20
+    },
+    {
+     "id": "quest",
+     "rect": [
+      533,
+      86,
+      210,
+      67
+     ],
+     "minFont": 12
+    },
+    {
+     "id": "shop",
+     "rect": [
+      732,
+      10,
+      48,
+      48
+     ],
+     "minFont": 12
+    },
+    {
+     "id": "sprint",
+     "rect": [
+      610,
+      292,
+      64,
+      64
+     ],
+     "minFont": 13
+    },
+    {
+     "id": "settings",
+     "rect": [
+      788,
+      10,
+      46,
+      46
+     ],
+     "minFont": 18
+    }
+   ],
+   "infoAreaPct": 6.3,
+   "issues": [],
+   "screenshot": "bm03_after_phone-landscape-844x390.png"
+  },
+  {
+   "file": "bm03_after.html",
+   "viewport": "tablet-landscape-1024x768",
+   "elements": [
+    {
+     "id": "currency",
+     "rect": [
+      431,
+      10,
+      163,
+      40
+     ],
+     "minFont": 20
+    },
+    {
+     "id": "quest",
+     "rect": [
+      691,
+      169,
+      210,
+      67
+     ],
+     "minFont": 12
+    },
+    {
+     "id": "shop",
+     "rect": [
+      912,
+      10,
+      48,
+      48
+     ],
+     "minFont": 12
+    },
+    {
+     "id": "sprint",
+     "rect": [
+      728,
+      607,
+      64,
+      64
+     ],
+     "minFont": 13
+    },
+    {
+     "id": "settings",
+     "rect": [
+      968,
+      10,
+      46,
+      46
+     ],
+     "minFont": 18
+    }
+   ],
+   "infoAreaPct": 2.6,
+   "issues": [],
+   "screenshot": "bm03_after_tablet-landscape-1024x768.png"
+  }
+ ]
+}

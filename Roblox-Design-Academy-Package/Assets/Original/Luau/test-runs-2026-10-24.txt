@@ -1,0 +1,20 @@
+# BM-02 run, 2026-10-24, Luau CLI commit 32c2808
+$ luau benchmarks/bm02_spec.luau
+FAIL BM-02 DailyReward (buggy) > D1a: refuses NaN time
+    ./benchmarks/bm02_spec.luau:26: expected falsy, got true
+FAIL BM-02 DailyReward (buggy) > D1b: refuses infinite time
+    ./benchmarks/bm02_spec.luau:29: expected falsy, got true
+FAIL BM-02 DailyReward (buggy) > D2: streak resets at exactly STREAK_WINDOW
+    ./benchmarks/bm02_spec.luau:33: values differ: expected 1, got 2
+FAIL BM-02 DailyReward (buggy) > D3: first claim pays BASE (reward uses the new streak)
+    ./benchmarks/bm02_spec.luau:37: values differ: expected 50, got 0
+FAIL BM-02 DailyReward (buggy) > D4: reward is capped at MAX_STREAK
+    ./benchmarks/bm02_spec.luau:46: values differ: expected 350, got 450
+FAIL BM-02 DailyReward (buggy) > D5: does not modify the state it is given
+    ./benchmarks/bm02_spec.luau:51: values differ: expected 0, got 1
+12 passed, 6 failed
+
+$ bash run_tests.sh
+luau-analyze: 0 type errors
+54 passed, 0 failed
+6 passed, 0 failed

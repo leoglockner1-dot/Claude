@@ -5,7 +5,7 @@ set -u
 BIN="${1:-}"; LUAU="${BIN:+$BIN/}luau"; ANALYZE="${BIN:+$BIN/}luau-analyze"
 cd "$(dirname "$0")"
 status=0
-for f in src/*.luau mocks/*.luau tests/*.luau; do
+for f in src/*.luau mocks/*.luau tests/*.luau benchmarks/*.luau; do
   out=$("$ANALYZE" "$f" 2>&1)
   if echo "$out" | grep -q "Error"; then echo "TYPE ERRORS in $f"; echo "$out" | grep -A2 "Error"; status=1; fi
 done

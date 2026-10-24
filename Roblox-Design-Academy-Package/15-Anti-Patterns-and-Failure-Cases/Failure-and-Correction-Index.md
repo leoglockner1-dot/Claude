@@ -55,6 +55,7 @@ Also recorded inside the exercise notes (each with before/after evidence):
 | Data | Saving defaults over real data after a failed load (widely reported pattern; Roblox's sample guards against it with session locking) | [LU-08](../07-Roblox-Studio-and-Luau/LU-08-Player-Data-Persistence.md) |
 | Official tutorial code | *Script an upgrade button*: coin check before a yield, deduction after it (two purchases pass) | [TUT-01](../16-Tutorials-and-Workflows/TUT-01-Upgrade-Button-Server-Purchase.md) — **reproduced by us in a Luau simulation** |
 | Official tutorial code | *Save player data*: a failed load followed by collecting gold lets autosave overwrite the real save (500 → 10) | [TUT-13](../16-Tutorials-and-Workflows/TUT-13-Save-Player-Data-Safely.md) — **reproduced by us in a Luau simulation** |
+| Core loop / retention | Six developer post-mortems from the DevForum (retention collapse, repetitive loop, feature sprawl, generic first impression, tutorial money gap, engaged core with low D1) | [FC-GD-01…06](../03-Core-Gameplay-Loops/Core-Loop-Failure-Cases.md) (files in `Failures-Documented/`) |
 More documented cases from the game-design research: [Core Loop Failure Cases](../03-Core-Gameplay-Loops/Core-Loop-Failure-Cases.md).
 
 ## C. Generalized anti-patterns

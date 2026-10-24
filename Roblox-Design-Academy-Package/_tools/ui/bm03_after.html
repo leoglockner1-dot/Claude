@@ -1,0 +1,33 @@
+<!doctype html><html><head><meta charset="utf-8"><title>BM-03 after</title><link rel="stylesheet" href="hud_common.css">
+<style>
+/* Top-centre: currency (clear of the top-left core UI). Top-right: settings, clear of the notch side by the safe inset. */
+#currency { left: 50%; top: 10px; transform: translateX(-50%); padding: 6px 14px; height: 40px; font-size: 20px; }
+/* Quest collapsed to one line + progress, right edge, above the jump area. */
+#quest { right: 12%; top: 22%; width: 210px; padding: 8px 10px; font-size: 14px; }
+#quest .bar { height: 8px; margin-top: 6px; border-radius: 4px; background: rgba(255,255,255,.18); overflow: hidden; }
+#quest .bar i { display: block; height: 100%; width: 48%; background: #7fe3ff; }
+#quest small { display: block; font-size: 12px; opacity: .85; margin-top: 3px; text-align: right; }
+/* Sprint: primary action placed relative to the jump button (left of it, within right-thumb reach). */
+#sprint { width: 64px; height: 64px; font-size: 13px; }
+/* Shop: secondary, top-right cluster (rarely used, not in the thumbstick zone). */
+#shop { right: 64px; top: 10px; width: 48px; height: 48px; font-size: 12px; }
+#settings { right: 10px; top: 10px; width: 46px; height: 46px; font-size: 18px; }
+/* Rebirth: moved into the shop screen (not on the HUD). */
+</style></head><body>
+<div id="currency" class="hud panel" data-role="info" data-priority="2">🔥 12.5K Heat</div>
+<div id="quest" class="hud panel" data-role="info" data-priority="3">Feed Frost Salamanders<div class="bar"><i></i></div><small>12 / 25</small></div>
+<div id="shop" class="hud btn secondary" data-role="action" data-priority="2">SHOP</div>
+<div id="sprint" class="hud btn primary" data-role="action" data-priority="1">SPRINT</div>
+<div id="settings" class="hud btn secondary" data-role="action" data-priority="4">⚙</div>
+<script>
+// Place SPRINT 20 px left of the jump button, mirroring the relative-positioning approach in the Roblox docs.
+// The jump button centre/radius here are the approximate values measured from the docs illustration (see bm03_check.js).
+function place() {
+  const W = innerWidth, H = innerHeight, r = 0.10 * H, cx = 0.868 * W, cy = 0.832 * H;
+  const s = document.getElementById('sprint'), size = 64;
+  s.style.left = (cx - r - 20 - size) + 'px';
+  s.style.top = (cy - size / 2) + 'px';
+}
+place(); addEventListener('resize', place);
+</script>
+</body></html>
