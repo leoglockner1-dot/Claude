@@ -1,0 +1,92 @@
+{
+ "sounds": {
+  "AV-01_button_press": {
+   "duration_s": 0.07,
+   "peak_dbfs": -3.0,
+   "spectral_centroid_hz": 1482,
+   "onsets_s": []
+  },
+  "AV-03_coin_pickup_streak": {
+   "duration_s": 0.62,
+   "peak_dbfs": -3.0,
+   "spectral_centroid_hz": 2354,
+   "onsets_s": [
+    0.11,
+    0.22,
+    0.33,
+    0.44
+   ]
+  },
+  "AV-04_purchase_confirm": {
+   "duration_s": 0.47,
+   "peak_dbfs": -3.0,
+   "spectral_centroid_hz": 2303,
+   "onsets_s": []
+  },
+  "AV-05_error_denied": {
+   "duration_s": 0.16,
+   "peak_dbfs": -3.0,
+   "spectral_centroid_hz": 301,
+   "onsets_s": []
+  },
+  "AV-06_level_up": {
+   "duration_s": 0.9,
+   "peak_dbfs": -3.0,
+   "spectral_centroid_hz": 2168,
+   "onsets_s": []
+  },
+  "AV-07_rare_reveal": {
+   "duration_s": 1.81,
+   "peak_dbfs": -3.0,
+   "spectral_centroid_hz": 4702,
+   "onsets_s": [
+    1.2
+   ]
+  },
+  "AV-08_impact_light": {
+   "duration_s": 0.09,
+   "peak_dbfs": -3.0,
+   "spectral_centroid_hz": 2942,
+   "onsets_s": []
+  },
+  "AV-08_impact_heavy": {
+   "duration_s": 0.43,
+   "peak_dbfs": -3.0,
+   "spectral_centroid_hz": 903,
+   "onsets_s": []
+  },
+  "AV-13_victory": {
+   "duration_s": 0.9,
+   "peak_dbfs": -3.0,
+   "spectral_centroid_hz": 1703,
+   "onsets_s": []
+  },
+  "AV-14_defeat": {
+   "duration_s": 1.95,
+   "peak_dbfs": -3.0,
+   "spectral_centroid_hz": 385,
+   "onsets_s": [
+    0.51
+   ]
+  }
+ },
+ "previews": {
+  "AV-01_button_press.gif": {
+   "frames": 33,
+   "fps": 60,
+   "min_scale": 0.9401,
+   "max_scale": 1.006
+  },
+  "AV-02_reward_pop.gif": {
+   "frames": 27,
+   "fps": 30,
+   "pop_duration_s": 0.25
+  },
+  "AV-03_coin_burst.gif": {
+   "frames": 33,
+   "fps": 30,
+   "coins": 14,
+   "spread_deg": 60
+  }
+ }
+}
