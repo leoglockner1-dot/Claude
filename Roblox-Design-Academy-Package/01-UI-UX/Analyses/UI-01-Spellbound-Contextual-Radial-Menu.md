@@ -58,4 +58,4 @@ A crafting game: one "Workbench" button that fans out Recipes / Materials / Upgr
 The opening animation, sound and the gamepad/keyboard equivalents were not observable. "Selected" is inferred from the cursor and the doc alt text.
 
 ## Related
-[HUD Design](../HUD-Layouts.md) · [Menus and Navigation](../Menus-and-Navigation.md) · [Mobile UI](../Mobile-Controller-and-Accessibility.md) · [UI Design Principles](../../14-Design-Principles/UI-Principles.md)
+[HUD Design](../HUD-Layouts.md) · [Menus and Navigation](../Menus-and-Navigation.md) · [Mobile UI](../Mobile-Controller-and-Accessibility.md) · [UI Design Principles](../../17-Design-Principles/UI-Principles.md)

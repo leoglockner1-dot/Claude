@@ -15,16 +15,16 @@ note_type: "start-here"
 | A. UI/UX — social interfaces, matchmaking, limited-time events UI | **Weak** | Season pass (UI-04), lobby voting (UI-24); no direct captures of social/matchmaking UIs of top games | [Menus and Navigation](../01-UI-UX/Menus-and-Navigation.md) |
 | B. Thumbnails & icons | **Strong** | 30 analyses, 85-game chart study, brief template, composition checklist | [Thumbnail Principles](../02-Thumbnails-and-Icons/Thumbnail-Principles.md) |
 | C. Core loops & game feel (first 10 s/1 min) | **Medium** | 18 case studies (inferred loops), funnel evidence, framework; no gameplay played/watched | [Core Loop Framework](../03-Core-Gameplay-Loops/Core-Loop-Framework.md) |
-| D. Progression, rewards, economy | **Strong (data) / Medium (design)** | 1,041-pass study, odds policy, reward presentation | [Game Pass Economy Study](../04-Progression-and-Economy/Game-Pass-Economy-Study.md) |
-| E. Animation, VFX, game feel | **Medium-Strong** | 19 video notes with measured timing; docs-only footage | [Timing Reference](../05-Animation-and-Game-Feel/Timing-Reference.md) |
-| F. Sound design | **Medium** | Measured (not listened) audio from 12 videos; recipes are synthesized | [Measured Audio Observations](../06-Sound-Design/Measured-Audio-Observations.md) |
-| G. Visual identity & art direction | **Medium-Strong** | Framework, style catalogue, identity analyses | [Visual Identity Framework](../07-Visual-Identity/Visual-Identity-Framework.md) |
-| H. Level design & environmental communication | **Weak** | 8 docs-based references; no level walkthroughs | [Environmental Communication](../08-Level-Design/Environmental-Communication.md) |
-| I. Onboarding & FTUE | **Strong** | Roblox guidance + 6 analyses + developer funnel data | [Onboarding Evidence From Developers](../09-Onboarding/Onboarding-Evidence-From-Developers.md) |
-| J. Social & multiplayer | **Medium** | Case studies, co-op thumbnails, low-population/bot guidance (largely synthesized) | [Cooperative and Social Design](../10-Multiplayer-Design/Cooperative-and-Social-Design.md) |
-| K. Technical constraints | **Strong** | 11 verified reference notes | [Roblox Platform Facts](../11-Roblox-Technical-Reference/Roblox-Platform-Facts.md) |
-| L. Anti-patterns | **Strong** | 28 anti-patterns with evidence + AI-look detection | [Anti Pattern Catalog](../12-Anti-Patterns-and-Design-Critique/Anti-Pattern-Catalog.md) |
-| M. External references | **Weak-Medium** | NN/g ×3, Apple HIG ×2; several sites inaccessible | [External Design Sources](../17-Source-Library/External-Design-Sources.md) |
+| D. Progression, rewards, economy | **Strong (data) / Medium (design)** | 1,041-pass study, odds policy, reward presentation | [Game Pass Economy Study](../05-Progression-and-Economy/Game-Pass-Economy-Study.md) |
+| E. Animation, VFX, game feel | **Medium-Strong** | 19 video notes with measured timing; docs-only footage | [Timing Reference](../08-Animation-and-Game-Feel/Timing-Reference.md) |
+| F. Sound design | **Medium** | Measured (not listened) audio from 12 videos; recipes are synthesized | [Measured Audio Observations](../10-Sound-Design/Measured-Audio-Observations.md) |
+| G. Visual identity & art direction | **Medium-Strong** | Framework, style catalogue, identity analyses | [Visual Identity Framework](../11-Visual-Identity/Visual-Identity-Framework.md) |
+| H. Level design & environmental communication | **Weak** | 8 docs-based references; no level walkthroughs | [Environmental Communication](../12-Level-Design/Environmental-Communication.md) |
+| I. Onboarding & FTUE | **Strong** | Roblox guidance + 6 analyses + developer funnel data | [Onboarding Evidence From Developers](../13-Onboarding-and-Multiplayer/Onboarding/Onboarding-Evidence-From-Developers.md) |
+| J. Social & multiplayer | **Medium** | Case studies, co-op thumbnails, low-population/bot guidance (largely synthesized) | [Cooperative and Social Design](../13-Onboarding-and-Multiplayer/Multiplayer/Cooperative-and-Social-Design.md) |
+| K. Technical constraints | **Strong** | 11 verified reference notes | [Roblox Platform Facts](../14-Technical-Reference/Roblox-Platform-Facts.md) |
+| L. Anti-patterns | **Strong** | 28 anti-patterns with evidence + AI-look detection | [Anti Pattern Catalog](../15-Anti-Patterns-and-Failure-Cases/Anti-Pattern-Catalog.md) |
+| M. External references | **Weak-Medium** | NN/g ×3, Apple HIG ×2; several sites inaccessible | [External Design Sources](../22-Source-Library/External-Design-Sources.md) |
 
 ## Coverage targets (requested vs actual)
 | Target | Requested | Actual |

@@ -40,4 +40,4 @@ A player stands next to a shell-shaped chair. A world-space prompt shows a gloss
 A haunted-house prompt rendered as a flickering candle with key glyph + "Light".
 
 ## Related
-[UI Design Principles](../../14-Design-Principles/UI-Principles.md) · [Mobile UI](../Mobile-Controller-and-Accessibility.md)
+[UI Design Principles](../../17-Design-Principles/UI-Principles.md) · [Mobile UI](../Mobile-Controller-and-Accessibility.md)

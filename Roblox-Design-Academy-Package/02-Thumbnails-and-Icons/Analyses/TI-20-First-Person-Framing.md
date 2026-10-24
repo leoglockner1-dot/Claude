@@ -41,7 +41,7 @@ date_accessed: "2026-10-24"
 
 ## What Does Not Work
 - It hides the avatar, which loses the "show off my avatar" social appeal Roblox notes is important for many players.
-- "Ages Offline!" is a feature claim in text. It's fine for still images, but the same overlay wouldn't be allowed in a video thumbnail ([FACT](../../11-Roblox-Technical-Reference/Roblox-Platform-Facts.md)).
+- "Ages Offline!" is a feature claim in text. It's fine for still images, but the same overlay wouldn't be allowed in a video thumbnail ([FACT](../../14-Technical-Reference/Roblox-Platform-Facts.md)).
 
 ## Reusable Design Rules
 1. For verb-centred games (driving, caring, crafting, shooting), try a **first-person thumbnail with hands performing the verb**.

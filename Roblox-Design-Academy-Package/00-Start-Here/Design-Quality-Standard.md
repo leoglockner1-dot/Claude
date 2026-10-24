@@ -18,4 +18,4 @@ A feature is **done** only when:
 
 Priority order when trading off (default, not law): core-loop clarity → moment-to-moment satisfaction → readability/responsiveness → meaningful progression → reward feedback → visual identity → UI polish → long-term replayability. Exceptions: in roleplay/social sandboxes, expression tools and identity may outrank progression; in horror, atmosphere may outrank UI polish.
 
-Quality gate: [CL 11 Final Quality Gate](../18-Checklists/CL-11-Final-Quality-Gate.md)
+Quality gate: [CL 11 Final Quality Gate](../23-Quality-Checklists/CL-11-Final-Quality-Gate.md)

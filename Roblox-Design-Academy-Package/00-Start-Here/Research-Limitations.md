@@ -17,7 +17,7 @@ note_type: "start-here"
 9. **Recommended durations** in recipes are hypotheses unless marked as measured.
 10. **Images of third-party games** are included for private study; do not republish.
 
-Full access log: [Access Log](../17-Source-Library/Access-Log.md)
+Full access log: [Access Log](../22-Source-Library/Access-Log.md)
 
 ## Highest-value next research (for whoever continues)
 - Capture current in-game UI of 20 top games (screenshots + 10 s clips with sound) — the main gap.

@@ -51,4 +51,4 @@ A music-maker game offering three themes (Day, Night, Neon) built on the same to
 High.
 
 ## Related
-[UI Layout and Scaling](../../11-Roblox-Technical-Reference/UI-Layout-and-Scaling.md) · [Typography Color and Spacing](../Typography-Color-and-Spacing.md)
+[UI Layout and Scaling](../../14-Technical-Reference/UI-Layout-and-Scaling.md) · [Typography Color and Spacing](../Typography-Color-and-Spacing.md)

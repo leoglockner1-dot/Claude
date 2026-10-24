@@ -11,8 +11,8 @@ note_type: "topic"
 - **Colour = live state; neutral = navigation.** Health/hunger bars carry colour; menu buttons stay muted (UI-03).
 - **Context-swap actions** (Tackle/Sprint ↔ Deke/Pass) instead of showing everything (UI-02).
 - **Genre conventions** speed comprehension: racing (position list top-left, timer + map top-right, speedometer bottom-right), survival (bars top-right, hotbar bottom-centre).
-- **Feedback stack** for combat answers separate questions (hit? how much? danger? reward?) ([GF-01](../05-Animation-and-Game-Feel/Analyses/GF-01-Winds-of-Fortune-Combat-Feedback.md)).
-- **Meters**: tween ≈0.25 s perceived, colour + length, peripheral flash for damage ([V06/V07](../16-Video-Analyses/V06-V07-HUD-Meter-Tween-and-Damage-Flash.md)).
+- **Feedback stack** for combat answers separate questions (hit? how much? danger? reward?) ([GF-01](../08-Animation-and-Game-Feel/Analyses/GF-01-Winds-of-Fortune-Combat-Feedback.md)).
+- **Meters**: tween ≈0.25 s perceived, colour + length, peripheral flash for damage ([V06/V07](../21-Video-Analyses/V06-V07-HUD-Meter-Tween-and-Damage-Flash.md)).
 
 ## Layout template (adapt, don't copy)
 | Zone | Typical content | Notes |
@@ -27,10 +27,10 @@ note_type: "topic"
 | Edges | Menu buttons (shop, inventory) in one family | Progressive disclosure |
 
 ## Rules
-UI-001, UI-003, UI-005, UI-012, UI-016, TECH-001 — see [UI Principles](../14-Design-Principles/UI-Principles.md).
+UI-001, UI-003, UI-005, UI-012, UI-016, TECH-001 — see [UI Principles](../17-Design-Principles/UI-Principles.md).
 
 ## Recipe
-[R02 Clean Readable Gameplay HUD](../13-Reusable-Design-Recipes/R02-Clean-Readable-Gameplay-HUD.md)
+[R02 Clean Readable Gameplay HUD](../18-Skill-Training/Design-Recipes/R02-Clean-Readable-Gameplay-HUD.md)
 
 ## Common mistakes
 Two button languages in one HUD (UI-02), translucent buttons over bright terrain, centre overlays during action (UI-24), keyboard letters shown on touch (UI-03), default-template stacks (UI-19).

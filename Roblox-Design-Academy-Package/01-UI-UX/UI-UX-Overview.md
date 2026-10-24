@@ -19,7 +19,7 @@ Roblox's official UI/UX guidance names five UI principles — **prioritization, 
 | Mobile, controller, accessibility | [Mobile Controller and Accessibility](Mobile-Controller-and-Accessibility.md) |
 | Typography, colour, spacing | [Typography Color and Spacing](Typography-Color-and-Spacing.md) |
 | Loading, death, respawn, round transitions | [Loading Death and Round Transitions](Loading-Death-and-Round-Transitions.md) |
-| Principles UI-001…017 | [UI Principles](../14-Design-Principles/UI-Principles.md) |
+| Principles UI-001…017 | [UI Principles](../17-Design-Principles/UI-Principles.md) |
 
 ## The five decisions that separate intentional UI from template UI
 1. **What is the one primary action on this screen?** (UI-001) — if you cannot name it, the screen has no hierarchy.

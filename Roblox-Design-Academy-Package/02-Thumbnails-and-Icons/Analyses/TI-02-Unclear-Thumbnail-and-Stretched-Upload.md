@@ -48,4 +48,4 @@ Pick one in-game moment that shows the verb (escape, race, build…). Render it 
 Replace a vague skyline with one in-game moment showing the core verb and one accent colour.
 
 ## Related
-[Thumbnail Anti Patterns](../../12-Anti-Patterns-and-Design-Critique/Anti-Pattern-Catalog.md) · [Thumbnail Review](../../18-Checklists/CL-02-Thumbnail-and-Icon-Review.md)
+[Thumbnail Anti Patterns](../../15-Anti-Patterns-and-Failure-Cases/Anti-Pattern-Catalog.md) · [Thumbnail Review](../../23-Quality-Checklists/CL-02-Thumbnail-and-Icon-Review.md)

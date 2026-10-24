@@ -50,4 +50,4 @@ A lighthouse-keeper game menu: one lit "Start Night Shift" lamp-button; other op
 High.
 
 ## Related
-[Menus and Navigation](../Menus-and-Navigation.md) · [R01 Polished Main Menu](../../13-Reusable-Design-Recipes/R01-Polished-Main-Menu.md)
+[Menus and Navigation](../Menus-and-Navigation.md) · [R01 Polished Main Menu](../../18-Skill-Training/Design-Recipes/R01-Polished-Main-Menu.md)

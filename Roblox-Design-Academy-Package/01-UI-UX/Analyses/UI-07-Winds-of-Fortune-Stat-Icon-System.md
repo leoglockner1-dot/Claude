@@ -52,4 +52,4 @@ A magic-school stat page where each house element has its own colour + rune shap
 Static image, so interaction (spending points) and feedback weren't seen.
 
 ## Related
-[UI Design Principles](../../14-Design-Principles/UI-Principles.md) · [01 Visual Design Principles](../../07-Visual-Identity/Visual-Identity-Framework.md) · [Typography and Spacing](../Typography-Color-and-Spacing.md)
+[UI Design Principles](../../17-Design-Principles/UI-Principles.md) · [01 Visual Design Principles](../../11-Visual-Identity/Visual-Identity-Framework.md) · [Typography and Spacing](../Typography-Color-and-Spacing.md)

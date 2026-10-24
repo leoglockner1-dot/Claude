@@ -48,4 +48,4 @@ A photo-mode tool whose UI is entirely dark grey pills, so the player's screensh
 Medium (screenshots via the thread; games not played).
 
 ## Related
-[Typography Color and Spacing](../Typography-Color-and-Spacing.md) · [R12 Reusable Button Animation System](../../13-Reusable-Design-Recipes/R12-Reusable-Button-Animation-System.md)
+[Typography Color and Spacing](../Typography-Color-and-Spacing.md) · [R12 Reusable Button Animation System](../../18-Skill-Training/Design-Recipes/R12-Reusable-Button-Animation-System.md)

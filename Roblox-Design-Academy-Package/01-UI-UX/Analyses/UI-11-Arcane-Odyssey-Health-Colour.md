@@ -43,4 +43,4 @@ A character sheet. On the left are the avatar, name, age, playtime, a Max Health
 A colour map fixed in a ModuleScript (health, stamina, gold, rarity tiers) and enforced by a lint check on UI colours.
 
 ## Related
-[Typography and Spacing](../Typography-Color-and-Spacing.md) · [UI Design Principles](../../14-Design-Principles/UI-Principles.md) · [UI Anti Patterns](../../12-Anti-Patterns-and-Design-Critique/Anti-Pattern-Catalog.md)
+[Typography and Spacing](../Typography-Color-and-Spacing.md) · [UI Design Principles](../../17-Design-Principles/UI-Principles.md) · [UI Anti Patterns](../../15-Anti-Patterns-and-Failure-Cases/Anti-Pattern-Catalog.md)

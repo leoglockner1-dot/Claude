@@ -57,4 +57,4 @@ A space-survival HUD where oxygen and power gauges live top-right, the centre st
 Desktop only. The mobile layout, animations and audio weren't seen.
 
 ## Related
-[HUD Design](../HUD-Layouts.md) · [Mobile UI](../Mobile-Controller-and-Accessibility.md) · [UI Design Principles](../../14-Design-Principles/UI-Principles.md)
+[HUD Design](../HUD-Layouts.md) · [Mobile UI](../Mobile-Controller-and-Accessibility.md) · [UI Design Principles](../../17-Design-Principles/UI-Principles.md)

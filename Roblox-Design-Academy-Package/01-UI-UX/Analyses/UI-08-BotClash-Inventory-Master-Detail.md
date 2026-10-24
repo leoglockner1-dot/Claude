@@ -55,4 +55,4 @@ A robot-racing garage using one rounded-hexagon motif for every card, tab and bu
 No motion or sound seen. Gamepad navigation order wasn't checked.
 
 ## Related
-[Shops and Inventory](../Shops-and-Monetization-UI.md) · [UI Design Principles](../../14-Design-Principles/UI-Principles.md) · [01 Visual Design Principles](../../07-Visual-Identity/Visual-Identity-Framework.md)
+[Shops and Inventory](../Shops-and-Monetization-UI.md) · [UI Design Principles](../../17-Design-Principles/UI-Principles.md) · [01 Visual Design Principles](../../11-Visual-Identity/Visual-Identity-Framework.md)

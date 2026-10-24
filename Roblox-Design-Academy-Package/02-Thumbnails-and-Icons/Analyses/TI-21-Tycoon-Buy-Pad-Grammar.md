@@ -45,7 +45,7 @@ Genre familiarity: Roblox notes that matching genre patterns reduces explanation
 - Big absurd prices ("$1,000,000") are genre shorthand; they say little about what is unique.
 
 ## Reusable principles
-- **THUMB-002** Show the verb (here: buy/build) and the aspiration together; **THUMB-007** split images for long-term growth ([Principles](../../14-Design-Principles/Thumbnail-and-Icon-Principles.md)).
+- **THUMB-002** Show the verb (here: buy/build) and the aspiration together; **THUMB-007** split images for long-term growth ([Principles](../../17-Design-Principles/Thumbnail-and-Icon-Principles.md)).
 
 ## Roblox implementation
 Stage the shot in Studio: place a buy pad with a `BillboardGui` price in front of an upgraded build; Freecam (Shift+P) low angle; lead the eye from avatar → pad → built object.
@@ -57,4 +57,4 @@ An aquarium tycoon thumbnail: avatar stepping on a glowing "Shark Tank $50,000" 
 High (observed).
 
 ## Related
-[Thumbnail Principles](../Thumbnail-Principles.md) · [CS 11 Tycoon Group](../../15-Game-Case-Studies/CS-11-Tycoon-Group.md)
+[Thumbnail Principles](../Thumbnail-Principles.md) · [CS 11 Tycoon Group](../../20-Game-Case-Studies/CS-11-Tycoon-Group.md)

@@ -40,4 +40,4 @@ One composition (a lone tree and a small white chapel on a hill) in three grades
 Grade the same key art three ways and test which mood matches the game.
 
 ## Related
-[Game Icon Principles](../Icon-Principles.md) · [01 Visual Design Principles](../../07-Visual-Identity/Visual-Identity-Framework.md)
+[Game Icon Principles](../Icon-Principles.md) · [01 Visual Design Principles](../../11-Visual-Identity/Visual-Identity-Framework.md)

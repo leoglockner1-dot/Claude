@@ -43,4 +43,4 @@ A sports car silhouette (black with white rim light, glowing wheels and headligh
 A delivery game thumbnail: courier avatar on a scooter mid-jump across a gap, package flying, city at dusk.
 
 ## Related
-[Thumbnail Principles](../Thumbnail-Principles.md) · [Composition and Focal Points](../Composition-Checklist.md) · [Thumbnail Anti Patterns](../../12-Anti-Patterns-and-Design-Critique/Anti-Pattern-Catalog.md)
+[Thumbnail Principles](../Thumbnail-Principles.md) · [Composition and Focal Points](../Composition-Checklist.md) · [Thumbnail Anti Patterns](../../15-Anti-Patterns-and-Failure-Cases/Anti-Pattern-Catalog.md)

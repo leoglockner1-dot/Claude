@@ -41,4 +41,4 @@ date_accessed: "2026-10-24"
 Design the icon as a single bold subject that survives at 64 px; test it in a grid of genre competitors.
 
 ## Related
-[Game Icon Principles](../Icon-Principles.md) · [Composition and Focal Points](../Composition-Checklist.md) · [Thumbnail Review](../../18-Checklists/CL-02-Thumbnail-and-Icon-Review.md)
+[Game Icon Principles](../Icon-Principles.md) · [Composition and Focal Points](../Composition-Checklist.md) · [Thumbnail Review](../../23-Quality-Checklists/CL-02-Thumbnail-and-Icon-Review.md)

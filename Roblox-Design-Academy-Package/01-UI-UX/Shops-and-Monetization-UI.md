@@ -21,10 +21,10 @@ note_type: "topic"
 In-play (Dress to Impress intermission theme props), **pre-play** (Doors elevator pre-run shop), lobby 3D objects (Super Striker League), complementary passes (Bee Swarm), UI offers (loading screens, modal — Adopt Me mansion). Rules: never interrupt active play; allow time for the Robux flow; prevent modal stacking.
 
 ## Market context
-Median pass price **249 R$** (695 for-sale passes, 85 games); most common prices 99/199/299/399/499 → [Game Pass Economy Study](../04-Progression-and-Economy/Game-Pass-Economy-Study.md).
+Median pass price **249 R$** (695 for-sale passes, 85 games); most common prices 99/199/299/399/499 → [Game Pass Economy Study](../05-Progression-and-Economy/Game-Pass-Economy-Study.md).
 
 ## Policy (must)
-Paid random items: show all outcomes with % odds summing to 100 % before purchase; labelled "Odds/Details" button, not a bare (i) → [Random Rewards and Fairness](../04-Progression-and-Economy/Random-Rewards-and-Fairness.md).
+Paid random items: show all outcomes with % odds summing to 100 % before purchase; labelled "Odds/Details" button, not a bare (i) → [Random Rewards and Fairness](../05-Progression-and-Economy/Random-Rewards-and-Fairness.md).
 
 ## Recipe & checklist
-[R07 Responsive Shop](../13-Reusable-Design-Recipes/R07-Responsive-Shop.md) · [CL 08 Shop and Monetization Ethics](../18-Checklists/CL-08-Shop-and-Monetization-Ethics.md)
+[R07 Responsive Shop](../18-Skill-Training/Design-Recipes/R07-Responsive-Shop.md) · [CL 08 Shop and Monetization Ethics](../23-Quality-Checklists/CL-08-Shop-and-Monetization-Ethics.md)

@@ -60,4 +60,4 @@ A bakery shop whose bundles grow from a single cupcake to a full cake tower; the
 Hover and press states, purchase feedback and the mobile layout weren't seen.
 
 ## Related
-[Shops and Inventory](../Shops-and-Monetization-UI.md) · [UI Design Principles](../../14-Design-Principles/UI-Principles.md) · [UI Anti Patterns](../../12-Anti-Patterns-and-Design-Critique/Anti-Pattern-Catalog.md)
+[Shops and Inventory](../Shops-and-Monetization-UI.md) · [UI Design Principles](../../17-Design-Principles/UI-Principles.md) · [UI Anti Patterns](../../15-Anti-Patterns-and-Failure-Cases/Anti-Pattern-Catalog.md)

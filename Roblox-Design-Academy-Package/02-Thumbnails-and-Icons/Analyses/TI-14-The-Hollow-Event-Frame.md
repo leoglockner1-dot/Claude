@@ -45,4 +45,4 @@ Participating games wrap their icon or thumbnail in a **thick red, drippy horror
 Design key art with a margin so event frames do not cover the subject.
 
 ## Related
-[Game Icon Principles](../Icon-Principles.md) · [Thumbnail Anti-Patterns](../../12-Anti-Patterns-and-Design-Critique/Anti-Pattern-Catalog.md)
+[Game Icon Principles](../Icon-Principles.md) · [Thumbnail Anti-Patterns](../../15-Anti-Patterns-and-Failure-Cases/Anti-Pattern-Catalog.md)

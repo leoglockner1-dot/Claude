@@ -38,4 +38,4 @@ date_accessed: "2026-10-24"
 Checklist item: never ship default icon, no stickers, ≥512 px, square.
 
 ## Related
-[Game Icon Principles](../Icon-Principles.md) · [Thumbnail Anti Patterns](../../12-Anti-Patterns-and-Design-Critique/Anti-Pattern-Catalog.md) · [Thumbnail Review](../../18-Checklists/CL-02-Thumbnail-and-Icon-Review.md)
+[Game Icon Principles](../Icon-Principles.md) · [Thumbnail Anti Patterns](../../15-Anti-Patterns-and-Failure-Cases/Anti-Pattern-Catalog.md) · [Thumbnail Review](../../23-Quality-Checklists/CL-02-Thumbnail-and-Icon-Review.md)

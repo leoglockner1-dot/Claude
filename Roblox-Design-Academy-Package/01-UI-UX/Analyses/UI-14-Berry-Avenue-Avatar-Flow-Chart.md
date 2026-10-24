@@ -41,4 +41,4 @@ Before building a pet shop, write the goals (browse fast, preview pet, compare, 
 The video still needs to be watched to judge animation and feedback. Add a sequence analysis later.
 
 ## Related
-[Menus and Navigation](../Menus-and-Navigation.md) · [Shops and Inventory](../Shops-and-Monetization-UI.md) · [UI Review](../../18-Checklists/CL-01-UI-Review.md)
+[Menus and Navigation](../Menus-and-Navigation.md) · [Shops and Inventory](../Shops-and-Monetization-UI.md) · [UI Review](../../23-Quality-Checklists/CL-01-UI-Review.md)

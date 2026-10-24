@@ -18,4 +18,4 @@ A template to script the first 60–120 seconds. Values are **targets/hypotheses
 | 2–5 min | Meets others / first social moment | Shared goal, emote prompt | First social action |
 | End | Moment of joy + next goals visible | R06 milestone | Onboarding complete |
 
-Counter-evidence: a forced shop step at second 0 lost 48 % of users ([ONB-06](../09-Onboarding/Analyses/ONB-06-DevForum-Forced-Blur-Tutorial-Funnel.md)).
+Counter-evidence: a forced shop step at second 0 lost 48 % of users ([ONB-06](../13-Onboarding-and-Multiplayer/Onboarding/Analyses/ONB-06-DevForum-Forced-Blur-Tutorial-Funnel.md)).

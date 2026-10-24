@@ -47,4 +47,4 @@ A chaotic meme shooter whose weapon list is drawn as messy marker doodles — ch
 High.
 
 ## Related
-[AI and Template Look Detection](../../12-Anti-Patterns-and-Design-Critique/AI-and-Template-Look-Detection.md)
+[AI and Template Look Detection](../../15-Anti-Patterns-and-Failure-Cases/AI-and-Template-Look-Detection.md)

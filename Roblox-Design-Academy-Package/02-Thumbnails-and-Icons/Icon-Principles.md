@@ -22,4 +22,4 @@ One face or bold shape filling 60–100 % of the frame, high value contrast, at 
 - Colour grade sets genre (TI-07).
 
 ## Recipe
-[R09 Recognizable Game Icon](../13-Reusable-Design-Recipes/R09-Recognizable-Game-Icon.md)
+[R09 Recognizable Game Icon](../18-Skill-Training/Design-Recipes/R09-Recognizable-Game-Icon.md)

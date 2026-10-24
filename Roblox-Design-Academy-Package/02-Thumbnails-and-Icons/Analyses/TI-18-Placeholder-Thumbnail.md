@@ -34,4 +34,4 @@ Before any promotion or update push, **verify the live detail page** in a logged
 Check the logged-out detail page after every upload.
 
 ## Related
-[Thumbnail Review](../../18-Checklists/CL-02-Thumbnail-and-Icon-Review.md) · [TI-06](TI-06-Icon-Failures.md)
+[Thumbnail Review](../../23-Quality-Checklists/CL-02-Thumbnail-and-Icon-Review.md) · [TI-06](TI-06-Icon-Failures.md)

@@ -42,7 +42,7 @@ Huge numbers dominate many incremental and gacha thumbnails:
 
 ## What Does Not Work
 - **Inconsistent claims** (0.0001% vs 0.00001%) look careless and undermine trust.
-- Rarity bait combined with paid random items invites scrutiny. Odds shown in marketing should match the in-game odds disclosure ([FACT](../../11-Roblox-Technical-Reference/Roblox-Platform-Facts.md)).
+- Rarity bait combined with paid random items invites scrutiny. Odds shown in marketing should match the in-game odds disclosure ([FACT](../../14-Technical-Reference/Roblox-Platform-Facts.md)).
 - The text takes space from the subject, and at icon size the digits become noise.
 
 ## Reusable Design Rules
@@ -54,4 +54,4 @@ Huge numbers dominate many incremental and gacha thumbnails:
 If a number is shown, it must be true and identical across name, icon and thumbnails.
 
 ## Related
-[Thumbnail Anti-Patterns](../../12-Anti-Patterns-and-Design-Critique/Anti-Pattern-Catalog.md) · [Shops and Inventory](../../01-UI-UX/Shops-and-Monetization-UI.md) · [Progression and Rewards](../../04-Progression-and-Economy/Progression-Systems.md)
+[Thumbnail Anti-Patterns](../../15-Anti-Patterns-and-Failure-Cases/Anti-Pattern-Catalog.md) · [Shops and Inventory](../../01-UI-UX/Shops-and-Monetization-UI.md) · [Progression and Rewards](../../05-Progression-and-Economy/Progression-Systems.md)

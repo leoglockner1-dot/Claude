@@ -60,4 +60,4 @@ A basketball game whose single right-thumb button reads "Shoot" when you hold th
 Swap timing, animation and sound were not observable. Only the doc's two screenshots were seen.
 
 ## Related
-[HUD Design](../HUD-Layouts.md) · [Mobile UI](../Mobile-Controller-and-Accessibility.md) · [UI Anti Patterns](../../12-Anti-Patterns-and-Design-Critique/Anti-Pattern-Catalog.md) · [Core Loops](../../03-Core-Gameplay-Loops/Core-Loop-Framework.md)
+[HUD Design](../HUD-Layouts.md) · [Mobile UI](../Mobile-Controller-and-Accessibility.md) · [UI Anti Patterns](../../15-Anti-Patterns-and-Failure-Cases/Anti-Pattern-Catalog.md) · [Core Loops](../../03-Core-Gameplay-Loops/Core-Loop-Framework.md)

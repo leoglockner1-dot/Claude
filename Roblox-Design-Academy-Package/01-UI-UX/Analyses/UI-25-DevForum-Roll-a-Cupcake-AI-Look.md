@@ -39,7 +39,7 @@ A huge orange "SPIN" button with a thick dark stroke; "69 coins" in yellow outli
 - Players described it as AI-generated looking — the developer agreed and planned a full overhaul. Gameplay context: players "walk around aimlessly and leave despite the tutorial".
 
 ## Reusable principles
-- **UI-007** Strokes are for legibility over busy backgrounds, not a default on every text; **UI-017** tutorial prompts must be as prominent as the action they teach. See [AI/template look detection](../../12-Anti-Patterns-and-Design-Critique/AI-and-Template-Look-Detection.md).
+- **UI-007** Strokes are for legibility over busy backgrounds, not a default on every text; **UI-017** tutorial prompts must be as prominent as the action they teach. See [AI/template look detection](../../15-Anti-Patterns-and-Failure-Cases/AI-and-Template-Look-Detection.md).
 
 ## Roblox implementation
 `UIStroke` only on text over the 3D world; panel text without stroke; tutorial step as a large callout anchored to the target with an arrow.
@@ -51,4 +51,4 @@ A dessert-shop UI with cream panels and chocolate-brown text without strokes; on
 High (community + developer agreement).
 
 ## Related
-[AI and Template Look Detection](../../12-Anti-Patterns-and-Design-Critique/AI-and-Template-Look-Detection.md) · [First Session Design](../../09-Onboarding/First-Session-Design.md)
+[AI and Template Look Detection](../../15-Anti-Patterns-and-Failure-Cases/AI-and-Template-Look-Detection.md) · [First Session Design](../../13-Onboarding-and-Multiplayer/Onboarding/First-Session-Design.md)

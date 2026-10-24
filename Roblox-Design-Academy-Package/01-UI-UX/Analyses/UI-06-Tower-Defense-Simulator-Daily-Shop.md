@@ -51,7 +51,7 @@ Use `ZIndex` / `ZIndexBehavior.Sibling` to prevent tag clipping, and `TextServic
 A garden store with tall seed-packet cards for daily seeds and a separate crate panel for random packs (with labelled odds).
 
 ## Limitations
-No interaction states and no mobile view. Crate purchases are paid random items, so odds disclosure must be visible before purchase ([Verified facts](../../11-Roblox-Technical-Reference/Roblox-Platform-Facts.md)). Whether this screen complies wasn't checked.
+No interaction states and no mobile view. Crate purchases are paid random items, so odds disclosure must be visible before purchase ([Verified facts](../../14-Technical-Reference/Roblox-Platform-Facts.md)). Whether this screen complies wasn't checked.
 
 ## Related
-[Shops and Inventory](../Shops-and-Monetization-UI.md) · [UI Design Principles](../../14-Design-Principles/UI-Principles.md) · [Reward Reveal Sequences](../../05-Animation-and-Game-Feel/Reward-Reveals-and-Celebrations.md)
+[Shops and Inventory](../Shops-and-Monetization-UI.md) · [UI Design Principles](../../17-Design-Principles/UI-Principles.md) · [Reward Reveal Sequences](../../08-Animation-and-Game-Feel/Reward-Reveals-and-Celebrations.md)

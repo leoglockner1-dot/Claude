@@ -30,7 +30,7 @@ date_accessed: "2026-10-24"
 - Black background + two saturated hues = maximum separation.
 
 ## What Does Not Work
-- A logo icon **explains nothing** to a new player. It works because MM2 is famous. For a new game it would be an [anti-pattern](../../12-Anti-Patterns-and-Design-Critique/Anti-Pattern-Catalog.md) (no verb, no genre).
+- A logo icon **explains nothing** to a new player. It works because MM2 is famous. For a new game it would be an [anti-pattern](../../15-Anti-Patterns-and-Failure-Cases/Anti-Pattern-Catalog.md) (no verb, no genre).
 - The lead thumbnail is cluttered (props, a house and a character) with no strong focal hierarchy.
 
 ## Reusable Design Rules

@@ -50,7 +50,7 @@ The only difference is that Bike For Egg puts the avatar on a bicycle.
 Keep the genre grammar (verb, stakes, number) but frame your unique hook as the subject.
 
 ## Limitations
-Success data (Bike For Egg is still on Up-and-Coming) shows that cloning can attract players short-term. This is **not** a claim that cloning fails. It's a claim that it gives up identity. See [AP-13](../../12-Anti-Patterns-and-Design-Critique/Anti-Pattern-Catalog.md).
+Success data (Bike For Egg is still on Up-and-Coming) shows that cloning can attract players short-term. This is **not** a claim that cloning fails. It's a claim that it gives up identity. See [AP-13](../../15-Anti-Patterns-and-Failure-Cases/Anti-Pattern-Catalog.md).
 
 ## Related
-[Thumbnail Anti-Patterns](../../12-Anti-Patterns-and-Design-Critique/Anti-Pattern-Catalog.md) · [Anti-Pattern Catalog](../../12-Anti-Patterns-and-Design-Critique/Anti-Pattern-Catalog.md)
+[Thumbnail Anti-Patterns](../../15-Anti-Patterns-and-Failure-Cases/Anti-Pattern-Catalog.md) · [Anti-Pattern Catalog](../../15-Anti-Patterns-and-Failure-Cases/Anti-Pattern-Catalog.md)

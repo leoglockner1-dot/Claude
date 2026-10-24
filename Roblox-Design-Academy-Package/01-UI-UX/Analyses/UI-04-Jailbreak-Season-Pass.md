@@ -59,4 +59,4 @@ A fishing season track drawn as a river with free rewards on the bank and premiu
 The claim/unlock animation, sound and the in-season state were not visible.
 
 ## Related
-[Progression and Rewards](../../04-Progression-and-Economy/Progression-Systems.md) · [Shops and Inventory](../Shops-and-Monetization-UI.md) · [Typography and Spacing](../Typography-Color-and-Spacing.md) · [UI Anti Patterns](../../12-Anti-Patterns-and-Design-Critique/Anti-Pattern-Catalog.md)
+[Progression and Rewards](../../05-Progression-and-Economy/Progression-Systems.md) · [Shops and Inventory](../Shops-and-Monetization-UI.md) · [Typography and Spacing](../Typography-Color-and-Spacing.md) · [UI Anti Patterns](../../15-Anti-Patterns-and-Failure-Cases/Anti-Pattern-Catalog.md)

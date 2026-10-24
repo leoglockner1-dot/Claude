@@ -52,4 +52,4 @@ A two-player cooking game: one avatar blindfolded chopping, the other reading th
 High for observations; ratings are context, not causation.
 
 ## Related
-[Cooperative and Social Design](../../10-Multiplayer-Design/Cooperative-and-Social-Design.md) · [CS 09 Small CoOp Games](../../15-Game-Case-Studies/CS-09-Small-CoOp-Games.md)
+[Cooperative and Social Design](../../13-Onboarding-and-Multiplayer/Multiplayer/Cooperative-and-Social-Design.md) · [CS 09 Small CoOp Games](../../20-Game-Case-Studies/CS-09-Small-CoOp-Games.md)

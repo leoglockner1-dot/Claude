@@ -50,4 +50,4 @@ A dragon-themed inventory where the theme lives in icon style and a small scale-
 Medium (portfolio mock-ups, not shipped game).
 
 ## Related
-[Anti Pattern Catalog](../../12-Anti-Patterns-and-Design-Critique/Anti-Pattern-Catalog.md)
+[Anti Pattern Catalog](../../15-Anti-Patterns-and-Failure-Cases/Anti-Pattern-Catalog.md)

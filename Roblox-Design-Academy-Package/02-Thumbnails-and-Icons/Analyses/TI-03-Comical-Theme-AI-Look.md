@@ -46,4 +46,4 @@ A cartoon man with huge eyes balances a tower of about 12 hats on his head, hand
 Show the silly premise through the actual mechanic (e.g., avatar wobbling under a hat tower while others try to knock it over).
 
 ## Related
-[Thumbnail Anti Patterns](../../12-Anti-Patterns-and-Design-Critique/Anti-Pattern-Catalog.md) · [Composition and Focal Points](../Composition-Checklist.md) · [01 Visual Design Principles](../../07-Visual-Identity/Visual-Identity-Framework.md)
+[Thumbnail Anti Patterns](../../15-Anti-Patterns-and-Failure-Cases/Anti-Pattern-Catalog.md) · [Composition and Focal Points](../Composition-Checklist.md) · [01 Visual Design Principles](../../11-Visual-Identity/Visual-Identity-Framework.md)

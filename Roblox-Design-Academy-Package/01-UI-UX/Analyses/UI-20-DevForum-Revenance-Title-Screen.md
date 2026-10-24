@@ -50,4 +50,4 @@ A post-apocalyptic save screen using worn paper ID cards; deleting a save means 
 High for observations.
 
 ## Related
-[Menus and Navigation](../Menus-and-Navigation.md) · [Visual Identity Framework](../../07-Visual-Identity/Visual-Identity-Framework.md)
+[Menus and Navigation](../Menus-and-Navigation.md) · [Visual Identity Framework](../../11-Visual-Identity/Visual-Identity-Framework.md)

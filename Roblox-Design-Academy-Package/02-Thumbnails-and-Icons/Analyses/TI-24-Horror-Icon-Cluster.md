@@ -61,4 +61,4 @@ A deep-sea horror icon: a diver's helmet lamp illuminating one enormous eye in t
 High.
 
 ## Related
-[Icon Principles](../Icon-Principles.md) · [Art Direction Styles](../../07-Visual-Identity/Art-Direction-Styles.md)
+[Icon Principles](../Icon-Principles.md) · [Art Direction Styles](../../11-Visual-Identity/Art-Direction-Styles.md)

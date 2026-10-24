@@ -49,4 +49,4 @@ date_accessed: "2026-10-24"
 A boxing game: every thumbnail = one glove colour + one opponent silhouette on a clean ring floor; the icon is just the glove.
 
 ## Related
-[Thumbnail Principles](../Thumbnail-Principles.md) · [Game Icon Principles](../Icon-Principles.md) · [Visual Design Principles](../../07-Visual-Identity/Visual-Identity-Framework.md)
+[Thumbnail Principles](../Thumbnail-Principles.md) · [Game Icon Principles](../Icon-Principles.md) · [Visual Design Principles](../../11-Visual-Identity/Visual-Identity-Framework.md)

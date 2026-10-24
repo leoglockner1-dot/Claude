@@ -45,4 +45,4 @@ Make one `CloseButton` component and use it in every panel. Bind it to Escape an
 A cozy-farm game using a wooden peg "X" — top-right, same meaning, wholly different style.
 
 ## Related
-[UI Design Principles](../../14-Design-Principles/UI-Principles.md) · [UI Anti Patterns](../../12-Anti-Patterns-and-Design-Critique/Anti-Pattern-Catalog.md) · [01 Visual Design Principles](../../07-Visual-Identity/Visual-Identity-Framework.md)
+[UI Design Principles](../../17-Design-Principles/UI-Principles.md) · [UI Anti Patterns](../../15-Anti-Patterns-and-Failure-Cases/Anti-Pattern-Catalog.md) · [01 Visual Design Principles](../../11-Visual-Identity/Visual-Identity-Framework.md)

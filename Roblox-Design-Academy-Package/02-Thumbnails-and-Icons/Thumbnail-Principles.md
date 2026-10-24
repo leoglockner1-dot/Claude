@@ -7,10 +7,10 @@ note_type: "topic"
 # Thumbnail Principles
 
 ## Verified platform facts
-16:9, ideally 1920×1080 (other ratios are stretched); up to 10 images/videos; videos: 3 uploads/month, no voice-over or lyrics, no misleading visuals or ads/claims; personalization with ≥2 active thumbnails (Roblox reports +8.5 % average qualified play-through in testing); avoid essential content at the bottom → [Publishing Thumbnails and Icons](../11-Roblox-Technical-Reference/Publishing-Thumbnails-and-Icons.md).
+16:9, ideally 1920×1080 (other ratios are stretched); up to 10 images/videos; videos: 3 uploads/month, no voice-over or lyrics, no misleading visuals or ads/claims; personalization with ≥2 active thumbnails (Roblox reports +8.5 % average qualified play-through in testing); avoid essential content at the bottom → [Publishing Thumbnails and Icons](../14-Technical-Reference/Publishing-Thumbnails-and-Icons.md).
 
 ## Principles (THUMB-001…012)
-[Thumbnail and Icon Principles](../14-Design-Principles/Thumbnail-and-Icon-Principles.md)
+[Thumbnail and Icon Principles](../17-Design-Principles/Thumbnail-and-Icon-Principles.md)
 
 ## What a good thumbnail answers in one glance
 1. **Verb** — what will I do? (TI-21, TI-30)
@@ -37,4 +37,4 @@ note_type: "topic"
 - **Generic vs distinctive**: template clones (TI-12) vs RIVALS (TI-08).
 
 ## Workflow
-Brief → staged in-engine shot → Freecam capture → composite & grade → **test at grid size** → upload 2–5 → refresh per update. See [Thumbnail Brief Template](Thumbnail-Brief-Template.md) · [R08 Strong Thumbnail Composition](../13-Reusable-Design-Recipes/R08-Strong-Thumbnail-Composition.md) · [CL 02 Thumbnail and Icon Review](../18-Checklists/CL-02-Thumbnail-and-Icon-Review.md).
+Brief → staged in-engine shot → Freecam capture → composite & grade → **test at grid size** → upload 2–5 → refresh per update. See [Thumbnail Brief Template](Thumbnail-Brief-Template.md) · [R08 Strong Thumbnail Composition](../18-Skill-Training/Design-Recipes/R08-Strong-Thumbnail-Composition.md) · [CL 02 Thumbnail and Icon Review](../23-Quality-Checklists/CL-02-Thumbnail-and-Icon-Review.md).

@@ -38,7 +38,7 @@ date_accessed: "2026-10-24"
 - Generic question text ("Can you complete…?") adds no information.
 
 ## Reusable principles
-- **THUMB-001** Marketing quality cannot compensate for loop clarity; fix the first minute first. See [ONB principles](../../14-Design-Principles/Onboarding-Principles.md).
+- **THUMB-001** Marketing quality cannot compensate for loop clarity; fix the first minute first. See [ONB principles](../../17-Design-Principles/Onboarding-Principles.md).
 
 ## Roblox implementation
 —
@@ -50,4 +50,4 @@ Before commissioning key art, run 5 blind playtests of the first 60 s; only then
 Medium (developer-reported metrics).
 
 ## Related
-[Onboarding Evidence From Developers](../../09-Onboarding/Onboarding-Evidence-From-Developers.md) · [CS 17 Outbreak Mayhem](../../15-Game-Case-Studies/CS-17-Outbreak-Mayhem.md)
+[Onboarding Evidence From Developers](../../13-Onboarding-and-Multiplayer/Onboarding/Onboarding-Evidence-From-Developers.md) · [CS 17 Outbreak Mayhem](../../20-Game-Case-Studies/CS-17-Outbreak-Mayhem.md)

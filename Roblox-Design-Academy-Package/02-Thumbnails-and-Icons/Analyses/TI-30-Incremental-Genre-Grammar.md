@@ -60,4 +60,4 @@ A "+1 Kite Height" game: kite climbing with "+1" per gust, the string drawing a 
 High.
 
 ## Related
-[Genre Loop Library](../../03-Core-Gameplay-Loops/Genre-Loop-Library.md) · [Progression Systems](../../04-Progression-and-Economy/Progression-Systems.md)
+[Genre Loop Library](../../03-Core-Gameplay-Loops/Genre-Loop-Library.md) · [Progression Systems](../../05-Progression-and-Economy/Progression-Systems.md)

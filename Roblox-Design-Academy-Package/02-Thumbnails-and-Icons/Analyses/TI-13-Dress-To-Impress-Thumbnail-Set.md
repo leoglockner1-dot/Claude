@@ -40,7 +40,7 @@ Ten thumbnails, each a polished, magazine-style close-up of stylized female avat
 
 ## What Does Not Work
 - **The Halloween Update image is in the set twice** (slots 1 and 2, identical).
-- **Out-of-season images are still active** in October: summer carnival, Christmas, a 10B milestone. Roblox's guidance is to refresh thumbnails with each update ([FACT](../../11-Roblox-Technical-Reference/Roblox-Platform-Facts.md)), and stale seasonal art signals neglect.
+- **Out-of-season images are still active** in October: summer carnival, Christmas, a 10B milestone. Roblox's guidance is to refresh thumbnails with each update ([FACT](../../14-Technical-Reference/Roblox-Platform-Facts.md)), and stale seasonal art signals neglect.
 - Heavy beauty retouching sits at the edge of "artificial visuals" relative to real gameplay. That matters for video thumbnails, though it's not a rule violation for stills.
 
 ## Reusable Design Rules
@@ -52,4 +52,4 @@ Ten thumbnails, each a polished, magazine-style close-up of stylized female avat
 Audit thumbnail sets each update: remove duplicates and off-season art.
 
 ## Related
-[Thumbnail Principles](../Thumbnail-Principles.md) · [Thumbnail Review](../../18-Checklists/CL-02-Thumbnail-and-Icon-Review.md)
+[Thumbnail Principles](../Thumbnail-Principles.md) · [Thumbnail Review](../../23-Quality-Checklists/CL-02-Thumbnail-and-Icon-Review.md)

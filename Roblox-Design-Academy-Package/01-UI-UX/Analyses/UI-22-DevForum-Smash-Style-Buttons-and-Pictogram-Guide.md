@@ -26,7 +26,7 @@ Right-edge buttons are **tilted cards** (red "Modes" with a cube icon, yellow "B
 - "the side buttons, the timer window, and the loading screen are close to perfect" (checcerr). Note: the same designer's earlier shop (UI-15) was criticised as harsh — a visible learning arc.
 
 ## What works
-- **Mechanic explained with pictures and numbers**, minimal text (same principle as Color or Die, [ONB-02](../../09-Onboarding/Analyses/ONB-02-Color-or-Die-Rules-Sign.md)).
+- **Mechanic explained with pictures and numbers**, minimal text (same principle as Color or Die, [ONB-02](../../13-Onboarding-and-Multiplayer/Onboarding/Analyses/ONB-02-Color-or-Die-Rules-Sign.md)).
 - Distinct, ownable shape motif (tilted cards) applied to multiple buttons.
 - Locked content teased with hazard stripes + "???" (curiosity).
 
@@ -49,4 +49,4 @@ A cooking-race game explaining "burnt food" with three panels: pan + timer → s
 High.
 
 ## Related
-[First Session Design](../../09-Onboarding/First-Session-Design.md) · [Visual Identity Framework](../../07-Visual-Identity/Visual-Identity-Framework.md)
+[First Session Design](../../13-Onboarding-and-Multiplayer/Onboarding/First-Session-Design.md) · [Visual Identity Framework](../../11-Visual-Identity/Visual-Identity-Framework.md)

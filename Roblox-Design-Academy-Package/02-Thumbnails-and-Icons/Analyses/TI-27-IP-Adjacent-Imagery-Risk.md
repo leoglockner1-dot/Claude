@@ -56,4 +56,4 @@ Create an original mascot whose silhouette is as distinct as a famous one (e.g.,
 Medium (we cannot verify licences).
 
 ## Related
-[Anti Pattern Catalog](../../12-Anti-Patterns-and-Design-Critique/Anti-Pattern-Catalog.md)
+[Anti Pattern Catalog](../../15-Anti-Patterns-and-Failure-Cases/Anti-Pattern-Catalog.md)

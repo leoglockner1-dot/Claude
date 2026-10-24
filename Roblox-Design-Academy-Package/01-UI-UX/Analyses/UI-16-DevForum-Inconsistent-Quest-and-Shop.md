@@ -39,7 +39,7 @@ Separate colours for soft and premium currency prevent mistakes.
 - Old version's currency font differs from everything else.
 
 ## Reusable principles
-- **UI-005** One visual system across all screens; decide style before building screens ([UI Principles](../../14-Design-Principles/UI-Principles.md)).
+- **UI-005** One visual system across all screens; decide style before building screens ([UI Principles](../../17-Design-Principles/UI-Principles.md)).
 
 ## Roblox implementation
 Create a single `StyleSheet` with tokens and derive every panel from one panel component (header, body, close button) — change it once, update everywhere.
@@ -51,4 +51,4 @@ A farm game: decide "hand-painted wooden signage" once; quests become pinned not
 High.
 
 ## Related
-[UI UX Overview](../UI-UX-Overview.md) · [Visual Identity Framework](../../07-Visual-Identity/Visual-Identity-Framework.md)
+[UI UX Overview](../UI-UX-Overview.md) · [Visual Identity Framework](../../11-Visual-Identity/Visual-Identity-Framework.md)

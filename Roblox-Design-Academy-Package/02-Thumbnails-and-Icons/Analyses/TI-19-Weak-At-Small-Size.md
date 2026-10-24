@@ -50,4 +50,4 @@ Crop to one subject, raise value contrast, drop the text, and test at 64 px in a
 Crop tighter, raise contrast, remove text.
 
 ## Related
-[Game Icon Principles](../Icon-Principles.md) · [Thumbnail Anti-Patterns](../../12-Anti-Patterns-and-Design-Critique/Anti-Pattern-Catalog.md)
+[Game Icon Principles](../Icon-Principles.md) · [Thumbnail Anti-Patterns](../../15-Anti-Patterns-and-Failure-Cases/Anti-Pattern-Catalog.md)

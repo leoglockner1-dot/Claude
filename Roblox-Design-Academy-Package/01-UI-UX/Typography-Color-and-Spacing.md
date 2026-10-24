@@ -23,4 +23,4 @@ note_type: "topic"
 - Optical alignment for icons; equal internal padding in cards.
 
 ## Hierarchy test
-NN/g's **squint test**: blur the screen — the primary action must remain the most visible element ([source](../17-Source-Library/External-Design-Sources.md)).
+NN/g's **squint test**: blur the screen — the primary action must remain the most visible element ([source](../22-Source-Library/External-Design-Sources.md)).

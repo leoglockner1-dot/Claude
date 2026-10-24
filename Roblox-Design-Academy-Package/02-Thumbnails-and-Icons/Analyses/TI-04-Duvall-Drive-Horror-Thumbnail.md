@@ -44,4 +44,4 @@ A low-angle view up the stairs to a craftsman-style house at night. Dark foliage
 A ghost-hunting thumbnail: flashlight beam is the only light, revealing a ghost behind the player.
 
 ## Related
-[Thumbnail Principles](../Thumbnail-Principles.md) · [Composition and Focal Points](../Composition-Checklist.md) · [01 Visual Design Principles](../../07-Visual-Identity/Visual-Identity-Framework.md)
+[Thumbnail Principles](../Thumbnail-Principles.md) · [Composition and Focal Points](../Composition-Checklist.md) · [01 Visual Design Principles](../../11-Visual-Identity/Visual-Identity-Framework.md)

@@ -40,7 +40,7 @@ The row grammar is easy to scan left-to-right.
 - Inconsistent padding; buttons not fitting their slots (reply with crops).
 
 ## Reusable principles
-- **UI-003** One accent; **UI-004** consistent padding scale; **UI-007** every element rendered at the same fidelity ([UI Principles](../../14-Design-Principles/UI-Principles.md)).
+- **UI-003** One accent; **UI-004** consistent padding scale; **UI-007** every element rendered at the same fidelity ([UI Principles](../../17-Design-Principles/UI-Principles.md)).
 
 ## Roblox implementation
 Define tokens in the Style Editor (background, surface, accent, currency colours) and apply via `StyleRule`s; use one `UIPadding` value set; 9-slice frames rendered at 2× to avoid pixelation.
@@ -52,4 +52,4 @@ A sci-fi ammo shop on a dark neutral panel where only the "Buy" buttons carry co
 High that the issues are visible; community critique corroborates.
 
 ## Related
-[Shops and Monetization UI](../Shops-and-Monetization-UI.md) · [Anti Pattern Catalog](../../12-Anti-Patterns-and-Design-Critique/Anti-Pattern-Catalog.md) · [UI 22 DevForum Smash Style Buttons and Pictogram Guide](UI-22-DevForum-Smash-Style-Buttons-and-Pictogram-Guide.md)
+[Shops and Monetization UI](../Shops-and-Monetization-UI.md) · [Anti Pattern Catalog](../../15-Anti-Patterns-and-Failure-Cases/Anti-Pattern-Catalog.md) · [UI 22 DevForum Smash Style Buttons and Pictogram Guide](UI-22-DevForum-Smash-Style-Buttons-and-Pictogram-Guide.md)

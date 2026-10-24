@@ -37,7 +37,7 @@ note_type: "meta"
 | Assets | 367 files (+ registry) |
 
 ## Access failures
-YouTube (bot check — not bypassed); W3C, GDC Vault, Game Developer, web.archive.org, figma.com (timeouts); ArtStation, Epic docs (403); Material & FMOD (JS-only); some DevForum searches (HTTP 429). Details: [Access Log](../17-Source-Library/Access-Log.md)
+YouTube (bot check — not bypassed); W3C, GDC Vault, Game Developer, web.archive.org, figma.com (timeouts); ArtStation, Epic docs (403); Material & FMOD (JS-only); some DevForum searches (HTTP 429). Details: [Access Log](../22-Source-Library/Access-Log.md)
 
 ## Remaining gaps → next highest-value tasks
 1. Capture in-game UI of 20 top games (screenshots + 10 s clips **with sound**) — fills social/matchmaking/event UI gaps.

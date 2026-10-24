@@ -57,7 +57,7 @@ Before an update, many games temporarily replace their icon with the original ar
 
 ## What Does Not Work
 - **It erases identity.** At 64 px the 12 icons are nearly interchangeable (white hourglass, dark background). New players can't tell what the games are.
-- It serves **locals** (people who already know the game) at the expense of **tourists** (discovery). See the tourists-and-locals idea in [Retention](../../09-Onboarding/First-Session-Design.md).
+- It serves **locals** (people who already know the game) at the expense of **tourists** (discovery). See the tourists-and-locals idea in [Retention](../../13-Onboarding-and-Multiplayer/Onboarding/First-Session-Design.md).
 - It becomes noise when a quarter of the grid does the same thing.
 
 ## Reusable Design Rules
@@ -72,4 +72,4 @@ If a countdown is needed, put a small timer band along the icon edge and keep th
 No data on click-through. Icons change daily, so this is one snapshot.
 
 ## Related
-[Game Icon Principles](../Icon-Principles.md) · [Retention and Replayability](../../09-Onboarding/First-Session-Design.md)
+[Game Icon Principles](../Icon-Principles.md) · [Retention and Replayability](../../13-Onboarding-and-Multiplayer/Onboarding/First-Session-Design.md)

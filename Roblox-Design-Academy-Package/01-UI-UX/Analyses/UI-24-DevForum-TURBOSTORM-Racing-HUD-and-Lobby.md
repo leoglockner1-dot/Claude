@@ -53,4 +53,4 @@ A kart lobby where the only big button is "Join Race"; garage/shop/events are fo
 High for observations; Medium on causes of traffic (community opinions).
 
 ## Related
-[HUD Layouts](../HUD-Layouts.md) · [CS 15 TURBOSTORM Racing](../../15-Game-Case-Studies/CS-15-TURBOSTORM-Racing.md)
+[HUD Layouts](../HUD-Layouts.md) · [CS 15 TURBOSTORM Racing](../../20-Game-Case-Studies/CS-15-TURBOSTORM-Racing.md)

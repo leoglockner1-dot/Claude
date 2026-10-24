@@ -45,4 +45,4 @@ Abstract enchantments represented as gemstones socketed into a sword — familia
 The animation, sounds and the effects that play when a card is used weren't observed.
 
 ## Related
-[Core Loops](../../03-Core-Gameplay-Loops/Core-Loop-Framework.md) · [UI Design Principles](../../14-Design-Principles/UI-Principles.md) · [Typography and Spacing](../Typography-Color-and-Spacing.md)
+[Core Loops](../../03-Core-Gameplay-Loops/Core-Loop-Framework.md) · [UI Design Principles](../../17-Design-Principles/UI-Principles.md) · [Typography and Spacing](../Typography-Color-and-Spacing.md)

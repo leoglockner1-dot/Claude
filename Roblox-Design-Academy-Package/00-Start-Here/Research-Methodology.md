@@ -30,4 +30,4 @@ Identity → What is observable → What works → Why it might work → What do
 Every analysis contains an **original application** that does not copy the reference. Never copy interfaces, compositions, characters or branding.
 
 ## Intake of new references
-[CL 12 Reference Intake](../18-Checklists/CL-12-Reference-Intake.md)
+[CL 12 Reference Intake](../23-Quality-Checklists/CL-12-Reference-Intake.md)
