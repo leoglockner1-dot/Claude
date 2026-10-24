@@ -1,2 +1,7 @@
-Roblox-Design-Academy-Package/Assets/
-Roblox-Design-Academy-Package.zip
+# Third-party reference media (game icons, thumbnails, DevForum and docs screenshots) stay out of
+# this public repo. Rebuild them with: python3 Roblox-Design-Academy-Package/_tools/fetch_assets.py
+Roblox-Design-Academy-Package/Assets/*
+# Original work made for the academy (Blender renders, diagrams, synthesized audio) is committed.
+!Roblox-Design-Academy-Package/Assets/Original/
+Roblox-Design-Academy-Package*.zip
+__pycache__/
