@@ -104,3 +104,41 @@ note_type: "index"
 | ID-004 | Typography is part of identity | [Visual-Identity-Principles](Visual-Identity-Principles.md) | Medium |
 | ID-005 | Borrow grammar, not skins | [Visual-Identity-Principles](Visual-Identity-Principles.md) | High |
 | ID-006 | Colour grade sets genre | [Visual-Identity-Principles](Visual-Identity-Principles.md) | High |
+
+## Added in Academy 2.0 (34 principles)
+| ID | Principle | File | Confidence |
+|---|---|---|---|
+| LOOP-009 | Build return triggers into the loop | [Core-Loop-Principles](Core-Loop-Principles.md) | Medium-high |
+| LOOP-010 | Unlocks should change how you play | [Core-Loop-Principles](Core-Loop-Principles.md) | Medium-high |
+| LOOP-011 | Design the stranger and solo experience | [Core-Loop-Principles](Core-Loop-Principles.md) | Medium-high |
+| LOOP-012 | Change the verb and say it in the name | [Core-Loop-Principles](Core-Loop-Principles.md) | Medium-high |
+| LOOP-013 | Read current health next to historic success | [Core-Loop-Principles](Core-Loop-Principles.md) | Medium-high |
+| LOOP-014 | Variety through combinations | [Core-Loop-Principles](Core-Loop-Principles.md) | Medium-high |
+| LOOP-015 | Measure new players separately | [Core-Loop-Principles](Core-Loop-Principles.md) | Medium-high |
+| LOOP-016 | Test loop variables with experiments | [Core-Loop-Principles](Core-Loop-Principles.md) | Medium-high |
+| ASSET-001 | Judge four categories separately | [Asset-Production-Principles](Asset-Production-Principles.md) | Medium-high |
+| ASSET-002 | Silhouette at the gameplay angle | [Asset-Production-Principles](Asset-Production-Principles.md) | Medium-high |
+| ASSET-003 | Identity comes from 2–3 features | [Asset-Production-Principles](Asset-Production-Principles.md) | Medium-high |
+| ASSET-004 | Facet scale defines stylization | [Asset-Production-Principles](Asset-Production-Principles.md) | Medium-high |
+| ASSET-005 | Overlap, don't touch | [Asset-Production-Principles](Asset-Production-Principles.md) | Medium-high |
+| ASSET-006 | Pivot by role | [Asset-Production-Principles](Asset-Production-Principles.md) | Medium-high |
+| ASSET-007 | Few archetypes, instanced | [Asset-Production-Principles](Asset-Production-Principles.md) | Medium-high |
+| ASSET-008 | One material per mesh: split or palette | [Asset-Production-Principles](Asset-Production-Principles.md) | Medium-high |
+| ASSET-009 | Inspect what you'd see in game | [Asset-Production-Principles](Asset-Production-Principles.md) | Medium-high |
+| ASSET-010 | Treat cards as a documented exception | [Asset-Production-Principles](Asset-Production-Principles.md) | Medium-high |
+| ENG-001 | Pure modules, thin wiring | [Engineering-Principles](Engineering-Principles.md) | Medium-high |
+| ENG-002 | Validate in four layers | [Engineering-Principles](Engineering-Principles.md) | Medium-high |
+| ENG-003 | Treat NaN as hostile | [Engineering-Principles](Engineering-Principles.md) | Medium-high |
+| ENG-004 | Fail closed on data loads | [Engineering-Principles](Engineering-Principles.md) | Medium-high |
+| ENG-005 | Grant once, confirm after save | [Engineering-Principles](Engineering-Principles.md) | Medium-high |
+| ENG-006 | Type-check before running | [Engineering-Principles](Engineering-Principles.md) | Medium-high |
+| ENG-007 | Boundary-test display math | [Engineering-Principles](Engineering-Principles.md) | Medium-high |
+| ENG-008 | Show effective odds when modifiers apply | [Engineering-Principles](Engineering-Principles.md) | Medium-high |
+| PROC-001 | Critique follows evidence | [Process-and-Quality-Principles](Process-and-Quality-Principles.md) | Medium-high |
+| PROC-002 | Rank defects by impact | [Process-and-Quality-Principles](Process-and-Quality-Principles.md) | Medium-high |
+| PROC-003 | Re-run every check after a fix | [Process-and-Quality-Principles](Process-and-Quality-Principles.md) | Medium-high |
+| PROC-004 | Validate the validator | [Process-and-Quality-Principles](Process-and-Quality-Principles.md) | Medium-high |
+| PROC-005 | A failed fix diagnoses the cause | [Process-and-Quality-Principles](Process-and-Quality-Principles.md) | Medium-high |
+| PROC-006 | Question the criterion | [Process-and-Quality-Principles](Process-and-Quality-Principles.md) | Medium-high |
+| PROC-007 | State what was not verified | [Process-and-Quality-Principles](Process-and-Quality-Principles.md) | Medium-high |
+| PROC-008 | Rebuildable evidence | [Process-and-Quality-Principles](Process-and-Quality-Principles.md) | Medium-high |
