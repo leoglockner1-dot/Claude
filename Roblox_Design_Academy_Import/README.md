@@ -6,6 +6,7 @@ A ready-to-merge research package for the Obsidian `Roblox Design Academy`.
 
 **Contents:**
 - 28 analyzed references, written to the academy template
+- a **live chart snapshot** (2026-10-24) of 46 top games' icons and thumbnails with 13 references. The images come in the separate private zip `LIVE_2026-10-24_assets.zip`.
 - a catalog of 15 anti-patterns
 - verified Roblox platform specs
 - principle notes for UI, thumbnails, game feel and game design

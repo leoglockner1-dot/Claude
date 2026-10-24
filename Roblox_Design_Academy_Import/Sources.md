@@ -45,8 +45,15 @@ These are well-known works. The principles attributed to them are standard summa
 - Jan Willem Nijman (Vlambeer), "The Art of Screenshake" (2013 talk): impact feedback techniques.
 - WCAG 2.x contrast guidance (4.5:1 body text, 3:1 large text or UI components). This is a web standard, applied here as a heuristic for game UI.
 
+## Live Roblox data (accessed 2026-10-24, after the network policy was widened)
+- `https://apis.roblox.com/explore-api/v1/get-sorts` (charts: Top Trending, Up-and-Coming, Top Playing Now, Top Revisited; device = all, country = all)
+- `https://games.roblox.com/v1/games?universeIds=…` (names, genres, visits, players, created/updated dates)
+- `https://thumbnails.roblox.com/v1/games/icons` and `/v1/games/multiget/thumbnails` (current icons 512×512 and detail-page thumbnails 768×432), images from `tr.rbxcdn.com`
+- Images are copyrighted by their game developers. They're stored only in the private assets zip for study.
+
 ## Not accessed (blocked or not attempted)
 
-- create.roblox.com, roblox.com game pages and devforum.roblox.com were blocked by the network policy. No live game pages, player counts or current thumbnails were checked.
+- During the first research pass, create.roblox.com, roblox.com and devforum.roblox.com were blocked. They were later opened for the live snapshot. The docs content was **not** re-checked against the live site.
+- Personalized home-page thumbnails (each viewer may get a different one) and video thumbnails were not inspected.
 - No gameplay videos were watched. The two videos in the docs were downloaded to the manifest only (IMP-14) and **not analyzed**.
 - No audio was heard. No claim in this package is based on listening to anything.

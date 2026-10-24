@@ -31,6 +31,13 @@ A thumbnail has two jobs: get the click *and* set a truthful expectation. Roblox
 - Roblox's still-image rules don't ban text, but the video rules limit overlays to gameplay context, with no ads or claims ("50% off", "Free UGC!").
 - Hypothesis: 0–3 words at most, large, high contrast, never at the bottom. A logo works better on the icon than on every thumbnail.
 
+### Findings from the live chart snapshot (2026-10-24) [OBS LIVE]
+- **One visual rule across the icon and every thumbnail** gives the strongest grid identity ([LIVE-01 RIVALS](11_Live_Snapshot_2026-10/LIVE-01_RIVALS_Brand_System.md)).
+- **Situation, not object:** protagonist + threat or goal + tension, lit by one motivated light source ([LIVE-02](11_Live_Snapshot_2026-10/LIVE-02_99_Nights_Story_Thumbnail.md)).
+- **Before/after split** sells progression in one frame ([LIVE-09](11_Live_Snapshot_2026-10/LIVE-09_Before_After_Split.md)). **First-person hands** sell the verb ([LIVE-13](11_Live_Snapshot_2026-10/LIVE-13_First_Person_Framing.md)).
+- **Numbers:** one number, true and consistent across name, icon and thumbnail ([LIVE-08](11_Live_Snapshot_2026-10/LIVE-08_Number_and_Odds_Bait.md)).
+- **Set hygiene:** no duplicates, retire out-of-season art, check the live page for placeholders ([LIVE-06](11_Live_Snapshot_2026-10/LIVE-06_Dress_To_Impress_Thumbnail_Set.md), [LIVE-11](11_Live_Snapshot_2026-10/LIVE-11_Placeholder_Thumbnail.md)).
+
 ---
 
 ## → Game_Icon_Principles.md
@@ -42,6 +49,10 @@ A thumbnail has two jobs: get the click *and* set a truthful expectation. Roblox
 - **Never ship the default icon** [FACT + IMP-27].
 - **No stickers or unexplained symbols.** If an event matters, re-theme the art [OBS IMP-27].
 - **Colour grade decides genre perception** [OBS IMP-28].
+- **Live 64 px winners** share one subject filling the frame, a face with big eyes or one bold shape, high value contrast and at most a short wordmark ([LIVE-10](11_Live_Snapshot_2026-10/LIVE-10_Small_Size_Champions.md)). Losers are dark, busy or text-heavy ([LIVE-12](11_Live_Snapshot_2026-10/LIVE-12_Weak_At_Small_Size.md)).
+- **Countdown icons** (hourglass + "NOW"/"6 HOURS") were on 26% of sampled top icons. If you use one, keep your subject recognisable and run it for hours, not days ([LIVE-04](11_Live_Snapshot_2026-10/LIVE-04_Countdown_Icon_Convention.md)) [HYP].
+- **Logo-only icons** suit established brands. New games need subject-and-genre icons ([LIVE-03](11_Live_Snapshot_2026-10/LIVE-03_MM2_Logo_Icon.md)).
+- **Event frames** are acceptable when they carry shared meaning ([LIVE-07](11_Live_Snapshot_2026-10/LIVE-07_The_Hollow_Event_Frame.md)).
 - **Test in context:** put your icon in a mock grid between 10 popular icons in your genre at 150 px and 64 px. Does it stand out? Can you name the game's verb? [HYP method]
 
 ---
@@ -70,6 +81,9 @@ A focal-point checklist that can be run on any image:
 | Non-gameplay imagery (stock photos, other-game art) | IMP-22 | Use Freecam renders of your real game |
 | Essential info at the bottom | — | Keep the bottom roughly 15% free [HYP size] |
 | Default icon | IMP-27 | Custom icon before launch |
+| Template clone of the genre leader | [LIVE-05](11_Live_Snapshot_2026-10/LIVE-05_Template_Clone_Steal_An_Egg.md) | Keep the genre grammar, build the frame around your own hook |
+| Inconsistent numeric claims | [LIVE-08](11_Live_Snapshot_2026-10/LIVE-08_Number_and_Odds_Bait.md) | One true number everywhere |
+| Duplicate or out-of-season thumbnails, placeholders | [LIVE-06](11_Live_Snapshot_2026-10/LIVE-06_Dress_To_Impress_Thumbnail_Set.md), [LIVE-11](11_Live_Snapshot_2026-10/LIVE-11_Placeholder_Thumbnail.md) | Audit the set each update |
 
 ### Signs of the "AI look" (hypotheses to evaluate, not rules)
 - Random symmetric prop scatter

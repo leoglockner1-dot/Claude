@@ -36,6 +36,8 @@ Flag contradictions to me; don't resolve them silently.
 - macOS/Linux: `bash "<temp>/academy-import/Roblox_Design_Academy_Import/tools/fetch_assets.sh" "<vault>/Roblox Design Academy"`
 - Windows: `powershell -ExecutionPolicy Bypass -File "<temp>\academy-import\Roblox_Design_Academy_Import\tools\fetch_assets.ps1" -Academy "<vault>\Roblox Design Academy"`
 
+Also, I'll give you **`LIVE_2026-10-24_assets.zip`** (current icons and thumbnails of 46 top games). Unzip it into the academy root. It only adds `Assets/Icons/LIVE/` and `Assets/Thumbnails/LIVE/`. Copy the package folder `11_Live_Snapshot_2026-10/` into the academy as well, and merge its findings as `03_Thumbnails_Icons_Import.md` describes.
+
 Then **open a few of the images yourself** and spot-check that the analyses match what you see. Note any disagreement in the analysis under "Limitations".
 
 **6. Validate:** check that every Markdown link and every `Asset:` path resolves, that there are no duplicate notes, and that the academy index lists the new references. Report what you actually checked and what you couldn't check.
@@ -44,6 +46,6 @@ Then **open a few of the images yourself** and spot-check that the analyses matc
 - what was merged and where
 - what was skipped as a duplicate
 - the contradictions found
-- what still needs examples (see the package's limitations: no gameplay video or audio was analyzed, and real-world negative examples are thin)
+- what still needs examples (see the package's limitations: no gameplay video, in-game UI or audio was analyzed, and real-world negative examples are thin)
 
-**Note:** the images are from Roblox's documentation (CC BY 4.0). Screenshots of other developers' games inside them stay in the private vault for study only.
+**Note:** the IMP images are from Roblox's documentation (CC BY 4.0). The LIVE images are other developers' current icons and thumbnails. Keep all game screenshots in the private vault for study only and never publish them.

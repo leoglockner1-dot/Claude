@@ -31,12 +31,18 @@
 - [ ] In-engine render that represents real gameplay and visuals
 - [ ] At most 3 words of text, or none; no ads or claims
 - [ ] 2–5 variants uploaded for personalization
+- [ ] No duplicate thumbnails; no out-of-season art still active
+- [ ] Live detail page checked logged-out: every thumbnail rendered (no grey placeholder)
+- [ ] Any number or odds claim is identical across name, icon and thumbnails, and matches in-game odds
+- [ ] Next to the genre leader at 320×180, a stranger can tell the two games apart
+- [ ] Icon and all thumbnails follow one written visual rule
 - Icon:
   - [ ] 512×512 square
   - [ ] Checked at 150 px **and** about 64 px
   - [ ] One subject
   - [ ] No stickers
   - [ ] Not the default icon
+  - [ ] Still recognisable if darkened with a countdown overlay (if you plan to use one)
 
 ## → Animation_and_VFX_Review.md
 - [ ] Each effect has a stated trigger and the player question it answers

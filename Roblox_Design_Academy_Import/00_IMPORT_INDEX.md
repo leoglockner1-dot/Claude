@@ -19,6 +19,8 @@
 | [07_Bad_Examples/](07_Bad_Examples/) (3 files) | `07_Bad_Examples/` | IMP-23, IMP-27 and the **Anti-Pattern Catalog** (AP-01…AP-15) |
 | [09_Checklist_Additions.md](09_Checklist_Additions.md) | `09_Quality_Checklists/*.md` | Observable checklist items to add |
 | [10_Reference_Wishlist_and_Capture_Guide.md](10_Reference_Wishlist_and_Capture_Guide.md) | Merge into `00_START_HERE.md` ("How to contribute references") or keep as a note | What to capture next and how the user supplies references |
+| [11_Live_Snapshot_2026-10/](11_Live_Snapshot_2026-10/) (14 files) | Keep as its own folder `11_Live_Snapshot_2026-10/` (or move into `06_Reference_Analyses/`) | **Current** chart analysis of 46 top games (icons and all thumbnails, 2026-10-24): LIVE-00 overview and table, LIVE-01…13 references |
+| `LIVE_2026-10-24_assets.zip` (sent to the user privately, **not** in the repo) | unzip into the academy root | 46 icons, 222 thumbnails, contact sheets and raw data for the LIVE references |
 | [tools/asset_manifest.tsv](tools/asset_manifest.tsv) + `fetch_assets.sh` / `fetch_assets.ps1` | run once | Downloads the 48 reference images (and 1 video) into `Assets/…` with the exact filenames the analyses link to |
 
 ## Evidence labels used throughout
@@ -69,7 +71,7 @@ The analyses use the prefix **`IMP-`** so they can't collide with IDs the academ
 Cross-links use **relative Markdown links** (`[text](../folder/file.md)`), which work in Obsidian with the "Use Wikilinks" setting either on or off. The `Related Notes` paths assume the academy structure from the setup prompt. When you merge text from a package-root file (e.g., `02_UI_UX_Import.md`) into a note inside a subfolder, prefix its links with `../`.
 
 ## Known limitations of this package
-- **No live roblox.com, DevForum or create.roblox.com access.** Docs were read via the official GitHub mirror, so game pages, current thumbnails and player counts weren't checked.
+- The IMP references come from Roblox docs (dated examples). The **LIVE references are current** (2026-10-24, Halloween week) but cover only icons and thumbnails, not in-game UI.
 - **No video watched and no audio heard.** Animation, SFX and timing guidance is [GEN]/[HYP], not observed.
-- All reference images come from Roblox's documentation, so they're **examples Roblox chose**. That's a selection bias toward "teaching" examples. Real-world negatives are thin: only 2 dedicated negative references plus weaknesses noted inside mixed ones.
+- All reference images come from Roblox's documentation, so they're **examples Roblox chose**. That's a selection bias toward "teaching" examples. Real-world negatives are still thin: IMP-23, IMP-27, LIVE-11 and LIVE-12, plus weaknesses noted inside mixed references.
 - Ratings are subjective (1 = avoid, 3 = useful with caveats, 5 = exemplary for its stated lesson). They aren't performance measures.
