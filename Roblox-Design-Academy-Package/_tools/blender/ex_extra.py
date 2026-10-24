@@ -15,6 +15,7 @@ Run:  python3 ex_extra.py <out_dir>
 import json
 import math
 import os
+import tempfile
 import sys
 
 import bpy
@@ -26,7 +27,7 @@ import rbx_qc
 import rbx_scene as S
 import rbx_shapes as G
 
-OUT = sys.argv[1] if len(sys.argv) > 1 else '/tmp/extra'
+OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(tempfile.gettempdir(), 'rbx_extra')
 os.makedirs(OUT, exist_ok=True)
 
 

@@ -11,7 +11,7 @@ note_type: "meta"
 |---|---|
 | Categories covered | 16 domains (A–P in [Coverage Matrix](Coverage-Matrix.md)) |
 | Games examined | 113 collected via Roblox APIs in 2.0; 54 written up as case studies; 85 in the v1 chart study (overlapping) |
-| Sources inspected | 512 distinct external URLs cited ([All External Links](../22-Source-Library/All-External-Links.md)); creator-docs pages read as Markdown; 8 Blender manual pages; 47 DevForum topics cited |
+| Sources inspected | 320 distinct external URLs cited in notes ([All External Links](../22-Source-Library/All-External-Links.md)), plus 367 asset source URLs in the registry; creator-docs pages read as Markdown; 8 Blender manual pages; 47 DevForum topics cited |
 | Assets saved | 123 original (renders, QC JSON, exports, audio, GIFs, screenshots, test logs) + 367 third-party (registry, re-fetchable) |
 | Tutorials analysed | 16 official Roblox tutorials (text); 0 video tutorials (blocked) |
 | Principles | 128 (34 added in 2.0) |

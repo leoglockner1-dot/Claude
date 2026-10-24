@@ -14,6 +14,7 @@ Run:  python3 ex_props.py <out_dir> <version>
 """
 import math
 import os
+import tempfile
 import random
 import sys
 
@@ -26,7 +27,7 @@ import rbx_exercise as X
 import rbx_scene as S
 import rbx_shapes as G
 
-OUT = sys.argv[1] if len(sys.argv) > 1 else '/tmp/props'
+OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(tempfile.gettempdir(), 'rbx_props')
 V = sys.argv[2] if len(sys.argv) > 2 else 'v1'
 
 

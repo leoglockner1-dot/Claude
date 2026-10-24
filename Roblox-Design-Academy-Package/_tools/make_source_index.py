@@ -11,7 +11,7 @@ OUT = os.path.join('22-Source-Library', 'All-External-Links.md')
 url_re = re.compile(r'https?://[^\s)>\]|"\'`]+')
 cites = collections.defaultdict(set)
 for f in sorted(glob.glob('**/*.md', recursive=True)):
-    if os.path.normpath(f) == os.path.normpath(OUT):
+    if os.path.normpath(f) in (os.path.normpath(OUT), 'MANIFEST.md'):  # generated files would double-count
         continue
     for u in url_re.findall(open(f, encoding='utf-8').read()):
         u = u.rstrip('.,;:*')

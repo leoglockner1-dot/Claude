@@ -16,6 +16,7 @@ Run:  python3 ex_modular_kit.py <out_dir>
 import json
 import math
 import os
+import tempfile
 import sys
 
 import bpy
@@ -28,7 +29,7 @@ import rbx_qc
 import rbx_scene as S
 import rbx_shapes as G
 
-OUT = sys.argv[1] if len(sys.argv) > 1 else '/tmp/kit'
+OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(tempfile.gettempdir(), 'rbx_kit')
 VERSION = sys.argv[2] if len(sys.argv) > 2 else 'v2'
 os.makedirs(OUT, exist_ok=True)
 GRID = 5.0
