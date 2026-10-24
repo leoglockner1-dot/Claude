@@ -6,6 +6,36 @@ note_type: "meta"
 
 # Research Tracker
 
+## Academy 2.0 — final state (2026-10-24)
+| Item | Count / status |
+|---|---|
+| Categories covered | 16 domains (A–P in [Coverage Matrix](Coverage-Matrix.md)) |
+| Games examined | 113 collected via Roblox APIs in 2.0; 54 written up as case studies; 85 in the v1 chart study (overlapping) |
+| Sources inspected | 512 distinct external URLs cited ([All External Links](../22-Source-Library/All-External-Links.md)); creator-docs pages read as Markdown; 8 Blender manual pages; 47 DevForum topics cited |
+| Assets saved | 123 original (renders, QC JSON, exports, audio, GIFs, screenshots, test logs) + 367 third-party (registry, re-fetchable) |
+| Tutorials analysed | 16 official Roblox tutorials (text); 0 video tutorials (blocked) |
+| Principles | 128 (34 added in 2.0) |
+| Recipes | 23 AV recipes + 15 design recipes |
+| Benchmarks | 18 (15 executed, 1 partly, 2 specification only) |
+| Checklists | 14 |
+| Tests completed | Luau: 54 module specs + 6 tutorial-defect repros + BM-02 spec (buggy fails 6, fixed passes 9); Blender: QC + round-trip export on 10 exercises; BM-03: Playwright HUD checks at 2 viewports; validator: 0 broken links; fetch_assets from empty: 352 created + 15 derived, 0 failed; safe_copy tested on a fake vault |
+| Real failures logged | 13 ([Failure index](../15-Anti-Patterns-and-Failure-Cases/Failure-and-Correction-Index.md)) |
+
+### 2.0 access failures
+Wikipedia, Fandom, YouTube video pages, games-press sites (Sportskeeda, Dexerto, Polygon, PC Gamer, Game Rant) and badges.roblox.com are blocked by the environment's network policy. Roblox Studio is unavailable. Details: [Access Log](../22-Source-Library/Access-Log.md).
+
+### 2.0 remaining gaps → next highest-value tasks
+1. **Studio verification pass:** import the 10 Blender exports, run the Luau modules in a test place, and check BM-03-style layouts with the real Device Emulator. Record results in the exercise notes.
+2. **Play and record 10 case-study games** (first 5 minutes with sound) to replace inferred loops with observed ones.
+3. **Playtest one Core Loop Library concept** with fresh players (BM-18) and attach the results.
+4. **Execute BM-17** (an original thumbnail and icon tested in a genre grid).
+5. **BM-12 pacing table** against a stated income model.
+6. **Video analyses:** add at least one more inspected video when a video host is reachable (target 20 notes).
+
+---
+
+# v1 tracker (kept for history)
+
 ## Phase 1 — Capabilities (2026-10-24)
 | Source | Status | Use |
 |---|---|---|
