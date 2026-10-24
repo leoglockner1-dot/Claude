@@ -42,6 +42,27 @@ function WeightedLoot.odds(t: Table): { [string]: number }
 	return out
 end
 
+-- The true odds of the NEXT roll for this player, including a forced pity roll. Roblox's paid random
+-- items policy lists pity systems as probability modifiers whose effect must be shown numerically, so
+-- display these (not the base odds) when pity applies to a paid roll.
+function WeightedLoot.effectiveOdds(t: Table, userId: number): { [string]: number }
+	local p = t.pity
+	if not p or (t.misses[userId] or 0) + 1 < p.after then
+		return WeightedLoot.odds(t)
+	end
+	local total = 0
+	for _, e in t.entries do
+		if e.rarity >= p.rarity then
+			total += e.weight
+		end
+	end
+	local out = {}
+	for _, e in t.entries do
+		out[e.id] = if e.rarity >= p.rarity then e.weight / total else 0
+	end
+	return out
+end
+
 local function pick(t: Table, minRarity: number?): Entry
 	local pool, total = t.entries, t.total
 	if minRarity then

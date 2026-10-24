@@ -251,4 +251,5 @@ def main():
     print(json.dumps(rt, indent=1))
 
 
-main()
+if __name__ == '__main__':
+    main()

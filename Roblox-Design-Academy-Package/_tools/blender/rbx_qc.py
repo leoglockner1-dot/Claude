@@ -34,8 +34,10 @@ def _evaluated_bmesh(obj):
     return bm
 
 
-def check_object(obj, tri_budget=20000, pivot='bottom-center'):
-    """Return a list of check dicts for one mesh object, evaluated with its modifiers applied."""
+def check_object(obj, tri_budget=20000, pivot='bottom-center', card=False):
+    """Return a list of check dicts for one mesh object, evaluated with its modifiers applied.
+    card=True: an intentionally open, planar mesh (VFX ribbon, leaf card). Roblox's environment-art
+    curriculum uses such cards with MeshPart.DoubleSided; watertight/volume checks become INFO."""
     bm = _evaluated_bmesh(obj)
     bm.verts.ensure_lookup_table()
     res = []
@@ -52,25 +54,38 @@ def check_object(obj, tri_budget=20000, pivot='bottom-center'):
     add('ngons (faces > 4 verts)', ngons, '0 where possible', ngons == 0, OFFICIAL,
         'Triangulate or re-cut with loop cuts; check for shading artifacts after.')
     non_manifold = sum(1 for e in bm.edges if not e.is_manifold)
-    add('non-manifold edges (watertight)', non_manifold, '0', non_manifold == 0, OFFICIAL,
-        'Select > All by Trait > Non Manifold, then fill holes / merge by distance.')
+    if card:
+        res.append({'check': 'non-manifold edges (info: open card)', 'value': non_manifold, 'limit': 'open by design',
+                    'status': 'INFO', 'source': HOUSE, 'fix': 'Set MeshPart.DoubleSided if both sides must render.'})
+    else:
+        add('non-manifold edges (watertight)', non_manifold, '0', non_manifold == 0, OFFICIAL,
+            'Select > All by Trait > Non Manifold, then fill holes / merge by distance.')
     loose = sum(1 for v in bm.verts if not v.link_edges)
     add('loose vertices', loose, '0', loose == 0, HOUSE, 'Mesh > Clean Up > Delete Loose.')
     degenerate = sum(1 for f in bm.faces if f.calc_area() < 1e-8)
     add('zero-area faces', degenerate, '0', degenerate == 0, HOUSE, 'Mesh > Clean Up > Degenerate Dissolve.')
-    # Normals: compare with a copy whose normals were recalculated outside.
+    # Normals: compare with a copy whose normals were recalculated outside. Only meaningful on closed
+    # meshes - on open cards "outside" is undefined and the heuristic misfires (seen on BL-EX-12 v1).
     before = [f.normal.copy() for f in bm.faces]
     bm2 = bm.copy()
     bmesh.ops.recalc_face_normals(bm2, faces=bm2.faces)
     flipped = sum(1 for a, f in zip(before, bm2.faces) if a.dot(f.normal) < 0)
     bm2.free()
-    add('faces pointing inward', flipped, '0', flipped == 0, HOUSE,
-        'Mesh > Normals > Recalculate Outside (Shift+N).')
+    if non_manifold == 0:
+        add('faces pointing inward', flipped, '0', flipped == 0, HOUSE,
+            'Mesh > Normals > Recalculate Outside (Shift+N).')
+    else:
+        res.append({'check': 'faces pointing inward (skipped: open mesh)', 'value': '-', 'limit': 'n/a',
+                    'status': 'INFO', 'source': HOUSE, 'fix': ''})
     # Volume: zero-thickness check via bounding box.
     dims = obj.dimensions
     thin = min(dims) < 1e-4
-    add('has volume (not a flat plane)', [round(d, 3) for d in dims], 'min dim > 0', not thin, OFFICIAL,
-        'Add thickness (Solidify) - Roblox meshes cannot be 0 thickness.')
+    if card:
+        res.append({'check': 'has volume (info: card)', 'value': [round(d, 3) for d in dims], 'limit': 'flat by design',
+                    'status': 'INFO', 'source': HOUSE, 'fix': ''})
+    else:
+        add('has volume (not a flat plane)', [round(d, 3) for d in dims], 'min dim > 0', not thin, OFFICIAL,
+            'Add thickness (Solidify) - Roblox meshes cannot be 0 thickness.')
     # Transforms.
     scale_ok = all(abs(s - 1) < 1e-4 for s in obj.scale)
     add('object scale applied', [round(s, 4) for s in obj.scale], '(1,1,1)', scale_ok, HOUSE,

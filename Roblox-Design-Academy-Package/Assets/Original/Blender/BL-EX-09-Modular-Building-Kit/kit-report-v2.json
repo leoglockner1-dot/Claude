@@ -1,0 +1,120 @@
+{
+ "pieces": {
+  "wall": {
+   "size": [
+    10.0,
+    1.0,
+    10.0
+   ],
+   "footprint": [
+    0.0,
+    0.0,
+    10.0,
+    1.0
+   ],
+   "origin": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "footprint_on_5_grid": true,
+   "qc": {
+    "meshes": 1,
+    "total_triangles": 12,
+    "fails": 0,
+    "warns": 0
+   },
+   "fails": []
+  },
+  "doorway": {
+   "size": [
+    10.0,
+    1.0,
+    10.0
+   ],
+   "footprint": [
+    0.0,
+    0.0,
+    10.0,
+    1.0
+   ],
+   "origin": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "footprint_on_5_grid": true,
+   "qc": {
+    "meshes": 1,
+    "total_triangles": 28,
+    "fails": 0,
+    "warns": 0
+   },
+   "fails": []
+  },
+  "floor": {
+   "size": [
+    10.0,
+    10.0,
+    0.5
+   ],
+   "footprint": [
+    0.0,
+    0.0,
+    10.0,
+    10.0
+   ],
+   "origin": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "footprint_on_5_grid": true,
+   "qc": {
+    "meshes": 1,
+    "total_triangles": 12,
+    "fails": 0,
+    "warns": 0
+   },
+   "fails": []
+  },
+  "corner": {
+   "size": [
+    1.0,
+    1.0,
+    10.0
+   ],
+   "footprint": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "origin": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "footprint_on_5_grid": true,
+   "qc": {
+    "meshes": 1,
+    "total_triangles": 12,
+    "fails": 0,
+    "warns": 0
+   },
+   "fails": []
+  }
+ },
+ "doorway_opening": {
+  "width": 6.0,
+  "height": 8.0,
+  "ok": true
+ },
+ "room": {
+  "objects": 16,
+  "unique_meshes": 4,
+  "door_opening_samples": 12,
+  "unexpected_gaps": [],
+  "unexpected_gap_count": 0
+ }
+}

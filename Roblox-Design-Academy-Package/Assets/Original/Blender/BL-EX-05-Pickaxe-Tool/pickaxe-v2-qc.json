@@ -1,0 +1,379 @@
+{
+ "Pick_Handle": [
+  {
+   "check": "triangles",
+   "value": 96,
+   "limit": "<= 20000",
+   "status": "PASS",
+   "source": "Roblox specifications",
+   "fix": ""
+  },
+  {
+   "check": "ngons (faces > 4 verts)",
+   "value": 0,
+   "limit": "0 where possible",
+   "status": "PASS",
+   "source": "Roblox specifications",
+   "fix": ""
+  },
+  {
+   "check": "non-manifold edges (watertight)",
+   "value": 0,
+   "limit": "0",
+   "status": "PASS",
+   "source": "Roblox specifications",
+   "fix": ""
+  },
+  {
+   "check": "loose vertices",
+   "value": 0,
+   "limit": "0",
+   "status": "PASS",
+   "source": "academy house rule",
+   "fix": ""
+  },
+  {
+   "check": "zero-area faces",
+   "value": 0,
+   "limit": "0",
+   "status": "PASS",
+   "source": "academy house rule",
+   "fix": ""
+  },
+  {
+   "check": "faces pointing inward",
+   "value": 0,
+   "limit": "0",
+   "status": "PASS",
+   "source": "academy house rule",
+   "fix": ""
+  },
+  {
+   "check": "has volume (not a flat plane)",
+   "value": [
+    0.197,
+    0.197,
+    3.6
+   ],
+   "limit": "min dim > 0",
+   "status": "PASS",
+   "source": "Roblox specifications",
+   "fix": ""
+  },
+  {
+   "check": "object scale applied",
+   "value": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "limit": "(1,1,1)",
+   "status": "PASS",
+   "source": "academy house rule",
+   "fix": ""
+  },
+  {
+   "check": "object rotation applied",
+   "value": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "limit": "(0,0,0)",
+   "status": "PASS",
+   "source": "academy house rule",
+   "fix": ""
+  },
+  {
+   "check": "material slots",
+   "value": 1,
+   "limit": "<= 1 per mesh",
+   "status": "PASS",
+   "source": "Roblox texture specifications",
+   "fix": ""
+  },
+  {
+   "check": "UV sets",
+   "value": 0,
+   "limit": "<= 1",
+   "status": "PASS",
+   "source": "Roblox texture specifications",
+   "fix": ""
+  },
+  {
+   "check": "smooth-shaded faces (info)",
+   "value": "0/64",
+   "limit": "intentional",
+   "status": "INFO",
+   "source": "academy house rule",
+   "fix": ""
+  },
+  {
+   "check": "size in studs (info)",
+   "value": [
+    0.197,
+    0.197,
+    3.6
+   ],
+   "limit": "matches intended in-game size",
+   "status": "INFO",
+   "source": "academy house rule",
+   "fix": ""
+  }
+ ],
+ "Pick_Head": [
+  {
+   "check": "triangles",
+   "value": 192,
+   "limit": "<= 20000",
+   "status": "PASS",
+   "source": "Roblox specifications",
+   "fix": ""
+  },
+  {
+   "check": "ngons (faces > 4 verts)",
+   "value": 0,
+   "limit": "0 where possible",
+   "status": "PASS",
+   "source": "Roblox specifications",
+   "fix": ""
+  },
+  {
+   "check": "non-manifold edges (watertight)",
+   "value": 0,
+   "limit": "0",
+   "status": "PASS",
+   "source": "Roblox specifications",
+   "fix": ""
+  },
+  {
+   "check": "loose vertices",
+   "value": 0,
+   "limit": "0",
+   "status": "PASS",
+   "source": "academy house rule",
+   "fix": ""
+  },
+  {
+   "check": "zero-area faces",
+   "value": 0,
+   "limit": "0",
+   "status": "PASS",
+   "source": "academy house rule",
+   "fix": ""
+  },
+  {
+   "check": "faces pointing inward",
+   "value": 0,
+   "limit": "0",
+   "status": "PASS",
+   "source": "academy house rule",
+   "fix": ""
+  },
+  {
+   "check": "has volume (not a flat plane)",
+   "value": [
+    2.6,
+    0.44,
+    1.0
+   ],
+   "limit": "min dim > 0",
+   "status": "PASS",
+   "source": "Roblox specifications",
+   "fix": ""
+  },
+  {
+   "check": "object scale applied",
+   "value": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "limit": "(1,1,1)",
+   "status": "PASS",
+   "source": "academy house rule",
+   "fix": ""
+  },
+  {
+   "check": "object rotation applied",
+   "value": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "limit": "(0,0,0)",
+   "status": "PASS",
+   "source": "academy house rule",
+   "fix": ""
+  },
+  {
+   "check": "material slots",
+   "value": 1,
+   "limit": "<= 1 per mesh",
+   "status": "PASS",
+   "source": "Roblox texture specifications",
+   "fix": ""
+  },
+  {
+   "check": "UV sets",
+   "value": 0,
+   "limit": "<= 1",
+   "status": "PASS",
+   "source": "Roblox texture specifications",
+   "fix": ""
+  },
+  {
+   "check": "smooth-shaded faces (info)",
+   "value": "0/96",
+   "limit": "intentional",
+   "status": "INFO",
+   "source": "academy house rule",
+   "fix": ""
+  },
+  {
+   "check": "size in studs (info)",
+   "value": [
+    2.6,
+    0.44,
+    1.0
+   ],
+   "limit": "matches intended in-game size",
+   "status": "INFO",
+   "source": "academy house rule",
+   "fix": ""
+  }
+ ],
+ "Pick_Grip": [
+  {
+   "check": "triangles",
+   "value": 32,
+   "limit": "<= 20000",
+   "status": "PASS",
+   "source": "Roblox specifications",
+   "fix": ""
+  },
+  {
+   "check": "ngons (faces > 4 verts)",
+   "value": 0,
+   "limit": "0 where possible",
+   "status": "PASS",
+   "source": "Roblox specifications",
+   "fix": ""
+  },
+  {
+   "check": "non-manifold edges (watertight)",
+   "value": 0,
+   "limit": "0",
+   "status": "PASS",
+   "source": "Roblox specifications",
+   "fix": ""
+  },
+  {
+   "check": "loose vertices",
+   "value": 0,
+   "limit": "0",
+   "status": "PASS",
+   "source": "academy house rule",
+   "fix": ""
+  },
+  {
+   "check": "zero-area faces",
+   "value": 0,
+   "limit": "0",
+   "status": "PASS",
+   "source": "academy house rule",
+   "fix": ""
+  },
+  {
+   "check": "faces pointing inward",
+   "value": 0,
+   "limit": "0",
+   "status": "PASS",
+   "source": "academy house rule",
+   "fix": ""
+  },
+  {
+   "check": "has volume (not a flat plane)",
+   "value": [
+    0.27,
+    0.27,
+    0.9
+   ],
+   "limit": "min dim > 0",
+   "status": "PASS",
+   "source": "Roblox specifications",
+   "fix": ""
+  },
+  {
+   "check": "object scale applied",
+   "value": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "limit": "(1,1,1)",
+   "status": "PASS",
+   "source": "academy house rule",
+   "fix": ""
+  },
+  {
+   "check": "object rotation applied",
+   "value": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "limit": "(0,0,0)",
+   "status": "PASS",
+   "source": "academy house rule",
+   "fix": ""
+  },
+  {
+   "check": "material slots",
+   "value": 1,
+   "limit": "<= 1 per mesh",
+   "status": "PASS",
+   "source": "Roblox texture specifications",
+   "fix": ""
+  },
+  {
+   "check": "UV sets",
+   "value": 0,
+   "limit": "<= 1",
+   "status": "PASS",
+   "source": "Roblox texture specifications",
+   "fix": ""
+  },
+  {
+   "check": "smooth-shaded faces (info)",
+   "value": "0/24",
+   "limit": "intentional",
+   "status": "INFO",
+   "source": "academy house rule",
+   "fix": ""
+  },
+  {
+   "check": "size in studs (info)",
+   "value": [
+    0.27,
+    0.27,
+    0.9
+   ],
+   "limit": "matches intended in-game size",
+   "status": "INFO",
+   "source": "academy house rule",
+   "fix": ""
+  }
+ ],
+ "_summary": {
+  "meshes": 3,
+  "total_triangles": 320,
+  "fails": 0,
+  "warns": 0,
+  "size_studs": [
+   2.6,
+   0.44,
+   3.72
+  ]
+ }
+}

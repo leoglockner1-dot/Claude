@@ -1,0 +1,14 @@
+{
+ "export": "/tmp/claude-0/work/extra/export/coin_spin_bob.fbx",
+ "bytes": 27084,
+ "reimported_actions": [
+  [
+   "Coin_Anim|Coin_Anim|Coin_AnimAction",
+   [
+    1.0,
+    61.0
+   ]
+  ]
+ ],
+ "fcurves_set_linear": 2
+}

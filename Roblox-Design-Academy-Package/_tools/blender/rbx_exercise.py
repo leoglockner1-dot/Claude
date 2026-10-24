@@ -19,6 +19,7 @@ def center_on_origin(objs, pivot_obj=None, pivot='bottom-center'):
     """Move an assembly so `pivot_obj` (default: first object) has its pivot at the world origin,
     then set every object's origin to the world origin."""
     ref = pivot_obj or objs[0]
+    bpy.context.view_layer.update()   # matrix_world is stale after setting .location until updated
     lo, hi = S.bounds([ref])
     target = ((lo.x + hi.x) / 2, (lo.y + hi.y) / 2, lo.z if pivot == 'bottom-center' else (lo.z + hi.z) / 2)
     for o in objs:

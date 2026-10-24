@@ -141,19 +141,29 @@ def crystals():
 def pickaxe():
     wood = S.material('Handle', (0.45, 0.28, 0.14), roughness=0.7)
     steel = S.material('PickSteel', (0.62, 0.66, 0.72), roughness=0.35, metallic=0.9)
-    handle = G.cylinder('Pick_Handle', 0.11, 3.6, (0, 0, 1.8), wood, segments=8)
+    handle_len = 3.6 if V in ('v1', 'v2') else 3.75     # v3: handle end shows above the head
+    handle = G.cylinder('Pick_Handle', 0.11, handle_len, (0, 0, handle_len / 2), wood, segments=8)
     G.bevel(handle, 0.03, 1, harden=False)
     G.apply_modifiers(handle)
     # Head: a curved bar built from segments along an arc, tapering to points at both ends.
+    # v1/v2 profile grew tall in the middle (crescent cross-section), so the 3/4 view read as an umbrella
+    # canopy over a shaft. v3: near-constant bar thickness, sharper points, less sag, and the handle
+    # pokes through the top of the head (the "eye"), which is what makes a tool read as a tool.
     bm = bmesh.new()
-    segs, span, sag = 10, 2.6, 0.45 if V == 'v1' else 0.6
+    segs, span = 10, 2.6
+    sag = {'v1': 0.45, 'v2': 0.6}.get(V, 0.35)
     rings = []
     for i in range(segs + 1):
         t = i / segs
         x = (t - 0.5) * span
         z = 3.35 - sag * (2 * (t - 0.5)) ** 2
-        w = 0.2 * (1 - abs(2 * t - 1) ** 1.5) + 0.02          # tapered to points
-        hgt = (0.28 if V == 'v1' else 0.34) * (1 - abs(2 * t - 1) ** 2) + 0.03
+        if V in ('v1', 'v2'):
+            w = 0.2 * (1 - abs(2 * t - 1) ** 1.5) + 0.02
+            hgt = (0.28 if V == 'v1' else 0.34) * (1 - abs(2 * t - 1) ** 2) + 0.03
+        else:
+            edge = abs(2 * t - 1)
+            w = 0.13 * (1 - edge ** 4) + 0.01             # stays thick until close to the tips
+            hgt = 0.15 * (1 - edge ** 4) + 0.01
         rings.append([bm.verts.new((x, sy * w, z + sz * hgt)) for sy, sz in ((-1, -1), (1, -1), (1, 1), (-1, 1))])
     for a, b in zip(rings, rings[1:]):
         for k in range(4):
@@ -162,7 +172,7 @@ def pickaxe():
     bm.faces.new(rings[-1])
     bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
     head = G._new_obj('Pick_Head', bm, steel)
-    collar = G.box('Pick_Collar', (0.34, 0.34, 0.5), (0, 0, 3.3), steel)
+    collar = G.box('Pick_Collar', (0.34, 0.34, 0.5) if V in ('v1', 'v2') else (0.36, 0.36, 0.42), (0, 0, 3.3), steel)
     G.bevel(collar, 0.05, 2)
     G.apply_modifiers(collar)
     head = G.join([head, collar], 'Pick_Head')
@@ -206,6 +216,9 @@ def main():
     S.three_point_lights((0, 0, 1), 4)
     S.ground(80)
     builders = [rocks, gem, coin, crystals, pickaxe, tree]
+    only = os.environ.get('ONLY')            # e.g. ONLY=gem to rebuild one asset
+    if only:
+        builders = [b for b in builders if b.__name__ in only.split(',')]
     os.makedirs(OUT, exist_ok=True)
     summary, exports = {}, []
     for b in builders:
@@ -237,4 +250,5 @@ def main():
         print(k, v['summary'], v['issues'])
 
 
-main()
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,162 @@
+[
+ {
+  "file": "rock_boulder_v2.fbx",
+  "meshes": 1,
+  "size_blender_axes": [
+   3.343,
+   2.997,
+   2.013
+  ],
+  "bytes": 16332
+ },
+ {
+  "file": "rock_boulder_v2.glb",
+  "meshes": 1,
+  "size_blender_axes": [
+   3.343,
+   2.997,
+   2.013
+  ],
+  "bytes": 4972
+ },
+ {
+  "file": "rock_slab_v2.fbx",
+  "meshes": 1,
+  "size_blender_axes": [
+   3.826,
+   3.062,
+   0.909
+  ],
+  "bytes": 16508
+ },
+ {
+  "file": "rock_slab_v2.glb",
+  "meshes": 1,
+  "size_blender_axes": [
+   3.826,
+   3.062,
+   0.909
+  ],
+  "bytes": 5392
+ },
+ {
+  "file": "rock_cluster_v2.fbx",
+  "meshes": 1,
+  "size_blender_axes": [
+   2.577,
+   1.789,
+   0.843
+  ],
+  "bytes": 19148
+ },
+ {
+  "file": "rock_cluster_v2.glb",
+  "meshes": 1,
+  "size_blender_axes": [
+   2.577,
+   1.789,
+   0.843
+  ],
+  "bytes": 11620
+ },
+ {
+  "file": "gem_v2.fbx",
+  "meshes": 1,
+  "size_blender_axes": [
+   1.0,
+   1.0,
+   0.77
+  ],
+  "bytes": 15420
+ },
+ {
+  "file": "gem_v2.glb",
+  "meshes": 1,
+  "size_blender_axes": [
+   1.0,
+   1.0,
+   0.77
+  ],
+  "bytes": 3208
+ },
+ {
+  "file": "coin_v2.fbx",
+  "meshes": 1,
+  "size_blender_axes": [
+   1.2,
+   0.19,
+   1.2
+  ],
+  "bytes": 20556
+ },
+ {
+  "file": "coin_v2.glb",
+  "meshes": 1,
+  "size_blender_axes": [
+   1.2,
+   0.19,
+   1.2
+  ],
+  "bytes": 10352
+ },
+ {
+  "file": "crystal_cluster_v2.fbx",
+  "meshes": 2,
+  "size_blender_axes": [
+   2.549,
+   1.998,
+   2.739
+  ],
+  "bytes": 23308
+ },
+ {
+  "file": "crystal_cluster_v2.glb",
+  "meshes": 2,
+  "size_blender_axes": [
+   2.549,
+   1.998,
+   2.739
+  ],
+  "bytes": 14148
+ },
+ {
+  "file": "pickaxe_v2.fbx",
+  "meshes": 3,
+  "size_blender_axes": [
+   2.6,
+   0.44,
+   3.72
+  ],
+  "bytes": 27052
+ },
+ {
+  "file": "pickaxe_v2.glb",
+  "meshes": 3,
+  "size_blender_axes": [
+   2.6,
+   0.44,
+   3.72
+  ],
+  "bytes": 19800
+ },
+ {
+  "file": "tree_v2.fbx",
+  "meshes": 2,
+  "size_blender_axes": [
+   3.7,
+   3.05,
+   5.066
+  ],
+  "bytes": 28012
+ },
+ {
+  "file": "tree_v2.glb",
+  "meshes": 2,
+  "size_blender_axes": [
+   3.7,
+   3.05,
+   5.066
+  ],
+  "bytes": 28104
+ }
+]

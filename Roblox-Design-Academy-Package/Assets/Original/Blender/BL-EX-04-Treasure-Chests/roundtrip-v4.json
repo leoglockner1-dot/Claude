@@ -1,0 +1,68 @@
+{
+ "toy": [
+  {
+   "file": "chest_toy.fbx",
+   "meshes": 3,
+   "size_blender_axes": [
+    3.0,
+    2.53,
+    2.7
+   ],
+   "bytes": 41516
+  },
+  {
+   "file": "chest_toy.glb",
+   "meshes": 3,
+   "size_blender_axes": [
+    3.0,
+    2.53,
+    2.7
+   ],
+   "bytes": 31992
+  }
+ ],
+ "premium": [
+  {
+   "file": "chest_premium.fbx",
+   "meshes": 4,
+   "size_blender_axes": [
+    2.68,
+    1.725,
+    1.646
+   ],
+   "bytes": 36380
+  },
+  {
+   "file": "chest_premium.glb",
+   "meshes": 4,
+   "size_blender_axes": [
+    2.68,
+    1.725,
+    1.646
+   ],
+   "bytes": 57444
+  }
+ ],
+ "cartoon": [
+  {
+   "file": "chest_cartoon.fbx",
+   "meshes": 4,
+   "size_blender_axes": [
+    2.764,
+    3.656,
+    3.58
+   ],
+   "bytes": 57052
+  },
+  {
+   "file": "chest_cartoon.glb",
+   "meshes": 4,
+   "size_blender_axes": [
+    2.764,
+    3.656,
+    3.58
+   ],
+   "bytes": 38236
+  }
+ ]
+}

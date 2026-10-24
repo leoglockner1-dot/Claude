@@ -162,6 +162,18 @@ T.describe("WeightedLoot", function()
 		T.truthy(forced)
 		T.eq(t.misses[7], 0)
 	end)
+	T.it("effectiveOdds shows the forced pity roll as 100% for the pity tier", function()
+		local t = WeightedLoot.new(entries, function(): number
+			return 0.0
+		end, { rarity = 3, after = 10 })
+		T.near(WeightedLoot.effectiveOdds(t, 5).legendary, 0.05, 1e-9, "before any misses: base odds")
+		for _ = 1, 9 do
+			WeightedLoot.roll(t, 5)
+		end
+		local o = WeightedLoot.effectiveOdds(t, 5)
+		T.eq(o.legendary, 1)
+		T.eq(o.common, 0)
+	end)
 	T.it("rejects bad weights", function()
 		T.throws(function()
 			WeightedLoot.new({ { id = "x", weight = 0 / 0, rarity = 1 } }, function(): number

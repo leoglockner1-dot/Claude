@@ -1,0 +1,196 @@
+{
+ "diff": {
+  "mask_pixels": 302144,
+  "mean_abs_diff_per_channel": [
+   1.82,
+   1.87,
+   1.4
+  ],
+  "p99_abs_diff": 18.0
+ },
+ "info": {
+  "materials_in": 2,
+  "palette_px": 16,
+  "colours": {
+   "Toy_Wood": [
+    0.25,
+    0.75
+   ],
+   "Toy_Gold": [
+    0.75,
+    0.75
+   ]
+  }
+ },
+ "qc_after": {
+  "Toy_Chest": [
+   {
+    "check": "triangles",
+    "value": 1620,
+    "limit": "<= 20000",
+    "status": "PASS",
+    "source": "Roblox specifications",
+    "fix": ""
+   },
+   {
+    "check": "ngons (faces > 4 verts)",
+    "value": 0,
+    "limit": "0 where possible",
+    "status": "PASS",
+    "source": "Roblox specifications",
+    "fix": ""
+   },
+   {
+    "check": "non-manifold edges (watertight)",
+    "value": 0,
+    "limit": "0",
+    "status": "PASS",
+    "source": "Roblox specifications",
+    "fix": ""
+   },
+   {
+    "check": "loose vertices",
+    "value": 0,
+    "limit": "0",
+    "status": "PASS",
+    "source": "academy house rule",
+    "fix": ""
+   },
+   {
+    "check": "zero-area faces",
+    "value": 0,
+    "limit": "0",
+    "status": "PASS",
+    "source": "academy house rule",
+    "fix": ""
+   },
+   {
+    "check": "faces pointing inward",
+    "value": 0,
+    "limit": "0",
+    "status": "PASS",
+    "source": "academy house rule",
+    "fix": ""
+   },
+   {
+    "check": "has volume (not a flat plane)",
+    "value": [
+     3.0,
+     2.53,
+     2.7
+    ],
+    "limit": "min dim > 0",
+    "status": "PASS",
+    "source": "Roblox specifications",
+    "fix": ""
+   },
+   {
+    "check": "object scale applied",
+    "value": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "limit": "(1,1,1)",
+    "status": "PASS",
+    "source": "academy house rule",
+    "fix": ""
+   },
+   {
+    "check": "object rotation applied",
+    "value": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "limit": "(0,0,0)",
+    "status": "PASS",
+    "source": "academy house rule",
+    "fix": ""
+   },
+   {
+    "check": "pivot at bottom-center",
+    "value": 0.0873,
+    "limit": "<= 0.06 (2% of size)",
+    "status": "WARN",
+    "source": "academy house rule",
+    "fix": "Set origin: snap 3D cursor to the intended pivot, Object > Set Origin > Origin to 3D Cursor."
+   },
+   {
+    "check": "material slots",
+    "value": 1,
+    "limit": "<= 1 per mesh",
+    "status": "PASS",
+    "source": "Roblox texture specifications",
+    "fix": ""
+   },
+   {
+    "check": "UV sets",
+    "value": 1,
+    "limit": "<= 1",
+    "status": "PASS",
+    "source": "Roblox texture specifications",
+    "fix": ""
+   },
+   {
+    "check": "UVs inside 0-1",
+    "value": 0,
+    "limit": "0 loops outside",
+    "status": "PASS",
+    "source": "Roblox texture specifications",
+    "fix": ""
+   },
+   {
+    "check": "smooth-shaded faces (info)",
+    "value": "866/866",
+    "limit": "intentional",
+    "status": "INFO",
+    "source": "academy house rule",
+    "fix": ""
+   },
+   {
+    "check": "size in studs (info)",
+    "value": [
+     3.0,
+     2.53,
+     2.7
+    ],
+    "limit": "matches intended in-game size",
+    "status": "INFO",
+    "source": "academy house rule",
+    "fix": ""
+   }
+  ],
+  "_summary": {
+   "meshes": 1,
+   "total_triangles": 1620,
+   "fails": 0,
+   "warns": 1
+  }
+ },
+ "roundtrip": [
+  {
+   "file": "toy_chest_palette.fbx",
+   "meshes": 1,
+   "size_blender_axes": [
+    3.0,
+    2.53,
+    2.7
+   ],
+   "bytes": 44156
+  },
+  {
+   "file": "toy_chest_palette.glb",
+   "meshes": 1,
+   "size_blender_axes": [
+    3.0,
+    2.53,
+    2.7
+   ],
+   "bytes": 37552
+  }
+ ],
+ "glb_reimport_images": [
+  "ex07_palette"
+ ]
+}

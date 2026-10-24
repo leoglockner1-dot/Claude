@@ -1,0 +1,143 @@
+{
+ "Gem": [
+  {
+   "check": "triangles",
+   "value": 32,
+   "limit": "<= 20000",
+   "status": "PASS",
+   "source": "Roblox specifications",
+   "fix": ""
+  },
+  {
+   "check": "ngons (faces > 4 verts)",
+   "value": 0,
+   "limit": "0 where possible",
+   "status": "PASS",
+   "source": "Roblox specifications",
+   "fix": ""
+  },
+  {
+   "check": "non-manifold edges (watertight)",
+   "value": 0,
+   "limit": "0",
+   "status": "PASS",
+   "source": "Roblox specifications",
+   "fix": ""
+  },
+  {
+   "check": "loose vertices",
+   "value": 0,
+   "limit": "0",
+   "status": "PASS",
+   "source": "academy house rule",
+   "fix": ""
+  },
+  {
+   "check": "zero-area faces",
+   "value": 0,
+   "limit": "0",
+   "status": "PASS",
+   "source": "academy house rule",
+   "fix": ""
+  },
+  {
+   "check": "faces pointing inward",
+   "value": 0,
+   "limit": "0",
+   "status": "PASS",
+   "source": "academy house rule",
+   "fix": ""
+  },
+  {
+   "check": "has volume (not a flat plane)",
+   "value": [
+    1.0,
+    1.0,
+    0.77
+   ],
+   "limit": "min dim > 0",
+   "status": "PASS",
+   "source": "Roblox specifications",
+   "fix": ""
+  },
+  {
+   "check": "object scale applied",
+   "value": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "limit": "(1,1,1)",
+   "status": "PASS",
+   "source": "academy house rule",
+   "fix": ""
+  },
+  {
+   "check": "object rotation applied",
+   "value": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "limit": "(0,0,0)",
+   "status": "PASS",
+   "source": "academy house rule",
+   "fix": ""
+  },
+  {
+   "check": "pivot at center",
+   "value": 0.0,
+   "limit": "<= 0.02 (2% of size)",
+   "status": "PASS",
+   "source": "academy house rule",
+   "fix": ""
+  },
+  {
+   "check": "material slots",
+   "value": 1,
+   "limit": "<= 1 per mesh",
+   "status": "PASS",
+   "source": "Roblox texture specifications",
+   "fix": ""
+  },
+  {
+   "check": "UV sets",
+   "value": 0,
+   "limit": "<= 1",
+   "status": "PASS",
+   "source": "Roblox texture specifications",
+   "fix": ""
+  },
+  {
+   "check": "smooth-shaded faces (info)",
+   "value": "0/32",
+   "limit": "intentional",
+   "status": "INFO",
+   "source": "academy house rule",
+   "fix": ""
+  },
+  {
+   "check": "size in studs (info)",
+   "value": [
+    1.0,
+    1.0,
+    0.77
+   ],
+   "limit": "matches intended in-game size",
+   "status": "INFO",
+   "source": "academy house rule",
+   "fix": ""
+  }
+ ],
+ "_summary": {
+  "meshes": 1,
+  "total_triangles": 32,
+  "fails": 0,
+  "warns": 0,
+  "size_studs": [
+   1.0,
+   1.0,
+   0.77
+  ]
+ }
+}
