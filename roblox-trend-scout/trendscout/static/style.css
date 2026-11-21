@@ -74,3 +74,9 @@ footer { text-align: center; padding: 20px; }
   td, th { padding: 6px 5px; }
   .actions { width: 100%; } .actions .btn { flex: 1; }
 }
+.tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--border); margin-bottom: 10px; }
+.tab { background: none; border: none; border-bottom: 2px solid transparent; padding: 8px 12px; margin-bottom: -1px;
+  font: inherit; font-weight: 600; color: var(--muted); cursor: pointer; }
+.tab.active { color: var(--text); border-bottom-color: var(--accent); }
+.sub { display: block; font-size: 12px; color: var(--muted); }
+#mode-help { margin: 0 0 6px; }

@@ -10,7 +10,8 @@ const ago = (ts) => {
 };
 const css = (v) => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
 
-let report = null, selected = null, chart = null, wasRunning = false;
+let report = null, selected = null, chart = null, wasRunning = false, mode = "niches";
+const age = (d) => (d == null ? "–" : Math.round(d));
 
 async function api(path, opts) {
   const r = await fetch(path, opts);
@@ -45,30 +46,51 @@ async function loadTrends() {
 }
 
 function renderTable() {
+  const niches = mode === "niches";
+  const r = report.niche_rules || {};
+  $("#mode-help").textContent = niches
+    ? `Ideas from games under ${r.max_age_days} days old with ${fmt(r.min_demand)}+ players, where a Roblox search finds at most ${r.max_competitors} games with ${r.real_players}+ players.`
+    : "Big themes (keywords and subgenres) ranked by momentum. Mostly crowded already; useful for context.";
+  $("#genre-toggle").classList.toggle("hidden", niches);
+  $("#trend-table thead").innerHTML = niches
+    ? '<tr><th>#</th><th>Niche</th><th class="num">Score</th><th class="num">Games</th><th class="num">Leader</th><th class="num">Age (d)</th></tr>'
+    : '<tr><th>#</th><th>Trend</th><th class="num">Score</th><th class="num">Games</th><th class="num">New</th><th class="num">Players</th></tr>';
   const hide = $("#hide-genres").checked;
-  const rows = report.trends.filter((t) => !hide || t.kind !== "genre");
-  $("#trend-table tbody").innerHTML = rows.length ? rows.map((t, i) => `
+  const rows = niches ? report.niches : report.trends.filter((t) => !hide || t.kind !== "genre");
+  const bar = (t) => `<td class="num"><div class="scorecell"><div class="scorebar"><span style="width:${t.score}%"></span></div>${t.score.toFixed(0)}</div></td>`;
+  const empty = niches
+    ? "No niches found yet. Press <b>Collect now</b>; each run checks up to 150 new phrases, so more appear over the first day."
+    : "No data yet. Press <b>Collect now</b> (takes ~4 minutes).";
+  $("#trend-table tbody").innerHTML = rows.length ? rows.map((t, i) => niches ? `
     <tr data-id="${esc(t.id)}" class="${selected === t.id ? "active" : ""}">
       <td class="muted">${i + 1}</td>
-      <td>${esc(t.label)}</td>
-      <td class="num"><div class="scorecell"><div class="scorebar"><span style="width:${t.score}%"></span></div>${t.score.toFixed(0)}</div></td>
+      <td>${esc(t.label)}<span class="sub">${esc(t.lead_name)}</span></td>${bar(t)}
+      <td class="num">${t.n_games}</td><td class="num">${fmt(t.lead_playing)}</td><td class="num">${age(t.lead_age_days)}</td>
+    </tr>` : `
+    <tr data-id="${esc(t.id)}" class="${selected === t.id ? "active" : ""}">
+      <td class="muted">${i + 1}</td><td>${esc(t.label)}</td>${bar(t)}
       <td class="num">${t.n_games}</td><td class="num">${t.n_young}</td><td class="num">${fmt(t.total_ccu)}</td>
-    </tr>`).join("") : `<tr><td colspan="6" class="muted">No data yet. Press <b>Collect now</b> (takes ~3 minutes).</td></tr>`;
+    </tr>`).join("") : `<tr><td colspan="6" class="muted">${empty}</td></tr>`;
   document.querySelectorAll("#trend-table tbody tr[data-id]").forEach((tr) =>
     tr.addEventListener("click", () => selectTrend(tr.dataset.id)));
-  if (!selected && rows.length) selectTrend(rows[0].id);
+  if (rows.length && !rows.some((t) => t.id === selected)) selectTrend(rows[0].id);
 }
 
 async function selectTrend(id) {
   selected = id;
-  const t = report.trends.find((x) => x.id === id);
+  const niches = mode === "niches";
+  const t = (niches ? report.niches : report.trends).find((x) => x.id === id);
   if (!t) return;
+  const weights = niches ? report.niche_weights : report.weights;
+  const labels = niches ? report.niche_labels : report.labels;
   document.querySelectorAll("#trend-table tbody tr").forEach((tr) => tr.classList.toggle("active", tr.dataset.id === id));
   $("#detail-title").textContent = t.label;
-  $("#detail-sub").textContent = `Score ${t.score} · ${t.n_games} games by ${t.n_creators} creators · median age ${t.median_age_days} days · biggest game has ${pct(t.leader_share)} of players`;
-  $("#breakdown").innerHTML = Object.entries(report.weights).map(([k, w]) => `
-    <div class="brow" title="Weight ${Math.round(w * 100)}% of the score. Percentile vs other trends.">
-      <span>${esc(report.labels[k])}</span>
+  $("#detail-sub").textContent = niches
+    ? `Score ${t.score} · ${t.n_games} game${t.n_games === 1 ? "" : "s"} with real players · led by “${t.lead_name}” (${age(t.lead_age_days)} days old, ${fmt(t.lead_playing)} players)`
+    : `Score ${t.score} · ${t.n_games} games by ${t.n_creators} creators · median age ${t.median_age_days} days · biggest game has ${pct(t.leader_share)} of players`;
+  $("#breakdown").innerHTML = Object.entries(weights).map(([k, w]) => `
+    <div class="brow" title="Weight ${Math.round(w * 100)}% of the score. Percentile vs the others in this list.">
+      <span>${esc(labels[k])}</span>
       <div class="btrack"><div class="bfill" style="width:${t.breakdown[k]}%"></div></div>
       <span class="num">${t.breakdown[k]}</span>
     </div>`).join("");
@@ -77,7 +99,7 @@ async function selectTrend(id) {
     <tr>
       <td>${g.url ? `<a href="${esc(g.url)}" target="_blank" rel="noopener">${esc(g.name)}</a>` : esc(g.name)}
         ${g.charts.includes("up-and-coming") ? '<span class="tag">up-and-coming</span>' : ""}</td>
-      <td class="num">${fmt(g.playing)}</td><td class="num">${Math.round(g.age_days)}</td>
+      <td class="num">${fmt(g.playing)}</td><td class="num">${age(g.age_days)}</td>
       <td class="num">${pct(g.like_ratio)}</td>
       <td class="num ${g.ccu_dod > 0 ? "up" : g.ccu_dod < 0 ? "down" : ""}">${pct(g.ccu_dod, true)}</td>
     </tr>`).join("");
@@ -134,6 +156,8 @@ async function loadPick() {
   if (!r) return;
   const p = r.top_pick, c = r.game_concept;
   $("#pick-body").classList.remove("muted");
+  p.existing_games = p.existing_games || [];
+  c.how_to_beat_existing_games = c.how_to_beat_existing_games || [];
   $("#pick-body").innerHTML = `
     <div class="pick-head">
       <span class="pick-title">${esc(p.trend_label)}</span>
@@ -142,6 +166,7 @@ async function loadPick() {
     <p><b>${esc(p.one_line_verdict)}</b></p>
     <p>${esc(p.why_now)}</p>
     <div class="pick-cols">
+      <div><h3>Already in this niche</h3>${list(p.existing_games)}<h3>How to beat them</h3>${list(c.how_to_beat_existing_games)}</div>
       <div><h3>Evidence</h3>${list(p.evidence)}</div>
       <div><h3>Risks</h3>${list(p.risks)}</div>
       <div><h3>Game concept: ${esc((c.working_titles || []).join(" / "))}</h3>
@@ -165,6 +190,11 @@ async function startJob(path) {
 $("#btn-collect").addEventListener("click", () => startJob("/api/collect"));
 $("#btn-recommend").addEventListener("click", () => startJob("/api/recommend"));
 $("#hide-genres").addEventListener("change", renderTable);
+document.querySelectorAll(".tab").forEach((b) => b.addEventListener("click", () => {
+  mode = b.dataset.mode;
+  document.querySelectorAll(".tab").forEach((x) => x.classList.toggle("active", x === b));
+  renderTable();
+}));
 
 (async () => {
   await Promise.all([loadStatus(), loadTrends(), loadPick()]);

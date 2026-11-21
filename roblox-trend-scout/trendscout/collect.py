@@ -4,7 +4,7 @@ from __future__ import annotations
 import json
 import time
 
-from . import analyze, config, db, roblox, social
+from . import analyze, config, db, niches, roblox, social
 from .http import FetchError
 
 SUPPLY_TOP_N = 15     # how many top themes get a Roblox search (competition check)
@@ -28,7 +28,7 @@ def run(log=print) -> dict:
         tracked = {r[0] for r in conn.execute(
             "SELECT universe_id FROM games WHERE last_seen >= ? ORDER BY last_seen DESC LIMIT 600",
             (now - 7 * 86400,))}
-        ids = sorted(chart_ids | tracked)
+        ids = sorted(chart_ids | tracked | niches.tracked_ids(conn))
 
         log(f"Fetching stats for {len(ids)} games...")
         details = roblox.fetch_game_details(ids)
@@ -45,9 +45,15 @@ def run(log=print) -> dict:
         conn.commit()
         summary.update(games=len(details), charts=len(charts))
 
+        # Early niches: search Roblox for distinctive phrases from new games with real demand.
+        res = niches.collect(conn, log=log)
+        summary["niche_searches"] = res["niche_searches"]
+        summary["errors"] += res["errors"]
+
         # First-pass ranking decides which themes deserve the (slower) extra lookups.
-        ranked = analyze.analyze(conn, limit=SUPPLY_TOP_N)["trends"]
-        terms = [t["search_term"] for t in ranked]
+        first = analyze.analyze(conn, limit=SUPPLY_TOP_N)
+        terms = [t["search_term"] for t in first["trends"]]
+        niche_terms = [n["search_term"] for n in first["niches"]]
 
         log(f"Checking competition for {len(terms)} themes...")
         for term in terms:
@@ -73,7 +79,9 @@ def run(log=print) -> dict:
                 continue
             log(f"Checking {source} buzz...")
             ok = 0
-            for term in terms[:top_n]:
+            # Niches first (that's what you're hunting), then a few big trends for context.
+            social_terms = list(dict.fromkeys(niche_terms[:top_n] + terms[:5]))
+            for term in social_terms:
                 try:
                     res = fn(term)
                 except FetchError as e:

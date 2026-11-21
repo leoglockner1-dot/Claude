@@ -42,8 +42,14 @@ SIGNAL_LABELS = {
 
 
 # ---------------------------------------------------------------- name -> keywords
+NO_SINGULAR = {"christmas", "physics", "chaos", "bus", "gas", "atlas", "news", "series", "species",
+               "texas", "pancreas", "canvas", "lotus", "bonus", "virus", "cactus", "octopus", "plus"}
+
+
 def _singular(w: str) -> str:
     """Crude plural folding so "animals"/"animal" and "eggs"/"egg" become one theme."""
+    if w in NO_SINGULAR:
+        return w
     if len(w) > 4 and w.endswith("ies"):
         return w[:-3] + "y"
     if len(w) > 3 and w.endswith("s") and not w.endswith(("ss", "us", "is")):
@@ -310,8 +316,11 @@ def analyze(conn=None, limit: int = 40) -> dict:
     conn = conn or db.connect()
     try:
         games, meta = load_games(conn)
-        themes = [theme_metrics(t, _latest_supply(conn), _latest_social(conn)) for t in build_themes(games)]
+        social = _latest_social(conn)
+        themes = [theme_metrics(t, _latest_supply(conn), social) for t in build_themes(games)]
         ranked = score_themes(themes)[:limit]
+        from . import niches as niche_mod
+        niche_list = niche_mod.find_niches(conn, games, social, limit=limit)
     finally:
         if own:
             conn.close()
@@ -322,4 +331,7 @@ def analyze(conn=None, limit: int = 40) -> dict:
                      "(and gets much better after 7 days); until then scores lean on game age, "
                      "charts and visit velocity.")
     return {"generated_ts": time.time(), "meta": meta, "notes": notes,
-            "weights": WEIGHTS, "labels": SIGNAL_LABELS, "games_tracked": len(games), "trends": ranked}
+            "weights": WEIGHTS, "labels": SIGNAL_LABELS, "games_tracked": len(games), "trends": ranked,
+            "niches": niche_list, "niche_weights": niche_mod.WEIGHTS, "niche_labels": niche_mod.LABELS,
+            "niche_rules": {"max_age_days": niche_mod.NICHE_MAX_AGE_DAYS, "min_demand": niche_mod.MIN_DEMAND,
+                            "real_players": niche_mod.REAL_PLAYERS, "max_competitors": niche_mod.MAX_COMPETITORS}}

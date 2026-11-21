@@ -97,7 +97,7 @@ class Handler(BaseHTTPRequestHandler):
                                    "model": config.CLAUDE_MODEL})
             if url.path == "/api/trends":
                 rep = analyze.analyze()
-                for t in rep["trends"]:
+                for t in rep["trends"] + rep["niches"]:
                     t["games"] = [{k: v for k, v in g.items() if k != "description"} for g in t["games"][:12]]
                 return self._json(rep)
             if url.path == "/api/history":

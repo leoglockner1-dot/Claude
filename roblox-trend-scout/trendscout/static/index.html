@@ -24,18 +24,22 @@
 
   <main>
     <section id="pick" class="card pick">
-      <h2>Top pick</h2>
+      <h2>AI top pick</h2>
       <div id="pick-body" class="muted">No AI recommendation yet. Collect data, then press <b>Get AI pick</b>.</div>
     </section>
 
     <section class="grid">
       <div class="card">
+        <div class="tabs" role="tablist">
+          <button class="tab active" data-mode="niches" role="tab">Early niches</button>
+          <button class="tab" data-mode="trends" role="tab">All trends</button>
+        </div>
         <div class="card-head">
-          <h2>Upcoming trends</h2>
-          <label class="muted small"><input type="checkbox" id="hide-genres"> hide broad subgenres</label>
+          <p class="muted small" id="mode-help"></p>
+          <label class="muted small hidden" id="genre-toggle"><input type="checkbox" id="hide-genres"> hide broad subgenres</label>
         </div>
         <div class="table-scroll"><table class="trends" id="trend-table">
-          <thead><tr><th>#</th><th>Trend</th><th class="num">Score</th><th class="num">Games</th><th class="num">New</th><th class="num">Players</th></tr></thead>
+          <thead></thead>
           <tbody></tbody>
         </table></div>
       </div>

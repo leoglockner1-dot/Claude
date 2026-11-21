@@ -103,5 +103,47 @@ class SchemaTests(unittest.TestCase):
         walk(recommend.SCHEMA)
 
 
+class NicheTests(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        config.DATA_DIR = Path(self.tmp.name)
+        config.DB_PATH = config.DATA_DIR / "n.db"
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def test_name_matching(self):
+        from trendscout.niches import name_matches as m
+        self.assertTrue(m("Clean the Ball Pits!", "ballpit"))
+        self.assertTrue(m("[UPD] Ball Pit Simulator", "ball pit"))
+        self.assertTrue(m("Run a Christmas Tree Lot", "christmas tree"))
+        self.assertFalse(m("Garage Tycoon", "rage"))
+        self.assertFalse(m("Volley Bomb", "half punch"))
+
+    def test_finds_niche_and_skips_crowded(self):
+        import json
+        from trendscout import niches
+        now = time.time()
+        iso = lambda days: time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime(now - days * DAY))
+        games = [(1, "Clean The Ballpit!", 1, 20, 30000)]
+        games += [(10 + i, f"Ragdoll Thing {i}", 10 + i, 30, 2000) for i in range(7)]   # crowded word
+        with db.session() as conn:
+            r = db.new_run(conn)
+            for uid, name, cr, age, ccu in games:
+                db.upsert_game(conn, {"universe_id": uid, "root_place_id": uid, "name": name, "description": "",
+                                      "creator_id": cr, "creator_name": "c", "creator_type": "User",
+                                      "genre_l1": "", "genre_l2": "", "created": iso(age), "updated": iso(1),
+                                      "url_path": ""}, now)
+                conn.execute("INSERT INTO snapshots VALUES (?,?,?,?,?,?,?,?)", (r, uid, now, ccu, ccu * 50, 0, 90, 10))
+            niches._ensure(conn)
+            results = [{"universe_id": 1, "name": "Clean The Ballpit!", "playing": 30000},
+                       {"universe_id": 2, "name": "Ball Pit Simulator", "playing": 1500},
+                       {"universe_id": 3, "name": "Totally Unrelated Hit", "playing": 90000}]   # search padding
+            conn.execute("INSERT INTO niche_search VALUES (?,?,?,?)", ("ballpit", now, 2, json.dumps(results)))
+            found = niches.find_niches(conn)
+        self.assertEqual([x["keyword"] for x in found], ["ballpit"])
+        self.assertEqual({g["name"] for g in found[0]["games"]}, {"Clean The Ballpit!", "Ball Pit Simulator"})
+
+
 if __name__ == "__main__":
     unittest.main()

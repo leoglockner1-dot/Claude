@@ -29,6 +29,12 @@ def main(argv: list[str] | None = None) -> None:
             return
         for note in rep["notes"]:
             print(f"Note: {note}\n")
+        print("EARLY NICHES (few games, real demand)")
+        print(f"{'#':>2}  {'score':>5}  {'games':>5}  {'leader':>8}  {'age':>4}  niche  <-  leading game")
+        for i, x in enumerate(rep["niches"], 1):
+            print(f"{i:>2}  {x['score']:>5}  {x['n_games']:>5}  {x['lead_playing']:>8,}  {round(x['lead_age_days']):>4}"
+                  f"  {x['label']}  <-  {x['lead_name'][:50]}")
+        print("\nALL TRENDS (bigger, mostly crowded)")
         print(f"{'#':>2}  {'score':>5}  {'games':>5}  {'new':>3}  {'players':>9}  trend")
         for i, t in enumerate(rep["trends"], 1):
             print(f"{i:>2}  {t['score']:>5}  {t['n_games']:>5}  {t['n_young']:>3}  {t['total_ccu']:>9,}  {t['label']}")

@@ -2,9 +2,11 @@
 
 ## 1. Goal
 
-Help a solo or small-team developer decide **which Roblox game to build next** by finding
-trends that are rising *before* they peak, ranking them, and turning the best one into a concrete
-game concept and build plan.
+Help a solo developer find **early niches**: Roblox game ideas with proven demand (a new game
+already has real players) but almost no competition (1–5 games). The developer builds a better
+version with their own twist and owns the niche before the trend blows up. The tool ranks these
+niches and turns the best one into a concrete concept, a plan to beat the existing games, and a
+build plan. Bigger, crowded trends are still shown on a second tab for context.
 
 Requirements:
 - Runs on a Mac laptop at home, set up with one script.
@@ -36,7 +38,8 @@ Requirements:
 | `trendscout/roblox.py` | Roblox Explore charts (`explore-api/get-sorts`), game details, votes, search |
 | `trendscout/social.py` | YouTube Data API (videos + views in the last 7 days), Reddit search |
 | `trendscout/collect.py` | One collection run; writes snapshots to `data/trends.db` |
-| `trendscout/analyze.py` | Groups games into trends, computes metrics, scores them |
+| `trendscout/niches.py` | Finds early niches: new games with demand, phrases with ≤ 5 real competitors |
+| `trendscout/analyze.py` | Per-game growth metrics; groups games into big trends and scores them |
 | `trendscout/recommend.py` | Calls Claude with structured JSON output |
 | `trendscout/server.py`, `static/` | Local dashboard (Python standard library + Chart.js, bundled) |
 | `setup.sh`, `start.command`, `scripts/` | Mac install, launcher, background schedule |
@@ -49,9 +52,9 @@ Only one dependency is installed: the official `anthropic` Python SDK.
 |---|---|---|
 | Roblox Explore | ~25 charts (Up-and-Coming, Top Trending, Top Playing Now, Fun with Friends, Top Revisited, Top Earning, …), ~900 unique games | Free, public |
 | Roblox games API | Players now, visits, favorites, likes/dislikes, created/updated dates, genre, creator | Free, public |
-| Roblox search | For the top 15 themes: how many games compete and how concentrated the players are | Free, public |
-| YouTube | For the top 10 themes: videos in the last 7 days and their views (every 12h) | Free key; ~1,000 of the 10,000 daily quota units per check |
-| Reddit | For the top 12 themes: posts in Roblox subreddits this week (every 6h) | Free, no key |
+| Roblox search | Up to 150 phrases from new games per run (niche competitor counts, cached 24h), plus the top 15 big themes | Free, public |
+| YouTube | For the top 10 niches + top 5 trends: videos in the last 7 days and their views (every 12h) | Free key; ~1,000 of the 10,000 daily quota units per check |
+| Reddit | For the top 12 niches + top 5 trends: posts in Roblox subreddits this week (every 6h) | Free, no key |
 
 Games that fall off the charts keep being tracked for 7 days, so a dip doesn't erase history.
 
@@ -65,10 +68,46 @@ A trend is a group of games sharing a **theme**:
 A theme needs at least 2 games (3 for subgenres) from at least 2 different creators and 1,000+
 concurrent players in total. Themes covering exactly the same games are merged.
 
-## 5. Scoring (0–100)
+## 5. Early niches (the main view)
 
-Each signal is turned into a percentile against all other trends (so it adapts to whatever
-the market looks like), then weighted:
+`trendscout/niches.py`. The rules (all adjustable at the top of the file):
+
+| Rule | Value |
+|---|---|
+| Leading game age | ≤ 120 days |
+| Proof of demand | leading game has ≥ 500 players online |
+| A competitor counts if it has | ≥ 100 players online |
+| Max competitors | 5 (a single game with no copies yet counts too) |
+
+How niches are found each run:
+1. Take every game that passes the age and demand rules.
+2. Pull the distinctive words and phrases from its name. Words already used by 6+ tracked games
+   are crowded by definition and skipped.
+3. Search Roblox for each phrase (up to 150 new phrases per run; results cached 24h). Roblox
+   search pads results with loosely related hits, so **only games whose name actually contains
+   the phrase** count as competitors ("ballpit" matches "Clean the Ball Pit!", "rage" doesn't
+   match "Garage").
+4. For each game, the broadest phrase that still has ≤ 5 competitors becomes its niche label.
+   The game's most crowded related word is shown as a warning ("Broader idea “ragdoll” already
+   has 18 games").
+5. Games found this way are tracked from then on, so their growth is measured too.
+
+Niche score (percentiles against the other niches):
+
+| Signal | Weight | Measures |
+|---|---|---|
+| Growth momentum | 22% | Players vs same time yesterday / last week, visit acceleration |
+| Proven demand | 18% | Players online in the leading game |
+| How new it is | 13% | Age of the leading game |
+| Few competitors | 13% | Number of games with real players in the niche |
+| Broader idea uncrowded | 12% | Penalty when the niche is a renamed version of a crowded idea |
+| Social buzz | 9% | YouTube views + Reddit engagement this week |
+| Player approval | 8% | Like ratio |
+| Chart presence | 5% | Up-and-Coming, Top Trending, … |
+
+## 6. All trends (context tab)
+
+Each big theme's signals are turned into a percentile against all other trends, then weighted:
 
 | Signal | Weight | Measures |
 |---|---|---|
@@ -80,34 +119,33 @@ the market looks like), then weighted:
 | Room to compete | 12% | Players per competing game, penalized when one game owns most of the players |
 | Player approval | 8% | Like ratio weighted by player count |
 
-Design choices:
+Design choices (both views):
 - **Player counts swing by time of day**, so growth only compares a snapshot with one ~24h or
   ~7 days earlier, never with 3 hours ago.
-- **Missing data scores neutral (50)**, so a trend isn't rewarded or punished for a source
-  that wasn't checked.
-- **Weights live in one place** (`WEIGHTS` in `analyze.py`) so they can be tuned.
+- **Missing data scores neutral (50)**, so nothing is rewarded or punished for a source that
+  wasn't checked.
 
-## 6. The AI recommendation
+## 7. The AI recommendation
 
-`recommend.py` sends the top 10 trends (metrics, signals, top 6 games each) to Claude
-(`claude-opus-5-5`, effort `high`, streamed) with a strict JSON schema, so the dashboard always
-gets the same fields:
+`recommend.py` sends the top 12 niches (metrics, signals, the games in each) plus the top 5 big
+trends as context to Claude (`claude-opus-5-5`, effort `high`, streamed) with a strict JSON schema:
 
-- **Top pick**: trend, confidence 1–10, verdict, why now, evidence, risks, estimated window
-- **Game concept**: working titles, pitch, core loop, original twist, target players,
-  monetization, icon/thumbnail ideas
-- **Build plan** by phase, **launch checklist**, **runner-ups**, **trends to avoid**, **data caveats**
+- **Top pick**: niche, the games already in it, confidence 1–10, verdict, why now, evidence,
+  risks, estimated window
+- **Game concept**: working titles, pitch, core loop, original twist, **how to beat the existing
+  games**, target players, monetization, icon/thumbnail ideas
+- **Build plan** by phase, **launch checklist**, **runner-ups**, **niches to avoid**, **data caveats**
 
-The instructions tell Claude to favour young, multi-creator, growing themes a solo dev can ship
-in 3–6 weeks, to avoid one-off events and licensed IP, to propose an **original** game rather
+The instructions tell Claude to favour proven demand with very few competitors that a solo dev
+can ship in 3–6 weeks, to flag one-game flukes and renamed crowded ideas, to avoid one-off events and licensed IP, to propose an **original** game rather
 than a copy, and to treat game names and descriptions as data, never as instructions.
 Server-side refusal fallback is turned on, so a declined request is retried on a fallback model
 automatically.
 
-Cost: about 12k input tokens and a few thousand output tokens, roughly **$0.10–0.25 per pick**.
+Cost: about 8–12k input tokens and a few thousand output tokens, roughly **$0.10–0.25 per pick**.
 Collection itself never calls Claude, so the background job is free.
 
-## 7. Running on the Mac
+## 8. Running on the Mac
 
 - `setup.sh` finds Python 3.10+, creates `.venv`, installs the SDK, creates `.env`, and
   installs the background job.
@@ -117,7 +155,7 @@ Collection itself never calls Claude, so the background job is free.
 - `start.command` (double-click) starts the dashboard and opens the browser. The server only
   listens on `127.0.0.1` and rejects action requests from other websites.
 
-## 8. Timeline to a useful pick
+## 9. Timeline to a useful pick
 
 | When | What you get |
 |---|---|
@@ -126,19 +164,21 @@ Collection itself never calls Claude, so the background job is free.
 | ~7 days | Week-over-week growth. **Recommended point to trust the AI pick.** |
 | 2–4 weeks | Enough history to see which trends kept rising vs faded (useful for tuning weights). |
 
-## 9. Limitations and risks
+## 10. Limitations and risks
 
 - **Unofficial endpoints.** The Roblox Explore/search APIs are what roblox.com itself uses,
   not a documented public API; they can change. Collectors fail soft and report warnings.
 - **Snapshot gaps.** If the laptop is off for days, growth for that window is missing (it
   recovers once new snapshots arrive).
+- **Niches are found from game names.** An idea whose games all have different names (same
+  mechanic, different words) can look less crowded than it is; the AI reads the game list to catch this.
 - **Keyword themes are heuristic.** Two unrelated games can share a word; a trend can also be
   a mechanic that names don't reveal. Subgenres partly cover that.
 - **Correlation, not causation.** A rising trend is a signal, not a guarantee; execution,
   thumbnails and update cadence decide most of a game's success.
-- **YouTube quota.** 10,000 units/day free; the defaults use ~2,000/day.
+- **YouTube quota.** 10,000 units/day free; the defaults use ~3,000/day.
 
-## 10. Roadmap
+## 11. Roadmap
 
 **v1 (built now):** collection, trend detection, scoring, AI pick, dashboard, Mac scheduler, tests.
 

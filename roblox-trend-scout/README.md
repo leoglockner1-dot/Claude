@@ -1,9 +1,12 @@
 # Roblox Trend Scout
 
-Finds Roblox game trends that are **on the way up** and recommends the one with the most
-potential for you to build a game in. It runs on your Mac: a background job takes a snapshot of
-Roblox every 3 hours, and a local dashboard in your browser shows the ranked trends plus an
-AI-written top pick with a game concept and build plan.
+Finds **early niches** on Roblox: game ideas that players clearly want (a new game already has
+real players) but that **almost nobody has built yet** (1–5 games). Build a better version with
+your own twist and own the niche before it blows up and gets flooded with copies.
+
+It runs on your Mac: a background job checks Roblox every 3 hours, and a local dashboard shows
+the ranked niches, the games already in each one, and an AI-written top pick with a game concept,
+how to beat the existing games and a build plan.
 
 See **[PLAN.md](PLAN.md)** for how it works, the scoring method and the roadmap.
 
@@ -62,12 +65,20 @@ The first time, macOS may say the file is from an unidentified developer: right-
 
 ## Using it
 
-1. **Collect now** takes a fresh snapshot (about 3 minutes). The background job does this every
+1. **Collect now** takes a fresh snapshot (about 4–5 minutes). The background job does this every
    3 hours on its own while your Mac is on.
-2. The **Upcoming trends** table ranks themes 0–100. Click one to see why it scored that way,
-   its games and a players-over-time chart.
-3. **Get AI pick** sends the top 10 trends to Claude, which picks the best one for a solo
-   developer and writes a game concept, a week-by-week build plan, risks and runner-ups.
+2. The **Early niches** tab (the default) lists ideas where:
+   - the leading game is under **120 days** old and has **500+** players online, and
+   - a Roblox search for the idea finds at most **5** games with **100+** players.
+
+   Click one to see the games already in it, why it scored that way and a players-over-time chart.
+   Each run checks up to 150 new phrases, so more niches appear over the first day.
+3. **All trends** shows the bigger themes for context (mostly crowded already).
+4. **Get AI pick** sends the top 12 niches to Claude. It picks the best one for a solo developer
+   and writes how to beat the existing games, an original concept, a build plan and the risks.
+
+You can change the niche rules at the top of `trendscout/niches.py` (`MAX_COMPETITORS`,
+`MIN_DEMAND`, `NICHE_MAX_AGE_DAYS`, `REAL_PLAYERS`).
 
 **Give it time.** On day one the ranking is based on game age, charts and visit counts. After
 ~24 hours it can measure real growth, and after ~7 days week-over-week growth too, which is
