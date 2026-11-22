@@ -36,7 +36,14 @@ fi
 chmod +x start.command scripts/*.sh 2>/dev/null || true
 
 # 4) Background collection every 3 hours.
-read -r -p "Collect data automatically every 3 hours in the background? [Y/n] " ans
+# Asks when run by a person; defaults to "yes" when run by a tool (no keyboard attached).
+# Use ./setup.sh --no-schedule to skip it.
+ans="Y"
+if [[ " $* " == *" --no-schedule "* ]]; then
+  ans="n"
+elif [ -t 0 ]; then
+  read -r -p "Collect data automatically every 3 hours in the background? [Y/n] " ans
+fi
 if [[ ! "$ans" =~ ^[Nn] ]]; then ./scripts/install_schedule.sh; fi
 
 # 5) Test notification (macOS may ask you to allow notifications the first time).
