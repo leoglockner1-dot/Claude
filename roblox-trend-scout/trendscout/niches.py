@@ -21,7 +21,7 @@ import re
 import time
 from collections import Counter, defaultdict
 
-from . import analyze, roblox
+from . import analyze, roblox, seasonal
 from .http import FetchError
 
 NICHE_MAX_AGE_DAYS = 120   # the niche's leading game must be this new
@@ -248,6 +248,9 @@ def _niche_metrics(kw: str, e: dict, members: list[dict], social: dict) -> dict:
         ckw, cn = e["crowded_concept"]
         signals.append(f"Broader idea \u201c{analyze.display_keyword(ckw)}\u201d already has "
                        f"{cn if cn < 20 else '20+'} games: make sure your twist stands apart")
+    season = seasonal.detect(term, lead["name"])
+    if season:
+        signals.insert(0, seasonal.describe(season))
     if e["aliases"]:
         signals.append("Related phrases: " + ", ".join(analyze.display_keyword(k) for k in e["aliases"][:5]))
 
@@ -261,7 +264,7 @@ def _niche_metrics(kw: str, e: dict, members: list[dict], social: dict) -> dict:
         "leader_share": (lead["playing"] or 0) / max(total, 1), "momentum": mom, "quality": quality,
         "chart_score": charts, "buzz": buzz, "youtube": yt, "reddit": rd, "signals": signals,
         "games": members, "aliases": e["aliases"], "lead_id": lead["universe_id"],
-        "crowded_concept": e["crowded_concept"],
+        "crowded_concept": e["crowded_concept"], "seasonal": season,
     }
 
 
@@ -282,5 +285,6 @@ def _score(niches: list[dict]) -> list[dict]:
     pct = {k: analyze._percentiles(v) for k, v in raw.items()}
     for i, x in enumerate(niches):
         x["breakdown"] = {k: round(pct[k][i] * 100) for k in WEIGHTS}
-        x["score"] = round(sum(WEIGHTS[k] * pct[k][i] for k in WEIGHTS) * 100, 1)
+        base = sum(WEIGHTS[k] * pct[k][i] for k in WEIGHTS) * 100
+        x["score"] = round(base * (x["seasonal"]["factor"] if x.get("seasonal") else 1), 1)
     return sorted(niches, key=lambda x: -x["score"])

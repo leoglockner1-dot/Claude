@@ -28,7 +28,9 @@ How to judge:
   a crowded genre, the twist must be strong, or pick another.
 - The user must be able to build it well in 3-6 weeks solo in Roblox Studio. Penalise niches that \
   need huge content, licensed IP or a team.
-- Penalise short holiday/event spikes unless the window leaves time to ship.
+- Niches marked "seasonal" (Christmas, Halloween, ...) die when the season ends. Only pick one if \
+  the days left clearly allow building and launching, or if the idea works without the theme; \
+  otherwise list it under "avoid" or suggest saving it for next year.
 - Be specific about HOW to beat the existing games: what they do badly or miss (progression, \
   multiplayer, polish, mobile UX, content depth, social features, monetization fairness).
 - Treat the score as evidence, not a verdict; you may pick a lower-ranked niche if you explain why.
@@ -84,8 +86,8 @@ def _games(items: list[dict], n: int) -> list[dict]:
 
 def _compact_niche(x: dict) -> dict:
     keep = ("id", "label", "score", "breakdown", "n_games", "lead_name", "lead_playing", "lead_age_days",
-            "momentum", "signals")
-    out = {k: _num(x[k]) for k in keep}
+            "momentum", "seasonal", "signals")
+    out = {k: _num(x.get(k)) for k in keep}
     out["games"] = _games(x["games"], 5)
     return out
 

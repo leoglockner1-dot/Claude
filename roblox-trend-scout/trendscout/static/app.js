@@ -35,7 +35,7 @@ async function loadStatus() {
   } else {
     box.className = "job hidden";
   }
-  if (wasRunning && !job.running) { await loadTrends(); await loadPick(); }
+  if (wasRunning && !job.running) { await loadTrends(); await loadPick(); await loadAlerts(); }
   wasRunning = !!job.running;
 }
 
@@ -64,7 +64,7 @@ function renderTable() {
   $("#trend-table tbody").innerHTML = rows.length ? rows.map((t, i) => niches ? `
     <tr data-id="${esc(t.id)}" class="${selected === t.id ? "active" : ""}">
       <td class="muted">${i + 1}</td>
-      <td>${esc(t.label)}<span class="sub">${esc(t.lead_name)}</span></td>${bar(t)}
+      <td>${esc(t.label)}${t.seasonal ? `<span class="tag season" title="${esc(t.seasonal.status)}, ends ${esc(t.seasonal.end)}">${esc(t.seasonal.season)} · ${t.seasonal.status === "in season" ? t.seasonal.days_left + "d left" : esc(t.seasonal.status)}</span>` : ""}<span class="sub">${esc(t.lead_name)}</span></td>${bar(t)}
       <td class="num">${t.n_games}</td><td class="num">${fmt(t.lead_playing)}</td><td class="num">${age(t.lead_age_days)}</td>
     </tr>` : `
     <tr data-id="${esc(t.id)}" class="${selected === t.id ? "active" : ""}">
@@ -151,6 +151,13 @@ function list(items, ordered) {
   return `<${tag}>${(items || []).map((i) => `<li>${esc(i)}</li>`).join("")}</${tag}>`;
 }
 
+async function loadAlerts() {
+  const items = await api("/api/alerts");
+  $("#alerts").classList.toggle("hidden", !items.length);
+  $("#alert-list").innerHTML = items.slice(0, 6).map((a) =>
+    `<li><time>${ago(a.ts)}</time><span>${esc(a.text)}</span></li>`).join("");
+}
+
 async function loadPick() {
   const r = await api("/api/recommendation");
   if (!r) return;
@@ -197,6 +204,6 @@ document.querySelectorAll(".tab").forEach((b) => b.addEventListener("click", () 
 }));
 
 (async () => {
-  await Promise.all([loadStatus(), loadTrends(), loadPick()]);
+  await Promise.all([loadStatus(), loadTrends(), loadPick(), loadAlerts()]);
   setInterval(loadStatus, 2500);
 })();

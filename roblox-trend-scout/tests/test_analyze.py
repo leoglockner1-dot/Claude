@@ -145,5 +145,62 @@ class NicheTests(unittest.TestCase):
         self.assertEqual({g["name"] for g in found[0]["games"]}, {"Clean The Ballpit!", "Ball Pit Simulator"})
 
 
+
+class SeasonalTests(unittest.TestCase):
+    def test_detects_and_penalises(self):
+        import datetime as dt
+        from trendscout import seasonal
+        today = dt.date(2026, 11, 22)
+        xmas = seasonal.detect("Run a Christmas Tree Lot", today=today)
+        self.assertEqual((xmas["season"], xmas["status"], xmas["days_left"]), ("Christmas", "in season", 35))
+        self.assertLess(xmas["factor"], 1)
+        self.assertEqual(seasonal.detect("Halloween Hunt", today=today)["status"], "season over")
+        self.assertEqual(seasonal.detect("Easter Egg Hunt", today=today)["factor"], 1.0)   # upcoming
+        self.assertIsNone(seasonal.detect("[🎃 EVENT] Pet Farm", today=today))   # event tag only
+        self.assertIsNone(seasonal.detect("Volley Bomb", today=today))
+
+    def test_easter(self):
+        import datetime as dt
+        from trendscout import seasonal
+        self.assertEqual(seasonal._easter(2026), dt.date(2026, 4, 5))
+        self.assertEqual(seasonal._easter(2027), dt.date(2027, 3, 28))
+
+
+class NotifyTests(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        config.DATA_DIR = Path(self.tmp.name)
+        config.DB_PATH = config.DATA_DIR / "a.db"
+        from trendscout import notify
+        self.notify = notify
+        self.sent = []
+        self._orig = notify.send
+        notify.send = lambda title, msg, subtitle="": self.sent.append((subtitle, msg)) or True
+
+    def tearDown(self):
+        self.notify.send = self._orig
+        self.tmp.cleanup()
+
+    @staticmethod
+    def niche(nid, dod=None):
+        return {"id": nid, "label": nid, "lead_name": "Game " + nid, "lead_playing": 1000,
+                "lead_age_days": 10, "lead_ccu_dod": dod, "seasonal": None}
+
+    def test_new_top_and_jump_with_cooldown(self):
+        with db.session() as conn:
+            quiet = lambda *_: None
+            first = [self.niche(n) for n in "abdef"]
+            self.assertEqual(self.notify.check(conn, first, log=quiet), [])   # first run only remembers
+            second = [self.niche("c")] + first[:4] + [self.niche("z", dod=0.8)]   # z is #6: jump alert
+            texts = self.notify.check(conn, second, log=quiet)
+            self.assertEqual(len(texts), 2)
+            self.assertTrue(texts[0].startswith("New in top 5: c"))
+            self.assertTrue(texts[1].startswith("Up +80% vs yesterday: z"))
+            self.assertEqual(len(self.sent), 1)   # grouped into one notification
+            # Same situation again: cooldown stops repeats.
+            again = [self.niche("c")] + first[:4] + [self.niche("z", dod=0.9)]
+            self.assertEqual(self.notify.check(conn, again, log=quiet), [])
+
+
 if __name__ == "__main__":
     unittest.main()

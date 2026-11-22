@@ -77,6 +77,24 @@ The first time, macOS may say the file is from an unidentified developer: right-
 4. **Get AI pick** sends the top 12 niches to Claude. It picks the best one for a solo developer
    and writes how to beat the existing games, an original concept, a build plan and the risks.
 
+**Seasonal niches** (Christmas, Halloween, Easter, summer…) get an orange badge with the days left
+in the season. When fewer than 60 days are left, their score is lowered (up to 45%), since the
+trend may die before you can ship.
+
+### Mac notifications
+After every collection, your Mac shows a notification when:
+- a niche **enters the top 5** that wasn't there before, or
+- a niche's leading game has **+50% players vs the same time yesterday**.
+
+Each niche alerts at most once a day, and several alerts are grouped into one notification. The
+latest alerts also appear in a **Recent alerts** box on the dashboard. Settings in `.env`:
+`NOTIFICATIONS=off` turns them off, `NOTIFY_JUMP=0.3` alerts at +30% instead.
+
+macOS shows these as coming from **Script Editor**. If you see nothing, open System Settings →
+Notifications → Script Editor → Allow Notifications, then test with:
+`.venv/bin/python -m trendscout notify-test`. (Clicking a notification opens Script Editor, not
+the dashboard: just close it.)
+
 You can change the niche rules at the top of `trendscout/niches.py` (`MAX_COMPETITORS`,
 `MIN_DEMAND`, `NICHE_MAX_AGE_DAYS`, `REAL_PLAYERS`).
 
@@ -92,6 +110,7 @@ cd ~/claude-repo/roblox-trend-scout
 .venv/bin/python -m trendscout report       # print the ranking
 .venv/bin/python -m trendscout recommend    # AI pick, printed as JSON
 .venv/bin/python -m trendscout serve        # start the dashboard
+.venv/bin/python -m trendscout notify-test  # send a test notification
 ```
 
 ## Troubleshooting
@@ -102,6 +121,7 @@ cd ~/claude-repo/roblox-trend-scout
 | Dashboard says *Claude key missing* | Put `ANTHROPIC_API_KEY=...` in `.env`, then close the Terminal window running the dashboard and start it again. |
 | Background collection isn't happening | Check `logs/collect.log`. Re-install with `./scripts/install_schedule.sh`. The folder must not be on Desktop/Documents/Downloads. |
 | Stop background collection | `./scripts/uninstall_schedule.sh` |
+| No notifications | System Settings → Notifications → Script Editor → Allow. Check `NOTIFICATIONS=on` in `.env`. Alerts start from the 2nd collection (the 1st only records the top 5), and "+50%" alerts need 24h of history. |
 | `Address already in use` | The dashboard is already running in another window. Use that, or change `PORT` in `.env`. |
 | Reddit/YouTube warnings in the log | Harmless; the tool skips that source for this run. YouTube's free quota resets daily. |
 

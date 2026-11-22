@@ -39,6 +39,10 @@ chmod +x start.command scripts/*.sh 2>/dev/null || true
 read -r -p "Collect data automatically every 3 hours in the background? [Y/n] " ans
 if [[ ! "$ans" =~ ^[Nn] ]]; then ./scripts/install_schedule.sh; fi
 
+# 5) Test notification (macOS may ask you to allow notifications the first time).
+./.venv/bin/python -m trendscout notify-test || true
+echo "If no notification appeared: System Settings > Notifications > Script Editor > Allow Notifications."
+
 echo
 echo "Setup done! Next steps:"
 echo "  1. open -e .env          (paste your API keys, save)"

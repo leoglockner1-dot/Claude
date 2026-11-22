@@ -4,7 +4,7 @@ from __future__ import annotations
 import json
 import time
 
-from . import analyze, config, db, niches, roblox, social
+from . import analyze, config, db, niches, notify, roblox, social
 from .http import FetchError
 
 SUPPLY_TOP_N = 15     # how many top themes get a Roblox search (competition check)
@@ -97,6 +97,10 @@ def run(log=print) -> dict:
             conn.commit()
             summary[source] = ok
 
+        try:
+            summary["alerts"] = len(notify.check(conn, log=log))
+        except Exception as e:   # never let a notification problem break data collection
+            summary["errors"].append(f"notifications: {e}")
         conn.execute("UPDATE runs SET notes=? WHERE id=?", (json.dumps(summary), run_id))
     summary["seconds"] = round(time.time() - t0, 1)
     log(f"Done in {summary['seconds']}s" + (f" ({len(summary['errors'])} warnings)" if summary["errors"] else ""))

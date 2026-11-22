@@ -39,6 +39,8 @@ Requirements:
 | `trendscout/social.py` | YouTube Data API (videos + views in the last 7 days), Reddit search |
 | `trendscout/collect.py` | One collection run; writes snapshots to `data/trends.db` |
 | `trendscout/niches.py` | Finds early niches: new games with demand, phrases with ≤ 5 real competitors |
+| `trendscout/seasonal.py` | Detects seasonal niches and how many days their season has left |
+| `trendscout/notify.py` | Mac notifications: new top-5 niches and fast-growing niches |
 | `trendscout/analyze.py` | Per-game growth metrics; groups games into big trends and scores them |
 | `trendscout/recommend.py` | Calls Claude with structured JSON output |
 | `trendscout/server.py`, `static/` | Local dashboard (Python standard library + Chart.js, bundled) |
@@ -104,6 +106,20 @@ Niche score (percentiles against the other niches):
 | Social buzz | 9% | YouTube views + Reddit engagement this week |
 | Player approval | 8% | Like ratio |
 | Chart presence | 5% | Up-and-Coming, Top Trending, … |
+
+**Seasonal niches** (`trendscout/seasonal.py`): the niche phrase and leading game's name are
+checked for season words (Halloween, Thanksgiving, Christmas, New Year, winter, Valentine's,
+St. Patrick's, Easter (date computed per year), April Fools, summer). Bracketed update tags like
+`[🎃 EVENT]` are ignored because those are temporary events on normal games. A seasonal niche gets
+a badge with the days left; with < 60 days left its score is multiplied by up to 0.55 (fully at
+0 days or once the season has ended). Upcoming seasons aren't penalized. Claude is told to only
+pick a seasonal niche if there's time to ship, or the idea works without the theme.
+
+**Notifications** (`trendscout/notify.py`): after each collection, a macOS notification
+(via `osascript`) when a niche enters the top 5, or a niche's leading game is +50% vs the same
+time yesterday. Max one alert per niche per 24h; several alerts are grouped into one
+notification; all alerts are logged and shown in the dashboard's "Recent alerts". The first
+collection only records the top 5, so setup doesn't trigger a burst of alerts.
 
 ## 6. All trends (context tab)
 
@@ -193,7 +209,8 @@ Collection itself never calls Claude, so the background job is free.
 - Game update frequency (how often top games in a theme push updates).
 
 **v1.3 – decision support**
-- "Watchlist": pin trends and get a weekly digest (macOS notification or email).
+- "Watchlist": pin niches and get a weekly digest (email).
+- Clickable notifications that open the dashboard (needs a small helper app instead of osascript).
 - Thumbnail/icon analysis of the winning games, using the Roblox Design Academy notes already
   in this repo (`Roblox-Design-Academy-Package/`).
 - Export the AI pick as a one-page game design doc.

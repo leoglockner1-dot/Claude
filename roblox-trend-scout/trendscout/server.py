@@ -10,7 +10,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
-from . import analyze, collect, config, db, recommend
+from . import analyze, collect, config, db, notify, recommend
 
 STATIC = Path(__file__).parent / "static"
 TYPES = {".html": "text/html; charset=utf-8", ".js": "application/javascript; charset=utf-8",
@@ -103,6 +103,9 @@ class Handler(BaseHTTPRequestHandler):
             if url.path == "/api/history":
                 ids = [int(x) for x in parse_qs(url.query).get("ids", [""])[0].split(",") if x.isdigit()]
                 return self._json(_history(ids))
+            if url.path == "/api/alerts":
+                with db.session() as conn:
+                    return self._json(notify.recent(conn))
             if url.path == "/api/recommendation":
                 with db.session() as conn:
                     return self._json(db.latest_recommendation(conn))

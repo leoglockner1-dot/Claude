@@ -14,6 +14,7 @@ def main(argv: list[str] | None = None) -> None:
     r.add_argument("-n", type=int, default=15)
     r.add_argument("--json", action="store_true")
     sub.add_parser("recommend", help="ask Claude for the top pick and a game plan")
+    sub.add_parser("notify-test", help="send a test Mac notification")
     s = sub.add_parser("serve", help="start the local dashboard")
     s.add_argument("--no-browser", action="store_true")
     args = p.parse_args(argv)
@@ -45,6 +46,11 @@ def main(argv: list[str] | None = None) -> None:
         except RuntimeError as e:
             sys.exit(f"Error: {e}")
         print(json.dumps(res, indent=2, ensure_ascii=False))
+    elif args.cmd == "notify-test":
+        from . import notify
+        ok = notify.send("Roblox Trend Scout", "Notifications work! You'll get alerts about new niches here.",
+                         subtitle="Test notification")
+        print("Sent." if ok else "Notifications only work on macOS.")
     elif args.cmd == "serve":
         from . import server
         server.serve(open_browser=not args.no_browser)
