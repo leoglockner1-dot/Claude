@@ -14,7 +14,7 @@ class FetchError(Exception):
     pass
 
 
-def get_json(url: str, params: dict | None = None, retries: int = 3, pause: float = 0.35,
+def get_json(url: str, params: dict | None = None, retries: int = 5, pause: float = 0.35,
              headers: dict | None = None) -> dict:
     if params:
         url = f"{url}?{urllib.parse.urlencode(params)}"
@@ -30,7 +30,15 @@ def get_json(url: str, params: dict | None = None, retries: int = 3, pause: floa
             return data
         except urllib.error.HTTPError as e:
             last_err = e
-            if e.code in (429, 500, 502, 503, 504):
+            if e.code == 429:
+                # Rate limited: honor Retry-After, else back off long enough for the window to reset.
+                try:
+                    wait = float(e.headers.get("Retry-After") or 0)
+                except (TypeError, ValueError):
+                    wait = 0
+                time.sleep(min(max(wait, 15 * (attempt + 1)), 90))
+                continue
+            if e.code in (500, 502, 503, 504):
                 time.sleep(2 ** attempt * 2)
                 continue
             raise FetchError(f"HTTP {e.code} for {url.split('?')[0]}") from e
